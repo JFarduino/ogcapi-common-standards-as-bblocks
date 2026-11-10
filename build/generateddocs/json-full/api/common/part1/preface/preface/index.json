@@ -1,0 +1,35 @@
+
+
+{
+  "itemIdentifier": "ogc.api.common.part1.preface.preface",
+  "name": "Preface",
+  "abstract": "Preface of OGC API - Common - Part 1: Core (preface section).",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "clause",
+  "normative": false,
+  "sources": [
+    {
+      "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Preface",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#preface-section"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "preface"
+  ],
+  "shaclShapes": {},
+  "license": {
+    "name": "OGC License Agreement",
+    "url": "https://www.ogc.org/license"
+  },
+  "dateOfLastChange": "2026-11-10",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/preface/preface/",
+  "validationPassed": true,
+  "description": "Attention is drawn to the possibility that some of the elements of this document may be the subject of\npatent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all\nsuch patent rights.\n\nRecipients of this document are requested to submit, with their comments, notification of any relevant\npatent claims or other intellectual property rights of which they may be aware that might be infringed\nby any implementation of the standard set forth in this document, and to provide supporting\ndocumentation.\n\nSuggested additions, changes and comments on this document are welcome and encouraged. Such suggestions\nmay be submitted using the online change request form on OGC web site:\n[http://ogc.standardstracker.org/](http://ogc.standardstracker.org/)\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks",
+  "gitPath": "_sources/part1/preface/preface"
+}

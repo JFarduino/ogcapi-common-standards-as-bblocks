@@ -1,0 +1,35 @@
+
+
+{
+  "itemIdentifier": "ogc.api.common.part1.clauses.encodings",
+  "name": "Encoding Requirements Classes",
+  "abstract": "Clause 10 of OGC API - Common - Part 1: Core: overview of the HTML and JSON encoding requirements classes, which are its subclauses 10.2 and 10.3.",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "clause",
+  "normative": true,
+  "sources": [
+    {
+      "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Encoding Requirements Classes",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#rc_encoding-section"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "clause"
+  ],
+  "shaclShapes": {},
+  "license": {
+    "name": "OGC License Agreement",
+    "url": "https://www.ogc.org/license"
+  },
+  "dateOfLastChange": "2026-11-10",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/clauses/encodings/",
+  "validationPassed": true,
+  "description": "# Overview\n\nThis clause specifies two requirements classes for encodings that may be used by an OGC Web API\nimplementation. These encodings are commonly used for spatial data on the web applications:\n\n- HTML\n- JSON\n\nNeither of these encodings are mandatory. An implementation of the OGC API \u2014 Common Standard may\nimplement one, both, or none of them. Other encodings are possible.\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks",
+  "gitPath": "_sources/part1/clauses/encodings"
+}

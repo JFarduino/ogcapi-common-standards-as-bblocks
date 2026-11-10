@@ -1,0 +1,154 @@
+{
+  "title": "Validation report for ogc.api.common.part1.requirements.landing-page - Landing Page Requirements Class",
+  "bblockName": "Landing Page Requirements Class",
+  "bblockId": "ogc.api.common.part1.requirements.landing-page",
+  "generated": "2026-11-10T16:38:34.509090+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part1/requirements/landing-page/tests/conf-landing-page-root-op.json",
+        "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/landing-page/tests/conf-landing-page-root-op.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using conf-landing-page-root-op.json from test resources"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part1/requirements/landing-page/tests/conf-landing-page-root-success.json",
+        "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/landing-page/tests/conf-landing-page-root-success.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using conf-landing-page-root-success.json from test resources"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part1/requirements/landing-page/tests/conf-landing-page-api-definition-op.yaml",
+        "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/landing-page/tests/conf-landing-page-api-definition-op.yaml",
+        "language": "yaml"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using conf-landing-page-api-definition-op.yaml from test resources"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part1/requirements/landing-page/tests/conf-landing-page-api-definition-success.yaml",
+        "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/landing-page/tests/conf-landing-page-api-definition-success.yaml",
+        "language": "yaml"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using conf-landing-page-api-definition-success.yaml from test resources"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part1/requirements/landing-page/tests/conf-landing-page-conformance-op.json",
+        "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/landing-page/tests/conf-landing-page-conformance-op.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using conf-landing-page-conformance-op.json from test resources"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part1/requirements/landing-page/tests/conf-landing-page-conformance-success.json",
+        "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/landing-page/tests/conf-landing-page-conformance-success.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using conf-landing-page-conformance-success.json from test resources"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "hasWarnings": false,
+  "counts": {
+    "total": 6,
+    "passed": 6,
+    "failed": 0
+  }
+}

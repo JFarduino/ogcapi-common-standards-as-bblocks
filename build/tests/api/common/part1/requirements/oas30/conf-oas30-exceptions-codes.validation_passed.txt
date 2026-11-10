@@ -1,0 +1,6 @@
+Validation report for ogc.api.common.part1.requirements.oas30 - OpenAPI 3.0 Requirements Class
+Generated 2026-11-10T16:38:36.275271+00:00
+=== Files ===
+Using conf-oas30-exceptions-codes.yaml from test resources
+=== End Files ===
+

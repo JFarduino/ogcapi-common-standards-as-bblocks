@@ -1,0 +1,6 @@
+Validation report for ogc.api.common.part1.requirements.core - Core Requirements Class
+Generated 2026-11-10T16:38:34.488633+00:00
+=== Files ===
+Using conf-core-query-param-name-unknown.yaml from test resources
+=== End Files ===
+

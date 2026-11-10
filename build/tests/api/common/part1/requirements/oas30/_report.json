@@ -1,0 +1,154 @@
+{
+  "title": "Validation report for ogc.api.common.part1.requirements.oas30 - OpenAPI 3.0 Requirements Class",
+  "bblockName": "OpenAPI 3.0 Requirements Class",
+  "bblockId": "ogc.api.common.part1.requirements.oas30",
+  "generated": "2026-11-10T16:38:36.276332+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part1/requirements/oas30/tests/conf-oas30-oas-definition-1.yaml",
+        "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/oas30/tests/conf-oas30-oas-definition-1.yaml",
+        "language": "yaml"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using conf-oas30-oas-definition-1.yaml from test resources"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part1/requirements/oas30/tests/conf-oas30-oas-definition-2.yaml",
+        "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/oas30/tests/conf-oas30-oas-definition-2.yaml",
+        "language": "yaml"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using conf-oas30-oas-definition-2.yaml from test resources"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part1/requirements/oas30/tests/conf-oas30-oas-impl.yaml",
+        "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/oas30/tests/conf-oas30-oas-impl.yaml",
+        "language": "yaml"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using conf-oas30-oas-impl.yaml from test resources"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part1/requirements/oas30/tests/conf-oas30-completeness.yaml",
+        "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/oas30/tests/conf-oas30-completeness.yaml",
+        "language": "yaml"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using conf-oas30-completeness.yaml from test resources"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part1/requirements/oas30/tests/conf-oas30-exceptions-codes.yaml",
+        "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/oas30/tests/conf-oas30-exceptions-codes.yaml",
+        "language": "yaml"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using conf-oas30-exceptions-codes.yaml from test resources"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part1/requirements/oas30/tests/conf-oas30-security.yaml",
+        "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/oas30/tests/conf-oas30-security.yaml",
+        "language": "yaml"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using conf-oas30-security.yaml from test resources"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "hasWarnings": false,
+  "counts": {
+    "total": 6,
+    "passed": 6,
+    "failed": 0
+  }
+}

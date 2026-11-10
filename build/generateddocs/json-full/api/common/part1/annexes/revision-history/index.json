@@ -1,0 +1,35 @@
+
+
+{
+  "itemIdentifier": "ogc.api.common.part1.annexes.revision-history",
+  "name": "Revision History",
+  "abstract": "Annex F of OGC API - Common - Part 1: Core: revision history.",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "clause",
+  "normative": false,
+  "sources": [
+    {
+      "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Revision History",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#_revision_history"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "annex"
+  ],
+  "shaclShapes": {},
+  "license": {
+    "name": "OGC License Agreement",
+    "url": "https://www.ogc.org/license"
+  },
+  "dateOfLastChange": "2026-11-10",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/annexes/revision-history/",
+  "validationPassed": true,
+  "description": "*Table F.1 \u2014 Revision History*\n\n| Date | Release | Editor | Primary clauses modified | Description |\n|---|---|---|---|---|\n| 2019-10-31 | October 2019 snapshot | C. Heazel | all | Baseline update |\n| 2020-04-21 | Public Comments | C. Heazel | all | Separation of Collections from Core plus additional comment adjudications. |\n| 2021-04-12 | Public Comments | C. Heazel | all | Second public comment period. |\n| 2021-08-01 | Final Review | C. Heazel | all | Ready for SWG review and TC vote |\n| 2022-11-04 | 1.0.0 | G. Hobona | all | Final OGC Staff review |\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks",
+  "gitPath": "_sources/part1/annexes/revision-history"
+}

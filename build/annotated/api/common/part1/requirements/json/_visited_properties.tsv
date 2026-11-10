@@ -1,0 +1,12 @@
+path	@id	schema
+/_anyOf/0/title	http://purl.org/dc/terms/title	https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/landingPage/schema.yaml
+/_anyOf/0/description	http://purl.org/dc/terms/description	https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/landingPage/schema.yaml
+/_anyOf/0/attribution		https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/landingPage/schema.yaml
+/_anyOf/0/links		https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/landingPage/schema.yaml
+/_anyOf/0/links/href	http://www.w3.org/ns/oa#hasTarget	https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/link/schema.yaml
+/_anyOf/0/links/rel	http://www.iana.org/assignments/relation	https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/link/schema.yaml
+/_anyOf/0/links/type	http://purl.org/dc/terms/type	https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/link/schema.yaml
+/_anyOf/0/links/hreflang	http://purl.org/dc/terms/language	https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/link/schema.yaml
+/_anyOf/0/links/title	http://www.w3.org/2000/01/rdf-schema#label	https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/link/schema.yaml
+/_anyOf/0/links/length	http://purl.org/dc/terms/extent	https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/link/schema.yaml
+/_anyOf/1/conformsTo	http://purl.org/dc/terms/conformsTo	https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/confClasses/schema.yaml

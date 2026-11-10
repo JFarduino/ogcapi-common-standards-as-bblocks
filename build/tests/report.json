@@ -1,0 +1,1268 @@
+{
+  "summary": {
+    "total": 25,
+    "passed": 25,
+    "failed": 0,
+    "result": true
+  },
+  "bblocks": {
+    "ogc.api.common.part1.annexes.ats": {
+      "title": "Validation report for ogc.api.common.part1.annexes.ats - Abstract Test Suite",
+      "bblockName": "Abstract Test Suite",
+      "bblockId": "ogc.api.common.part1.annexes.ats",
+      "generated": "2026-11-10T16:38:34.427095+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.annexes.bibliography": {
+      "title": "Validation report for ogc.api.common.part1.annexes.bibliography - Bibliography",
+      "bblockName": "Bibliography",
+      "bblockId": "ogc.api.common.part1.annexes.bibliography",
+      "generated": "2026-11-10T16:38:34.430292+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.annexes.bnf": {
+      "title": "Validation report for ogc.api.common.part1.annexes.bnf - Backus-Naur Forms",
+      "bblockName": "Backus-Naur Forms",
+      "bblockId": "ogc.api.common.part1.annexes.bnf",
+      "generated": "2026-11-10T16:38:34.433124+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.annexes.examples": {
+      "title": "Validation report for ogc.api.common.part1.annexes.examples - Examples (Informative)",
+      "bblockName": "Examples (Informative)",
+      "bblockId": "ogc.api.common.part1.annexes.examples",
+      "generated": "2026-11-10T16:38:34.435967+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.annexes.glossary": {
+      "title": "Validation report for ogc.api.common.part1.annexes.glossary - Glossary",
+      "bblockName": "Glossary",
+      "bblockId": "ogc.api.common.part1.annexes.glossary",
+      "generated": "2026-11-10T16:38:34.438712+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.annexes.revision-history": {
+      "title": "Validation report for ogc.api.common.part1.annexes.revision-history - Revision History",
+      "bblockName": "Revision History",
+      "bblockId": "ogc.api.common.part1.annexes.revision-history",
+      "generated": "2026-11-10T16:38:34.441496+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.annexes.web-api-guidelines": {
+      "title": "Validation report for ogc.api.common.part1.annexes.web-api-guidelines - OGC Web API Guidelines",
+      "bblockName": "OGC Web API Guidelines",
+      "bblockId": "ogc.api.common.part1.annexes.web-api-guidelines",
+      "generated": "2026-11-10T16:38:34.444067+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.clauses.abbreviated-terms": {
+      "title": "Validation report for ogc.api.common.part1.clauses.abbreviated-terms - Abbreviated terms",
+      "bblockName": "Abbreviated terms",
+      "bblockId": "ogc.api.common.part1.clauses.abbreviated-terms",
+      "generated": "2026-11-10T16:38:34.446762+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.clauses.conformance": {
+      "title": "Validation report for ogc.api.common.part1.clauses.conformance - Conformance",
+      "bblockName": "Conformance",
+      "bblockId": "ogc.api.common.part1.clauses.conformance",
+      "generated": "2026-11-10T16:38:34.449329+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.clauses.conventions": {
+      "title": "Validation report for ogc.api.common.part1.clauses.conventions - Conventions",
+      "bblockName": "Conventions",
+      "bblockId": "ogc.api.common.part1.clauses.conventions",
+      "generated": "2026-11-10T16:38:34.451962+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.clauses.encodings": {
+      "title": "Validation report for ogc.api.common.part1.clauses.encodings - Encoding Requirements Classes",
+      "bblockName": "Encoding Requirements Classes",
+      "bblockId": "ogc.api.common.part1.clauses.encodings",
+      "generated": "2026-11-10T16:38:34.454683+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.clauses.media-types": {
+      "title": "Validation report for ogc.api.common.part1.clauses.media-types - Media Types",
+      "bblockName": "Media Types",
+      "bblockId": "ogc.api.common.part1.clauses.media-types",
+      "generated": "2026-11-10T16:38:34.457261+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.clauses.overview": {
+      "title": "Validation report for ogc.api.common.part1.clauses.overview - Overview",
+      "bblockName": "Overview",
+      "bblockId": "ogc.api.common.part1.clauses.overview",
+      "generated": "2026-11-10T16:38:34.459771+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.clauses.references": {
+      "title": "Validation report for ogc.api.common.part1.clauses.references - Normative references",
+      "bblockName": "Normative references",
+      "bblockId": "ogc.api.common.part1.clauses.references",
+      "generated": "2026-11-10T16:38:34.462683+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.clauses.scope": {
+      "title": "Validation report for ogc.api.common.part1.clauses.scope - Scope",
+      "bblockName": "Scope",
+      "bblockId": "ogc.api.common.part1.clauses.scope",
+      "generated": "2026-11-10T16:38:34.465357+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.clauses.terms": {
+      "title": "Validation report for ogc.api.common.part1.clauses.terms - Terms and definitions",
+      "bblockName": "Terms and definitions",
+      "bblockId": "ogc.api.common.part1.clauses.terms",
+      "generated": "2026-11-10T16:38:34.468255+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.preface.preface": {
+      "title": "Validation report for ogc.api.common.part1.preface.preface - Preface",
+      "bblockName": "Preface",
+      "bblockId": "ogc.api.common.part1.preface.preface",
+      "generated": "2026-11-10T16:38:34.470930+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.preface.security-considerations": {
+      "title": "Validation report for ogc.api.common.part1.preface.security-considerations - Security considerations",
+      "bblockName": "Security considerations",
+      "bblockId": "ogc.api.common.part1.preface.security-considerations",
+      "generated": "2026-11-10T16:38:34.473544+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.preface.submitters": {
+      "title": "Validation report for ogc.api.common.part1.preface.submitters - Submitters",
+      "bblockName": "Submitters",
+      "bblockId": "ogc.api.common.part1.preface.submitters",
+      "generated": "2026-11-10T16:38:34.476183+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.preface.submitting-organizations": {
+      "title": "Validation report for ogc.api.common.part1.preface.submitting-organizations - Submitting Organizations",
+      "bblockName": "Submitting Organizations",
+      "bblockId": "ogc.api.common.part1.preface.submitting-organizations",
+      "generated": "2026-11-10T16:38:34.478696+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.requirements.core": {
+      "title": "Validation report for ogc.api.common.part1.requirements.core - Core Requirements Class",
+      "bblockName": "Core Requirements Class",
+      "bblockId": "ogc.api.common.part1.requirements.core",
+      "generated": "2026-11-10T16:38:34.498176+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/core/tests/conf-core-http.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/core/tests/conf-core-http.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-core-http.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/core/tests/conf-core-query-param-name-unknown.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/core/tests/conf-core-query-param-name-unknown.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-core-query-param-name-unknown.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/core/tests/conf-core-query-param-value-invalid.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/core/tests/conf-core-query-param-value-invalid.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-core-query-param-value-invalid.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/core/tests/conf-core-query-param-capitalization.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/core/tests/conf-core-query-param-capitalization.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-core-query-param-capitalization.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/core/tests/conf-core-query-param-list-delimiter.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/core/tests/conf-core-query-param-list-delimiter.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-core-query-param-list-delimiter.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/core/tests/conf-core-query-param-list-escape.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/core/tests/conf-core-query-param-list-escape.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-core-query-param-list-escape.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/core/tests/conf-core-query-param-list-empty.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/core/tests/conf-core-query-param-list-empty.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-core-query-param-list-empty.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/core/tests/conf-core-query-param-value-boolean.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/core/tests/conf-core-query-param-value-boolean.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-core-query-param-value-boolean.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/core/tests/conf-core-query-param-value-integer.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/core/tests/conf-core-query-param-value-integer.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-core-query-param-value-integer.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/core/tests/conf-core-query-param-value-decimal.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/core/tests/conf-core-query-param-value-decimal.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-core-query-param-value-decimal.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/core/tests/conf-core-query-param-value-double.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/core/tests/conf-core-query-param-value-double.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-core-query-param-value-double.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 11,
+        "passed": 11,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.requirements.landing-page": {
+      "title": "Validation report for ogc.api.common.part1.requirements.landing-page - Landing Page Requirements Class",
+      "bblockName": "Landing Page Requirements Class",
+      "bblockId": "ogc.api.common.part1.requirements.landing-page",
+      "generated": "2026-11-10T16:38:34.509090+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/landing-page/tests/conf-landing-page-root-op.json",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/landing-page/tests/conf-landing-page-root-op.json",
+            "language": "json"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-landing-page-root-op.json from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/landing-page/tests/conf-landing-page-root-success.json",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/landing-page/tests/conf-landing-page-root-success.json",
+            "language": "json"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-landing-page-root-success.json from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/landing-page/tests/conf-landing-page-api-definition-op.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/landing-page/tests/conf-landing-page-api-definition-op.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-landing-page-api-definition-op.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/landing-page/tests/conf-landing-page-api-definition-success.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/landing-page/tests/conf-landing-page-api-definition-success.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-landing-page-api-definition-success.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/landing-page/tests/conf-landing-page-conformance-op.json",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/landing-page/tests/conf-landing-page-conformance-op.json",
+            "language": "json"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-landing-page-conformance-op.json from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/landing-page/tests/conf-landing-page-conformance-success.json",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/landing-page/tests/conf-landing-page-conformance-success.json",
+            "language": "json"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-landing-page-conformance-success.json from test resources"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.requirements.html": {
+      "title": "Validation report for ogc.api.common.part1.requirements.html - Requirements Class \u201cHTML\u201d",
+      "bblockName": "Requirements Class \u201cHTML\u201d",
+      "bblockId": "ogc.api.common.part1.requirements.html",
+      "generated": "2026-11-10T16:38:34.516361+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.requirements.json": {
+      "title": "Validation report for ogc.api.common.part1.requirements.json - Requirements Class \u201cJSON\u201d",
+      "bblockName": "Requirements Class \u201cJSON\u201d",
+      "bblockId": "ogc.api.common.part1.requirements.json",
+      "generated": "2026-11-10T16:38:36.260558+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/json/tests/conf-json-definition-landing-page.json",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/json/tests/conf-json-definition-landing-page.json",
+            "language": "json"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-json-definition-landing-page.json from test resources"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "conf-json-definition-landing-page.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD conf-json-definition-landing-page.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "conf-json-definition-landing-page.ttl",
+                  "size": 2,
+                  "isError": false,
+                  "message": "Output Turtle conf-json-definition-landing-page.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/json/tests/conf-json-definition-conformance.json",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/json/tests/conf-json-definition-conformance.json",
+            "language": "json"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-json-definition-conformance.json from test resources"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "conf-json-definition-conformance.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD conf-json-definition-conformance.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "conf-json-definition-conformance.ttl",
+                  "size": 5,
+                  "isError": false,
+                  "message": "Output Turtle conf-json-definition-conformance.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/json/tests/conf-json-content-landing-page.json",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/json/tests/conf-json-content-landing-page.json",
+            "language": "json"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-json-content-landing-page.json from test resources"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "conf-json-content-landing-page.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD conf-json-content-landing-page.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "conf-json-content-landing-page.ttl",
+                  "size": 2,
+                  "isError": false,
+                  "message": "Output Turtle conf-json-content-landing-page.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/json/tests/conf-json-content-conformance.json",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/json/tests/conf-json-content-conformance.json",
+            "language": "json"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-json-content-conformance.json from test resources"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "conf-json-content-conformance.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD conf-json-content-conformance.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "conf-json-content-conformance.ttl",
+                  "size": 5,
+                  "isError": false,
+                  "message": "Output Turtle conf-json-content-conformance.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": true,
+            "filename": "_sources/part1/requirements/json/tests/conf-json-content-landing-page-no-links-fail.json",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/json/tests/conf-json-content-landing-page-no-links-fail.json",
+            "language": "json"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "GENERAL",
+              "title": "General",
+              "entries": [
+                {
+                  "op": "require-fail",
+                  "isError": false,
+                  "message": "Test was expected to fail and it did."
+                }
+              ]
+            },
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-json-content-landing-page-no-links-fail.json from test resources"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "conf-json-content-landing-page-no-links-fail.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD conf-json-content-landing-page-no-links-fail.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "conf-json-content-landing-page-no-links-fail.ttl",
+                  "size": 2,
+                  "isError": false,
+                  "message": "Output Turtle conf-json-content-landing-page-no-links-fail.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": false,
+                  "exception": "ValidationError",
+                  "errorMessage": "{'title': 'Example API Landing Page', 'description': 'Invalid landing page: the required \"links\" member is missing, so it does not conform to landingPage.yaml'} is not valid under any of the given schemas",
+                  "isError": true,
+                  "message": "ValidationError: {'title': 'Example API Landing Page', 'description': 'Invalid landing page: the required \"links\" member is missing, so it does not conform to landingPage.yaml'} is not valid under any of the given schemas\n\nFailed validating 'anyOf' in schema:\n    {'$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'title': 'JSON payload of the Landing Page requirements class '\n              'resources',\n     'description': '/req/json/content (OGC 19-072): the JSON payload of a '\n                    'Landing Page or Conformance resource SHALL conform '\n                    'with the JSON Schema specified for the resource in '\n                    'the Landing Page Requirements Class, i.e. '\n                    'landingPage.yaml for the Landing Page and '\n                    'confClasses.yaml for the Conformance Declaration. The '\n                    'test resources of the JSON requirements class are '\n                    'validated against this schema.',\n     'anyOf': [{'$ref': 'https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/landingPage/schema.yaml'},\n               {'$ref': 'https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/confClasses/schema.yaml'}],\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.common.part1.requirements.json',\n                            'register': 'https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/register.json',\n                            'version': '1.0.0',\n                            'dateOfLastChange': '2026-11-10'},\n     '$id': 'file:///github/workspace/build/annotated/api/common/part1/requirements/json/schema.yaml'}\n\nOn instance:\n    {'title': 'Example API Landing Page',\n     'description': 'Invalid landing page: the required \"links\" member is '\n                    'missing, so it does not conform to landingPage.yaml'}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": true,
+            "filename": "_sources/part1/requirements/json/tests/conf-json-content-conformance-not-a-list-fail.json",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/json/tests/conf-json-content-conformance-not-a-list-fail.json",
+            "language": "json"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "GENERAL",
+              "title": "General",
+              "entries": [
+                {
+                  "op": "require-fail",
+                  "isError": false,
+                  "message": "Test was expected to fail and it did."
+                }
+              ]
+            },
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-json-content-conformance-not-a-list-fail.json from test resources"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "conf-json-content-conformance-not-a-list-fail.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD conf-json-content-conformance-not-a-list-fail.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "conf-json-content-conformance-not-a-list-fail.ttl",
+                  "size": 1,
+                  "isError": false,
+                  "message": "Output Turtle conf-json-content-conformance-not-a-list-fail.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": false,
+                  "exception": "ValidationError",
+                  "errorMessage": "'http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core' is not of type 'array'",
+                  "isError": true,
+                  "message": "ValidationError: 'http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core' is not of type 'array'\n\nFailed validating 'type' in schema[1]['properties']['conformsTo']:\n    {'type': 'array',\n     'items': {'type': 'string',\n               'example': 'http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core'},\n     'x-jsonld-id': 'http://purl.org/dc/terms/conformsTo',\n     'x-jsonld-type': '@id',\n     'x-jsonld-container': '@set'}\n\nOn instance['conformsTo']:\n    'http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core'"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0
+      }
+    },
+    "ogc.api.common.part1.requirements.oas30": {
+      "title": "Validation report for ogc.api.common.part1.requirements.oas30 - OpenAPI 3.0 Requirements Class",
+      "bblockName": "OpenAPI 3.0 Requirements Class",
+      "bblockId": "ogc.api.common.part1.requirements.oas30",
+      "generated": "2026-11-10T16:38:36.276332+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/oas30/tests/conf-oas30-oas-definition-1.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/oas30/tests/conf-oas30-oas-definition-1.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-oas30-oas-definition-1.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/oas30/tests/conf-oas30-oas-definition-2.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/oas30/tests/conf-oas30-oas-definition-2.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-oas30-oas-definition-2.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/oas30/tests/conf-oas30-oas-impl.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/oas30/tests/conf-oas30-oas-impl.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-oas30-oas-impl.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/oas30/tests/conf-oas30-completeness.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/oas30/tests/conf-oas30-completeness.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-oas30-completeness.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/oas30/tests/conf-oas30-exceptions-codes.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/oas30/tests/conf-oas30-exceptions-codes.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-oas30-exceptions-codes.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": false,
+            "filename": "_sources/part1/requirements/oas30/tests/conf-oas30-security.yaml",
+            "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/oas30/tests/conf-oas30-security.yaml",
+            "language": "yaml"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using conf-oas30-security.yaml from test resources"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0
+      }
+    }
+  }
+}

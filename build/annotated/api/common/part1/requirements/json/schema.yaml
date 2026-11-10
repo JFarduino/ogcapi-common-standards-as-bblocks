@@ -1,0 +1,15 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: JSON payload of the Landing Page requirements class resources
+description: '/req/json/content (OGC 19-072): the JSON payload of a Landing Page or
+  Conformance resource SHALL conform with the JSON Schema specified for the resource
+  in the Landing Page Requirements Class, i.e. landingPage.yaml for the Landing Page
+  and confClasses.yaml for the Conformance Declaration. The test resources of the
+  JSON requirements class are validated against this schema.'
+anyOf:
+- $ref: https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/landingPage/schema.yaml
+- $ref: https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/confClasses/schema.yaml
+x-bblocks-metadata:
+  itemIdentifier: ogc.api.common.part1.requirements.json
+  register: https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/register.json
+  version: 1.0.0
+  dateOfLastChange: '2026-11-10'

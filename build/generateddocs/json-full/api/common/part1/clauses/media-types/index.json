@@ -1,0 +1,35 @@
+
+
+{
+  "itemIdentifier": "ogc.api.common.part1.clauses.media-types",
+  "name": "Media Types",
+  "abstract": "Clause 12 of OGC API - Common - Part 1: Core: media types for responses, OpenAPI definitions and Problem Details reports.",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "clause",
+  "normative": true,
+  "sources": [
+    {
+      "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Media Types",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#mediatypes-section"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "clause"
+  ],
+  "shaclShapes": {},
+  "license": {
+    "name": "OGC License Agreement",
+    "url": "https://www.ogc.org/license"
+  },
+  "dateOfLastChange": "2026-11-10",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/clauses/media-types/",
+  "validationPassed": true,
+  "description": "## Normal Response Media Types\n\nThe typical media type for all \u201cweb pages\u201d in an OGC Web API would be `text/html`.\n\nThe media type that would typically be used in an OGC Web API for machine-to-machine exchanges would be\n`application/json`.\n\n## OpenAPI Media Types\n\nThe media types for an OpenAPI definition are `application/vnd.oai.openapi+json;version=3.0` (JSON) and\n`application/vnd.oai.openapi;version=3.0` (YAML).\n\n> **NOTE** The OpenAPI media type has not been registered yet with IANA and may change.\n\n## Problem Details Media Types\n\nOGC API \u2014 Common recommends that implementers use IETF RFC 7807 when constructing the response body for\nan error condition. The media types for an RFC 7807 Problem Details response body are:\n\n- `application/problem+json` \u2014 for responses in JSON\n- `application/problem+xml` \u2014 for responses in XML\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks",
+  "gitPath": "_sources/part1/clauses/media-types"
+}

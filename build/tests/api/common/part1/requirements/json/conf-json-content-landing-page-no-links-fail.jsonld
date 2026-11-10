@@ -1,0 +1,5 @@
+{
+  "@context": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/annotated/api/common/part1/requirements/json/context.jsonld",
+  "title": "Example API Landing Page",
+  "description": "Invalid landing page: the required \"links\" member is missing, so it does not conform to landingPage.yaml"
+}

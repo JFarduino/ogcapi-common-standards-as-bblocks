@@ -1,0 +1,35 @@
+
+
+{
+  "itemIdentifier": "ogc.api.common.part1.clauses.overview",
+  "name": "Overview",
+  "abstract": "Clause 7 of OGC API - Common - Part 1: Core: evolution from OGC Web Services, modular APIs and the ways clients use OGC APIs.",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "clause",
+  "normative": true,
+  "sources": [
+    {
+      "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Overview",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#overview"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "clause"
+  ],
+  "shaclShapes": {},
+  "license": {
+    "name": "OGC License Agreement",
+    "url": "https://www.ogc.org/license"
+  },
+  "dateOfLastChange": "2026-11-10",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/clauses/overview/",
+  "validationPassed": true,
+  "description": "The OGC API \u2014 Common \u2014 Part 1: Core Standard defines common requirements and recommendations which are\napplicable to all OGC Web API Standards.\n\n## Evolution from OGC Web Services\n\nOGC Web Service (OWS) Standards implement a Remote-Procedure-Call-over-HTTP architectural style using\nXML for payloads. This was the state-of-the-art when OGC Web Services (OWS) were originally designed in\nthe late 1990s and early 2000s. However, technology has evolved. New Resource-Oriented APIs provide an\nalternative to the Service-Oriented Approach. New OGC Web API Standards are under development to provide\nAPI alternatives to the OWS Standards.\n\nThe OGC API \u2014 Common Standard specifies common modules for defining OGC Web API Standards that follow the\ncurrent Web architecture. In particular, the recommendations as defined in the W3C/OGC best practices\nfor sharing Spatial Data on the Web as well as the W3C best practices for sharing Data on the Web.\n\nA detailed discussion of OGC Web Services and Web APIs can be found in the\n[OGC API \u2014 Common \u2014 Users Guide](http://www.opengis.net/doc/UG/ogcapi-common/1.0#ug-evolution-from-web-services).\n\n## Modular APIs\n\nA goal of OGC API Standards is to provide rapid and easy access to spatial resources. To meet this goal,\nthe needs of both the resource provider and the resource consumer must be considered. The approach\nspecified in this Standard is to provide a modular framework of API components. This framework provides\na consistent \u201clook and feel\u201d across all OGC APIs. When API servers and clients are built from the same\nset of modules, the likelihood that they will integrate at run-time is greatly enhanced.\n\nThe modular Web API approach adopted by OGC API Standards has several facets.\n\n- A common core that is recommended for all implementations of OGC API Standards. This OGC API \u2014 Common\n  \u2014 Part 1: Core Standard defines this core in the [Core Requirements Class](#sec-8).\n- Common descriptive resources which allow clients to learn the purpose and capabilities of an API as\n  well as how they should be used. These resources are defined in the\n  [Landing Page Requirements Class](#sec-9).\n- Clear separation between common requirements and more resource specific capabilities. The OGC API \u2014\n  Common Standard specifies the common requirements that may be relevant to almost anyone who wants to\n  build an API for spatial resources. Resource-specific requirements are addressed in resource-specific\n  OGC Standards.\n- Technologies that change more frequently are decoupled and specified in separate modules (\u201cconformance\n  classes\u201d in OGC terminology). This enables, for example, the use/re-use of new encodings for spatial\n  data or API descriptions.\n\nModularization is not just about a single \u201cservice\u201d. OGC APIs provide building blocks that can be reused\nin APIs in general. In other words, a server that implements the OGC API \u2013 Features Standard should not\nbe seen as a standalone service. Rather, this server should be viewed as a collection of API building\nblocks that together implement the capabilities that are specified in OGC API \u2014 Features. A corollary of\nthis is that it should be possible to implement an API that simultaneously conforms to conformance\nclasses from multiple current or future OGC API Standards.\n\n## Using APIs\n\nOGC API Standards are expected to support two different approaches that clients may use when accessing\nan OGC conformant Web API.\n\nIn the first approach, clients are implemented with knowledge about the Standard used to build the API\nand the associated resource types. The clients navigate the resources based on this knowledge and based\non the responses provided by the API. The API definition may be used to determine details, e.g., on\nfilter parameters, but this may not be necessary depending on the needs of the client. These are clients\nthat are in general able to use multiple APIs as long as they implement OGC API Standards.\n\nThe other approach targets developers that are not familiar with OGC API Standards but want to interact\nwith spatial data provided by an API that happens to implement OGC API Standards. In this case the\ndeveloper will study and use the API definition \u2014 typically an OpenAPI document \u2014 to understand the API\nand implement the code to interact with that API. This assumes familiarity with the API definition\nlanguage and the related tooling, but it should not be necessary to study the OGC API Standards.\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks",
+  "gitPath": "_sources/part1/clauses/overview"
+}

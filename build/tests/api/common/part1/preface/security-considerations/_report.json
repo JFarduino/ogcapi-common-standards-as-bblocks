@@ -1,0 +1,15 @@
+{
+  "title": "Validation report for ogc.api.common.part1.preface.security-considerations - Security considerations",
+  "bblockName": "Security considerations",
+  "bblockId": "ogc.api.common.part1.preface.security-considerations",
+  "generated": "2026-11-10T16:38:34.473544+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "hasWarnings": false,
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

@@ -1,0 +1,60 @@
+
+
+{
+  "itemIdentifier": "ogc.api.common.part1.requirements.html",
+  "name": "Requirements Class \u201cHTML\u201d",
+  "abstract": "Encoding requirements class \"HTML\": HTML 5 representations of the Landing Page and Conformance resources.",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "requirements-class",
+  "normative": true,
+  "standardization-target": "Web API",
+  "sources": [
+    {
+      "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Requirements Class \u201cHTML\u201d",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#rc_html-section"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "requirements-class"
+  ],
+  "conformanceClasses": [
+    "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/html"
+  ],
+  "dependsOn": [
+    "ogc.api.common.part1.requirements.core",
+    "ogc.api.common.part1.requirements.landing-page"
+  ],
+  "resources": [
+    {
+      "ref": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/html/requirements.yaml",
+      "role": "requirements",
+      "format": "application/yaml"
+    }
+  ],
+  "shaclShapes": {},
+  "license": {
+    "name": "OGC License Agreement",
+    "url": "https://www.ogc.org/license"
+  },
+  "dateOfLastChange": "2026-11-10",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/html/",
+  "testResources": [
+    {
+      "id": "conf/html/definition",
+      "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/landing-page.html"
+    },
+    {
+      "id": "conf/html/content",
+      "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/landing-page.html"
+    }
+  ],
+  "validationPassed": true,
+  "description": "Geographic information that is only accessible in formats such as GeoJSON or GML have two issues when\nweb application principles are considered:\n\n- The data are not discoverable using Web crawlers and search engines,\n- The data cannot be viewed directly in a browser \u2014 additional tools are required to view the data.\n\nTherefore, sharing data on the Web should include publication in HTML. To be consistent with the Web,\nthis publication should be done in a way that enables users and search engines to discover and access\nall of the data.\n\nThis is discussed in detail in the W3C/OGC SDW Best Practice. Therefore, the OGC API \u2014 Common Standard\nrecommends supporting HTML as an encoding.\n\n<!-- requirements-class -->\n\n<!-- requirement: html/definition -->\n\n<!-- requirement: html/content -->\n\n<!-- recommendation: html/schema-org -->\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks",
+  "gitPath": "_sources/part1/requirements/html"
+}

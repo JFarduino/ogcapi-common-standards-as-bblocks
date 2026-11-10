@@ -1,0 +1,4 @@
+{
+  "@context": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/annotated/api/common/part1/requirements/json/context.jsonld",
+  "conformsTo": "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core"
+}

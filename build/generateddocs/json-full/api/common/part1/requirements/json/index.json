@@ -1,0 +1,88 @@
+
+
+{
+  "itemIdentifier": "ogc.api.common.part1.requirements.json",
+  "name": "Requirements Class \u201cJSON\u201d",
+  "abstract": "Encoding requirements class \"JSON\": JSON representations of the Landing Page and Conformance resources. The schema of this building block is the JSON payload of these resources, so that the test resources of the class are validated against it.",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "requirements-class",
+  "normative": true,
+  "standardization-target": "Web API",
+  "sources": [
+    {
+      "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Requirements Class \u201cJSON\u201d",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#rc_json-section"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "requirements-class"
+  ],
+  "conformanceClasses": [
+    "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/json"
+  ],
+  "dependsOn": [
+    "ogc.api.common.part1.requirements.core",
+    "ogc.api.common.part1.requirements.landing-page",
+    "ogc.api.common.part1.schemas.confClasses",
+    "ogc.api.common.part1.schemas.landingPage"
+  ],
+  "resources": [
+    {
+      "ref": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/json/requirements.yaml",
+      "role": "requirements",
+      "format": "application/yaml"
+    }
+  ],
+  "shaclShapes": {},
+  "license": {
+    "name": "OGC License Agreement",
+    "url": "https://www.ogc.org/license"
+  },
+  "dateOfLastChange": "2026-11-10",
+  "schema": {
+    "application/yaml": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/annotated/api/common/part1/requirements/json/schema.yaml",
+    "application/json": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/annotated/api/common/part1/requirements/json/schema.json"
+  },
+  "sourceSchema": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/json/schema.yaml",
+  "ldContext": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/annotated/api/common/part1/requirements/json/context.jsonld",
+  "resolvedSchemaProperties": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/annotated/api/common/part1/requirements/json/resolvedProperties.json",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/json/",
+  "testResources": [
+    {
+      "id": "conf/json/definition",
+      "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/landing-page.json"
+    },
+    {
+      "id": "conf/json/definition-conformance",
+      "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/conformance.json"
+    },
+    {
+      "id": "conf/json/content",
+      "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/landing-page.json"
+    },
+    {
+      "id": "conf/json/content-conformance",
+      "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/conformance.json"
+    },
+    {
+      "id": "conf/json/content-landing-page-no-links",
+      "require-fail": true,
+      "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/landing-page-no-links-fail.json"
+    },
+    {
+      "id": "conf/json/content-conformance-not-a-list",
+      "require-fail": true,
+      "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/conformance-not-a-list-fail.json"
+    }
+  ],
+  "validationPassed": true,
+  "testOutputs": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks/blob/master/build/tests/api/common/part1/requirements/json/",
+  "description": "JSON is a lightweight data-interchange format designed to facilitate structured data interchange between\napplications. JSON is commonly used for Web-based software-to-software interchanges. Most Web developers\nare comfortable with using a JSON-based format. Therefore, support for JSON is recommended for\nmachine-to-machine interactions.\n\n<!-- requirements-class -->\n\n<!-- requirement: json/definition -->\n\n<!-- requirement: json/content -->\n\n<!-- recommendation: json/problem-details -->\n\nAn example JSON Schema for the landing page is available at\n[landingPage.yaml](http://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/landingPage.yaml)\n(see also the [Landing Page schema](bblocks://ogc.api.common.part1.schemas.landingPage) building block).\n\nAn example JSON Problem Details report is available at\n[ExceptionExample.yaml](http://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/examples/ExceptionExample.yaml)\n(see also the [Exception schema](bblocks://ogc.api.common.part1.schemas.exception) building block).\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: JSON payload of the Landing Page requirements class resources\ndescription: '/req/json/content (OGC 19-072): the JSON payload of a Landing Page or\n  Conformance resource SHALL conform with the JSON Schema specified for the resource\n  in the Landing Page Requirements Class, i.e. landingPage.yaml for the Landing Page\n  and confClasses.yaml for the Conformance Declaration. The test resources of the\n  JSON requirements class are validated against this schema.'\nanyOf:\n- $ref: https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/landingPage/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/confClasses/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.common.part1.requirements.json\n  register: https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/register.json\n  version: 1.0.0\n  dateOfLastChange: '2026-11-10'\n",
+  "gitRepository": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks",
+  "gitPath": "_sources/part1/requirements/json"
+}

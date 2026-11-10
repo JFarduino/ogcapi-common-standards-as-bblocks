@@ -1,0 +1,44 @@
+Validation report for ogc.api.common.part1.requirements.json - Requirements Class “JSON”
+Generated 2026-11-10T16:38:36.165053+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using conf-json-content-landing-page-no-links-fail.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD conf-json-content-landing-page-no-links-fail.jsonld created
+Output Turtle conf-json-content-landing-page-no-links-fail.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: {'title': 'Example API Landing Page', 'description': 'Invalid landing page: the required "links" member is missing, so it does not conform to landingPage.yaml'} is not valid under any of the given schemas
+
+Failed validating 'anyOf' in schema:
+    {'$schema': 'https://json-schema.org/draft/2020-12/schema',
+     'title': 'JSON payload of the Landing Page requirements class '
+              'resources',
+     'description': '/req/json/content (OGC 19-072): the JSON payload of a '
+                    'Landing Page or Conformance resource SHALL conform '
+                    'with the JSON Schema specified for the resource in '
+                    'the Landing Page Requirements Class, i.e. '
+                    'landingPage.yaml for the Landing Page and '
+                    'confClasses.yaml for the Conformance Declaration. The '
+                    'test resources of the JSON requirements class are '
+                    'validated against this schema.',
+     'anyOf': [{'$ref': 'https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/landingPage/schema.yaml'},
+               {'$ref': 'https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/confClasses/schema.yaml'}],
+     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.common.part1.requirements.json',
+                            'register': 'https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/register.json',
+                            'version': '1.0.0',
+                            'dateOfLastChange': '2026-11-10'},
+     '$id': 'file:///github/workspace/build/annotated/api/common/part1/requirements/json/schema.yaml'}
+
+On instance:
+    {'title': 'Example API Landing Page',
+     'description': 'Invalid landing page: the required "links" member is '
+                    'missing, so it does not conform to landingPage.yaml'}
+=== End JSON Schema ===
+

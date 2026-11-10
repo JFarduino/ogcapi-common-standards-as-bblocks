@@ -1,0 +1,366 @@
+{
+  "title": "Validation report for ogc.api.common.part1.requirements.json - Requirements Class \u201cJSON\u201d",
+  "bblockName": "Requirements Class \u201cJSON\u201d",
+  "bblockId": "ogc.api.common.part1.requirements.json",
+  "generated": "2026-11-10T16:38:36.260558+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part1/requirements/json/tests/conf-json-definition-landing-page.json",
+        "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/json/tests/conf-json-definition-landing-page.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using conf-json-definition-landing-page.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "conf-json-definition-landing-page.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD conf-json-definition-landing-page.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "conf-json-definition-landing-page.ttl",
+              "size": 2,
+              "isError": false,
+              "message": "Output Turtle conf-json-definition-landing-page.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part1/requirements/json/tests/conf-json-definition-conformance.json",
+        "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/json/tests/conf-json-definition-conformance.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using conf-json-definition-conformance.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "conf-json-definition-conformance.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD conf-json-definition-conformance.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "conf-json-definition-conformance.ttl",
+              "size": 5,
+              "isError": false,
+              "message": "Output Turtle conf-json-definition-conformance.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part1/requirements/json/tests/conf-json-content-landing-page.json",
+        "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/json/tests/conf-json-content-landing-page.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using conf-json-content-landing-page.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "conf-json-content-landing-page.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD conf-json-content-landing-page.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "conf-json-content-landing-page.ttl",
+              "size": 2,
+              "isError": false,
+              "message": "Output Turtle conf-json-content-landing-page.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part1/requirements/json/tests/conf-json-content-conformance.json",
+        "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/json/tests/conf-json-content-conformance.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using conf-json-content-conformance.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "conf-json-content-conformance.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD conf-json-content-conformance.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "conf-json-content-conformance.ttl",
+              "size": 5,
+              "isError": false,
+              "message": "Output Turtle conf-json-content-conformance.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part1/requirements/json/tests/conf-json-content-landing-page-no-links-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/json/tests/conf-json-content-landing-page-no-links-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using conf-json-content-landing-page-no-links-fail.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "conf-json-content-landing-page-no-links-fail.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD conf-json-content-landing-page-no-links-fail.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "conf-json-content-landing-page-no-links-fail.ttl",
+              "size": 2,
+              "isError": false,
+              "message": "Output Turtle conf-json-content-landing-page-no-links-fail.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "{'title': 'Example API Landing Page', 'description': 'Invalid landing page: the required \"links\" member is missing, so it does not conform to landingPage.yaml'} is not valid under any of the given schemas",
+              "isError": true,
+              "message": "ValidationError: {'title': 'Example API Landing Page', 'description': 'Invalid landing page: the required \"links\" member is missing, so it does not conform to landingPage.yaml'} is not valid under any of the given schemas\n\nFailed validating 'anyOf' in schema:\n    {'$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'title': 'JSON payload of the Landing Page requirements class '\n              'resources',\n     'description': '/req/json/content (OGC 19-072): the JSON payload of a '\n                    'Landing Page or Conformance resource SHALL conform '\n                    'with the JSON Schema specified for the resource in '\n                    'the Landing Page Requirements Class, i.e. '\n                    'landingPage.yaml for the Landing Page and '\n                    'confClasses.yaml for the Conformance Declaration. The '\n                    'test resources of the JSON requirements class are '\n                    'validated against this schema.',\n     'anyOf': [{'$ref': 'https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/landingPage/schema.yaml'},\n               {'$ref': 'https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/schemas/confClasses/schema.yaml'}],\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.common.part1.requirements.json',\n                            'register': 'https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/register.json',\n                            'version': '1.0.0',\n                            'dateOfLastChange': '2026-11-10'},\n     '$id': 'file:///github/workspace/build/annotated/api/common/part1/requirements/json/schema.yaml'}\n\nOn instance:\n    {'title': 'Example API Landing Page',\n     'description': 'Invalid landing page: the required \"links\" member is '\n                    'missing, so it does not conform to landingPage.yaml'}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part1/requirements/json/tests/conf-json-content-conformance-not-a-list-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/json/tests/conf-json-content-conformance-not-a-list-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using conf-json-content-conformance-not-a-list-fail.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "conf-json-content-conformance-not-a-list-fail.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD conf-json-content-conformance-not-a-list-fail.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "conf-json-content-conformance-not-a-list-fail.ttl",
+              "size": 1,
+              "isError": false,
+              "message": "Output Turtle conf-json-content-conformance-not-a-list-fail.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core' is not of type 'array'",
+              "isError": true,
+              "message": "ValidationError: 'http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core' is not of type 'array'\n\nFailed validating 'type' in schema[1]['properties']['conformsTo']:\n    {'type': 'array',\n     'items': {'type': 'string',\n               'example': 'http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core'},\n     'x-jsonld-id': 'http://purl.org/dc/terms/conformsTo',\n     'x-jsonld-type': '@id',\n     'x-jsonld-container': '@set'}\n\nOn instance['conformsTo']:\n    'http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core'"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "hasWarnings": false,
+  "counts": {
+    "total": 6,
+    "passed": 6,
+    "failed": 0
+  }
+}

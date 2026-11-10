@@ -1,0 +1,80 @@
+
+
+{
+  "itemIdentifier": "ogc.api.common.part1.requirements.landing-page",
+  "name": "Landing Page Requirements Class",
+  "abstract": "Requirements class \"Landing Page\": the landing page, the API definition and the conformance declaration resources of an OGC Web API.",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "requirements-class",
+  "normative": true,
+  "standardization-target": "Web API",
+  "sources": [
+    {
+      "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Landing Page Requirements Class",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#rc_landing-page-section"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "requirements-class"
+  ],
+  "conformanceClasses": [
+    "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/landing-page"
+  ],
+  "dependsOn": [
+    "ogc.api.common.part1.paths.Conformance",
+    "ogc.api.common.part1.paths.LandingPage",
+    "ogc.api.common.part1.requirements.core",
+    "ogc.api.common.part1.schemas.confClasses",
+    "ogc.api.common.part1.schemas.landingPage"
+  ],
+  "resources": [
+    {
+      "ref": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/landing-page/requirements.yaml",
+      "role": "requirements",
+      "format": "application/yaml"
+    }
+  ],
+  "shaclShapes": {},
+  "license": {
+    "name": "OGC License Agreement",
+    "url": "https://www.ogc.org/license"
+  },
+  "dateOfLastChange": "2026-11-10",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/landing-page/",
+  "testResources": [
+    {
+      "id": "conf/landing-page/root-op",
+      "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/landing-page.json"
+    },
+    {
+      "id": "conf/landing-page/root-success",
+      "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/landing-page.json"
+    },
+    {
+      "id": "conf/landing-page/api-definition-op",
+      "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+    },
+    {
+      "id": "conf/landing-page/api-definition-success",
+      "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+    },
+    {
+      "id": "conf/landing-page/conformance-op",
+      "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/conformance.json"
+    },
+    {
+      "id": "conf/landing-page/conformance-success",
+      "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/conformance.json"
+    }
+  ],
+  "validationPassed": true,
+  "testOutputs": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks/blob/master/build/tests/api/common/part1/requirements/landing-page/",
+  "description": "<!-- requirements-class -->\n\nThe Landing Page Requirements Class of the OGC API \u2014 Common \u2014 Part 1: Core Standard describes how the\nLanding Page and its associated resources are accessed through an OGC conformant Web API.\n\nThe Landing Page resources are introduced in Table 3. The requirements and recommendations applicable\nto these resources are provided in the sections below.\n\n*Table 3 \u2014 Landing Page Resources*\n\n| Resource | HTTP Method | Description |\n|---|---|---|\n| Landing Page | GET | the landing page |\n| API Definition | GET | the API Definition document for this API |\n| Conformance Declaration | GET | the conformance information for this API |\n\n## API landing page\n\nAn OGC Web API has a single landing page on the `{root}` node.\n\nThe purpose of the landing page is to provide clients with a starting point for using the API. Any\nresource exposed through an API can be accessed by following paths or links starting from the landing\npage.\n\nThe landing page includes three metadata elements: title, description, and attribution. These three\nelements describe the API as a whole. Clients can expect to encounter metadata that is more\nresource-specific as they follow links and paths from the landing page.\n\nWhile the three metadata elements are defined as text strings, the attribution element is special.\nSpecifically, the attribution element can contain markup text. Markup allows a text string to import\nimages and format text. The capabilities are only limited by the markup language used. See the\n[example landing page](#sec-B.1) for an example of the use of markup in the attribution element.\n\n### Operation\n\n<!-- requirement: landing-page/root-op -->\n\n### Response\n\n<!-- requirement: landing-page/root-success -->\n\nThe Landing Page returned by this operation is based on the following OpenAPI schema.\n\n```yaml include=https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/landingPage.yaml bblock=ogc.api.common.part1.schemas.landingPage\n```\n\n*Figure 4 \u2014 Landing Page Schema*\n\nIn addition to the required resources, links to additional resources may be included in the Landing\nPage.\n\nExamples of OGC API landing pages are provided in [Annex B.1](#sec-B.1).\n\nA JSON schema for the Landing Page resource can be found on the\n[OGC Schema Repository](http://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/landingPage.yaml).\n\n### Error Situations\n\nSee [Clause 8.2](#sec-8.2) for general guidance.\n\n## API Definition\n\nEvery API implementation should provide an API Definition resource that describes the capabilities\nprovided by that API. This resource can be used by client developers to understand the supported\nservices, by software clients to connect to the server, and by development tools to support the\nimplementation of servers and clients.\n\n### Operation\n\n<!-- requirement: landing-page/api-definition-op -->\n\n<!-- recommendation: landing-page/api-definition-op -->\n\n### Response\n\n<!-- requirement: landing-page/api-definition-success -->\n\n> **NOTE** The -f parameter MAY be used to satisfy this requirement.\n\n<!-- recommendation: landing-page/api-definition-oas -->\n\n### Error Situations\n\nSee [Clause 8.2](#sec-8.2) for general guidance.\n\n## Declaration of Conformance Classes\n\nThe OGC Web API Standards define a collection of modules that can be assembled into a Web API. The first\nquestion a client will ask when accessing one of these APIs is \u201cwhat are you?\u201d In other words, what\nmodules were used to create you? Since implementers have a choice on the modules to use, there is no\nsimple answer. The best that can be done is to provide a list of the modules implemented, a declaration\nof the Conformance Classes.\n\nThe list of Conformance Classes is key to understanding and using an OGC Web API. So it is important that\nthey are easy to access. A simple GET using an easily constructed URI is all that should be required.\nTherefore, the path to the Conformance Declaration is fixed.\n\nEase of access is also supported by the structure of the Conformance Declaration resource. It is a simple\nlist of URIs. This is a structure that requires almost no parsing and little interpretation and is\ndesigned to be accessible to even the simplest client.\n\n### Operation\n\n<!-- requirement: landing-page/conformance-op -->\n\n### Response\n\n<!-- requirement: landing-page/conformance-success -->\n\nThe Conformance Declaration returned by this operation is based on the following OpenAPI schema.\n\n```yaml include=bblocks://ogc.api.common.part1.schemas.confClasses\n```\n\n*Figure 5 \u2014 Conformance Declaration Schema*\n\nA JSON schema for the Landing Page resource can be found on the\n[OGC Schema Repository](http://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/confClasses.yaml).\n\nExamples of OGC Conformance Declarations are provided in [Annex B.2](#sec-B.2).\n\n### Error situations\n\nSee [Clause 8.2](#sec-8.2) for general guidance.\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks",
+  "gitPath": "_sources/part1/requirements/landing-page"
+}

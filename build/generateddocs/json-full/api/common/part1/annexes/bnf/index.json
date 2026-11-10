@@ -1,0 +1,35 @@
+
+
+{
+  "itemIdentifier": "ogc.api.common.part1.annexes.bnf",
+  "name": "Backus-Naur Forms",
+  "abstract": "Annex D of OGC API - Common - Part 1: Core: ABNF for URIs (from IETF RFC 3986).",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "clause",
+  "normative": false,
+  "sources": [
+    {
+      "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Backus-Naur Forms",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#bnf-annex"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "annex"
+  ],
+  "shaclShapes": {},
+  "license": {
+    "name": "OGC License Agreement",
+    "url": "https://www.ogc.org/license"
+  },
+  "dateOfLastChange": "2026-11-10",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/annexes/bnf/",
+  "validationPassed": true,
+  "description": "## BNF for URI\n\nThe following Augmented Backus-Naur Form (ABNF) is from Appendix A of IETF RFC 3986.\n\n```text\nURI           = scheme \":\" hier-part [ \"?\" query ] [ \"#\" fragment ]\n\n  hier-part     = \"//\" authority path-abempty\n               / path-absolute\n               / path-rootless\n               / path-empty\n\n  URI-reference = URI / relative-ref\n\n  absolute-URI  = scheme \":\" hier-part [ \"?\" query ]\n\n  relative-ref  = relative-part [ \"?\" query ] [ \"#\" fragment ]\n\n  relative-part = \"//\" authority path-abempty\n                   / path-absolute\n                   / path-noscheme\n                   / path-empty\n\n  scheme        = ALPHA *( ALPHA / DIGIT / \"+\" / \"-\" / \".\" )\n\n  authority     = [ userinfo \"@\" ] host [ \":\" port ]\n  userinfo      = *( unreserved / pct-encoded / sub-delims / \":\" )\n  host          = IP-literal / IPv4address / reg-name\n  port          = *DIGIT\n\n  IP-literal    = \"[\" ( IPv6address / IPvFuture  ) \"]\"\n\n  IPvFuture     = \"v\" 1*HEXDIG \".\" 1*( unreserved / sub-delims / \":\" )\n\n  IPv6address   =                             6( h16 \":\" ) ls32\n                /                       \"::\" 5( h16 \":\" ) ls32\n                / [               h16 ] \"::\" 4( h16 \":\" ) ls32\n                / [ *1( h16 \":\" ) h16 ] \"::\" 3( h16 \":\" ) ls32\n                / [ *2( h16 \":\" ) h16 ] \"::\" 2( h16 \":\" ) ls32\n                / [ *3( h16 \":\" ) h16 ] \"::\"    h16 \":\"   ls32\n                / [ *4( h16 \":\" ) h16 ] \"::\"              ls32\n                / [ *5( h16 \":\" ) h16 ] \"::\"              h16\n                / [ *6( h16 \":\" ) h16 ] \"::\"\n\n  h16           = 1*4HEXDIG\n  ls32          = ( h16 \":\" h16 ) / IPv4address\n  IPv4address   = dec-octet \".\" dec-octet \".\" dec-octet \".\"\n\n  dec-octet     = DIGIT                 ; 0-9\n                / %x31-39 DIGIT         ; 10-99\n                / \"1\" 2DIGIT            ; 100-199\n                / \"2\" %x30-34 DIGIT     ; 200-249\n                / \"25\" %x30-35          ; 250-255\n\n  reg-name      = *( unreserved / pct-encoded / sub-delims )\n\n  path          = path-abempty    ; begins with \"/\" or is empty\n                / path-absolute   ; begins with \"/\" but not \"//\"\n                / path-noscheme   ; begins with a non-colon segment\n                / path-rootless   ; begins with a segment\n                / path-empty      ; zero characters\n\n  path-abempty  = *( \"/\" segment )\n  path-absolute = \"/\" [ segment-nz *( \"/\" segment ) ]\n  path-noscheme = segment-nz-nc *( \"/\" segment )\n  path-rootless = segment-nz *( \"/\" segment )\n  path-empty    = 0<pchar>\n\n  segment       = *pchar\n  segment-nz    = 1*pchar\n  segment-nz-nc = 1*( unreserved / pct-encoded / sub-delims / \"@\" )\n                ; non-zero-length segment without any colon \":\"\n\n  pchar         = unreserved / pct-encoded / sub-delims / \":\" / \"@\"\n\n  query         = *( pchar / \"/\" / \"?\" )\n\n  fragment      = *( pchar / \"/\" / \"?\" )\n\n  pct-encoded   = \"%\" HEXDIG HEXDIG\n\n  unreserved    = ALPHA / DIGIT / \"-\" / \".\" / \"_\" / \"~\"\n  reserved      = gen-delims / sub-delims\n  gen-delims    = \":\" / \"/\" / \"?\" / \"#\" / \"[\" / \"]\" / \"@\"\n  sub-delims    = \"!\" / \"$\" / \"&\" / \"'\" / \"(\" / \")\"\n                / \"*\" / \"+\" / \",\" / \";\" / \"=\"\n```\n\n*Figure D.1 \u2014 Backus-Naur Form for URI*\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks",
+  "gitPath": "_sources/part1/annexes/bnf"
+}

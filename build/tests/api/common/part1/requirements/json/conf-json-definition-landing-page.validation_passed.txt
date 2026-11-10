@@ -1,0 +1,13 @@
+Validation report for ogc.api.common.part1.requirements.json - Requirements Class “JSON”
+Generated 2026-11-10T16:38:35.208018+00:00
+=== Files ===
+Using conf-json-definition-landing-page.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD conf-json-definition-landing-page.jsonld created
+Output Turtle conf-json-definition-landing-page.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

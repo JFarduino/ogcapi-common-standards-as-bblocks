@@ -1,0 +1,42 @@
+
+
+{
+  "itemIdentifier": "ogc.api.common.part1.clauses.references",
+  "name": "Normative references",
+  "abstract": "Clause 3 of OGC API - Common - Part 1: Core: normative references (the informative ones are in the Bibliography).",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "references",
+  "normative": true,
+  "sources": [
+    {
+      "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Normative references",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#_755e56fb-0099-46f0-9932-c8ee0d7b2278"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "clause"
+  ],
+  "resources": [
+    {
+      "ref": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/clauses/references/references.yaml",
+      "role": "references",
+      "format": "application/yaml"
+    }
+  ],
+  "shaclShapes": {},
+  "license": {
+    "name": "OGC License Agreement",
+    "url": "https://www.ogc.org/license"
+  },
+  "dateOfLastChange": "2026-11-10",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/clauses/references/",
+  "validationPassed": true,
+  "description": "The following documents are referred to in the text in such a way that some or all of their content\nconstitutes requirements of this document. For dated references, only the edition cited applies. For\nundated references, the latest edition of the referenced document (including any amendments) applies.\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks",
+  "gitPath": "_sources/part1/clauses/references"
+}

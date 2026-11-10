@@ -1,0 +1,35 @@
+
+
+{
+  "itemIdentifier": "ogc.api.common.part1.annexes.ats",
+  "name": "Abstract Test Suite",
+  "abstract": "Annex A of OGC API - Common - Part 1: Core: conformance classes and abstract tests. The tests are defined in the requirements classes (abstract-tests); this block lays out the annex.",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "clause",
+  "normative": true,
+  "sources": [
+    {
+      "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Abstract Test Suite",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#_abstract_test_suite_normative"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "annex"
+  ],
+  "shaclShapes": {},
+  "license": {
+    "name": "OGC License Agreement",
+    "url": "https://www.ogc.org/license"
+  },
+  "dateOfLastChange": "2026-11-10",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/annexes/ats/",
+  "validationPassed": true,
+  "description": "# Introduction\n\nOGC Web APIs are not Web Services in the traditional sense. Rather, they define the behavior and\ncontent of a set of Resources exposed through a Web Application Programming Interface (Web API).\nTherefore, an API may expose resources in addition to those defined by the standard. A test engine\nmust be able to traverse the API, identify and validate test points, and ignore resource paths that\nare not to be tested.\n\n# Conformance Class Core\n\n<!-- conformance-class: ogc.api.common.part1.requirements.core -->\n\n## HTTP\n\n<!-- abstract-test: core/http -->\n\n## Query Parameters\n\n<!-- abstract-test: core/query-param-name-unknown -->\n\n> **NOTE 1** The parameter name chosen should not fall within the range allowed by\n> `/per/core/query-param-name-specified` or `/per/core/query-param-name-tolerance`.\n\n<!-- abstract-test: core/query-param-value-invalid -->\n\n> **NOTE 2** The parameter values chosen should not fall within the range allowed by\n> `/per/core/query-param-value-specified` or `/per/core/query-param-value-tolerance`.\n\n<!-- abstract-test: core/query-param-capitalization -->\n\n<!-- abstract-test: core/query-param-list-delimiter -->\n\n<!-- abstract-test: core/query-param-list-escape -->\n\n<!-- abstract-test: core/query-param-list-empty -->\n\n<!-- abstract-test: core/query-param-value-boolean -->\n\n<!-- abstract-test: core/query-param-value-integer -->\n\n<!-- abstract-test: core/query-param-value-decimal -->\n\n<!-- abstract-test: core/query-param-value-double -->\n\n# Conformance Class Landing Page\n\n<!-- conformance-class: ogc.api.common.part1.requirements.landing-page -->\n\n## Landing Page\n\n<!-- abstract-test: landing-page/root-op -->\n\n<!-- abstract-test: landing-page/root-success -->\n\n## API Definition\n\n<!-- abstract-test: landing-page/api-definition-op -->\n\n<!-- abstract-test: landing-page/api-definition-success -->\n\n## Conformance Declaration\n\n<!-- abstract-test: landing-page/conformance-op -->\n\n<!-- abstract-test: landing-page/conformance-success -->\n\n# Conformance Class JSON\n\n<!-- conformance-class: ogc.api.common.part1.requirements.json -->\n\n## JSON Definition\n\n<!-- abstract-test: json/definition -->\n\n## JSON Content\n\n<!-- abstract-test: json/content -->\n\n# Conformance Class HTML\n\n<!-- conformance-class: ogc.api.common.part1.requirements.html -->\n\n## HTML Definition\n\n<!-- abstract-test: html/definition -->\n\n## HTML Content\n\n<!-- abstract-test: html/content -->\n\n# Conformance Class OpenAPI 3.0\n\n<!-- conformance-class: ogc.api.common.part1.requirements.oas30 -->\n\n<!-- abstract-test: oas30/completeness -->\n\n<!-- abstract-test: oas30/exceptions-codes -->\n\n<!-- abstract-test: oas30/oas-definition-1 -->\n\n<!-- abstract-test: oas30/oas-definition-2 -->\n\n<!-- abstract-test: oas30/oas-impl -->\n\n<!-- abstract-test: oas30/security -->\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks",
+  "gitPath": "_sources/part1/annexes/ats"
+}

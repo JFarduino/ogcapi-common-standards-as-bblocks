@@ -1,0 +1,8 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+
+[] dct:conformsTo <http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core>,
+        <http://www.opengis.net/spec/ogcapi-common-1/1.0/req/html>,
+        <http://www.opengis.net/spec/ogcapi-common-1/1.0/req/json>,
+        <http://www.opengis.net/spec/ogcapi-common-1/1.0/req/landing-page>,
+        <http://www.opengis.net/spec/ogcapi-common-1/1.0/req/oas30> .
+

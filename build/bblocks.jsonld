@@ -1,0 +1,2182 @@
+{
+  "@context": [
+    {
+      "@base": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks"
+    },
+    {
+      "bblocks": "https://www.opengis.net/def/bblocks/",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "dct": "http://purl.org/dc/terms/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "prof": "http://www.w3.org/ns/dx/prof/",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "modspec": "http://www.opengis.net/def/ont/modspec/",
+      "void": "http://rdfs.org/ns/void#",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "role": "http://www.w3.org/ns/dx/prof/role/",
+      "shacl": "https://www.w3.org/TR/shacl/",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "baseURL": "@id",
+      "name": "rdfs:label",
+      "abstract": {
+        "@id": "dct:abstract",
+        "@type": "https://www.w3.org/ns/iana/media-types/text/markdown"
+      },
+      "description": {
+        "@id": "dct:description",
+        "@type": "https://www.w3.org/ns/iana/media-types/text/markdown"
+      },
+      "status": {
+        "@id": "bblocks:status",
+        "@type": "@id",
+        "@context": {
+          "@base": "http://www.opengis.net/def/status/"
+        }
+      },
+      "dateTimeAddition": {
+        "@id": "dct:created",
+        "@type": "xsd:dateTime"
+      },
+      "version": "dct:hasVersion",
+      "dateOfLastChange": {
+        "@id": "dct:modified",
+        "@type": "xsd:date"
+      },
+      "modified": {
+        "@id": "dct:modified",
+        "@type": "xsd:dateTime"
+      },
+      "scope": {
+        "@id": "bblocks:scope",
+        "@type": "@id",
+        "@context": {
+          "@base": "http://www.opengis.net/def/bblocks/scope/"
+        }
+      },
+      "sources": {
+        "@id": "dct:source",
+        "@context": {
+          "title": "rdfs:label",
+          "link": "@id"
+        }
+      },
+      "license": {
+        "@id": "dct:license",
+        "@context": {
+          "name": "rdfs:label",
+          "url": {
+            "@id": "rdfs:seeAlso",
+            "@type": "@id"
+          }
+        }
+      },
+      "schema": {
+        "@id": "prof:hasResource",
+        "@type": "@id"
+      },
+      "ldContext": {
+        "@id": "prof:hasResource",
+        "@type": "@id"
+      },
+      "sourceLdContext": {
+        "@id": "bblocks:hasSourceJsonLdContext",
+        "@type": "@id"
+      },
+      "documentation": {
+        "@id": "dct:description",
+        "@type": "@id",
+        "@container": "@index",
+        "@index": "dct:identifier",
+        "@context": {
+          "mediatype": "dct:format",
+          "url": {
+            "@id": "rdfs:isDefinedBy",
+            "@type": "@id"
+          }
+        }
+      },
+      "rdfs:isDefinedBy": {
+        "@type": "@id"
+      },
+      "hasConcepts": {
+        "@reverse": "skos:inScheme"
+      },
+      "dependsOn": {
+        "@id": "bblocks:dependsOn",
+        "@type": "@id"
+      },
+      "isProfileOf": {
+        "@id": "prof:isProfileOf",
+        "@type": "@id"
+      },
+      "isDescribedBy": {
+        "@id": "http://www.iana.org/assignments/relation/describedby",
+        "@type": "@id"
+      },
+      "hasFormat": {
+        "@id": "dct:hasFormat",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdfs:seeAlso",
+        "@type": "@id"
+      },
+      "tags": "dcat:keyword",
+      "shaclShapes": {
+        "@id": "prof:hasResource",
+        "@type": "@id"
+      },
+      "validationReport": {
+        "@id": "bblocks:hasValidationReport",
+        "@type": "@id"
+      },
+      "validationPassed": "bblocks:validationPassed",
+      "imports": {
+        "@id": "owl:imports",
+        "@type": "@id"
+      },
+      "conformanceClasses": {
+        "@id": "modspec:class",
+        "@type": "@id"
+      },
+      "requirementClasses": {
+        "@id": "modspec:requirementsClass",
+        "@type": "@id"
+      },
+      "sparqlEndpoint": {
+        "@id": "void:sparqlEndpoint",
+        "@type": "@id"
+      },
+      "viewerURL": {
+        "@id": "foaf:homepage",
+        "@type": "@id"
+      },
+      "dct:conformsTo": {
+        "@type": "@id"
+      },
+      "prof:hasRole": {
+        "@type": "@id"
+      },
+      "prof:hasArtifact": {
+        "@type": "@id"
+      },
+      "rdfs:seeAlso": {
+        "@type": "@id"
+      },
+      "ontology": {
+        "@id": "prof:hasResource",
+        "@type": "@id"
+      },
+      "rdfData": {
+        "@id": "prof:hasResource",
+        "@type": "@id"
+      },
+      "links": {
+        "@id": "prof:hasResource",
+        "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/context.jsonld"
+      },
+      "concept": {
+        "@id": "skos:closeMatch",
+        "@type": "@id"
+      },
+      "rdfType": {
+        "@id": "rdfs:subClassOf",
+        "@type": "@id"
+      },
+      "resources": {
+        "@id": "prof:hasResource",
+        "@context": {
+          "role": {
+            "@id": "prof:hasRole",
+            "@type": "@id"
+          },
+          "constraints": "role:constraints",
+          "example": "role:example",
+          "guidance": "role:guidance",
+          "mapping": "role:mapping",
+          "schema": "role:schema",
+          "specification": "role:specification",
+          "validation": "role:validation",
+          "vocabulary": "role:vocabulary",
+          "data": "role:data",
+          "ref": {
+            "@id": "prof:hasArtifact",
+            "@type": "@id"
+          },
+          "format": "dct:format",
+          "conformsTo": {
+            "@id": "dct:conformsTo",
+            "@type": "@id"
+          }
+        }
+      }
+    }
+  ],
+  "metaRegistry": "https://w3id.org/ogc/bblocks/meta-register.json",
+  "name": "Building Blocks - OGC API - Common - Part 1 (Standard as Building Blocks)",
+  "abstract": "OGC API \u2014 Common \u2014 Part 1: Core (OGC 19-072) authored as Building Blocks: every clause,\nrequirements class, term, reference and annex of the Standard is a Building Block, and the\nstandards document is generated from them.\n",
+  "description": "This repository contains the Building Blocks for\n[OGC API \u2014 Common \u2014 Part 1: Core](https://docs.ogc.org/is/19-072/19-072.html) (OGC 19-072, version 1.0.0),\nfollowing the \"OGC Standards as Building Blocks\" approach: normative requirements, abstract tests,\ntest resources and prose are co-located in Building Blocks, and the HTML standards document is\ngenerated from them by [bblocks-specgen](https://github.com/ogcincubator/bblocks-specgen)\n(see `standards.yaml`).\n\nThe requirements reference the reusable OGC API \u2014 Common components (schemas, paths, responses)\npublished in the [OGC API \u2014 Common Building Blocks register](https://ogcincubator.github.io/bblocks-ogcapi-common/).\n",
+  "modified": "2026-11-10T16:38:26.482447",
+  "tooling": {
+    "bblocks-postprocess": {
+      "commitId": "\"2deb5c60331691186d997e4f6ae9aab18b548ce5",
+      "shortCommitId": "\"2deb5c",
+      "date": "2026-11-09T12:20:47+00:00\""
+    }
+  },
+  "gitRepository": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks",
+  "gitHubRepository": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks/blob/master/",
+  "baseURL": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/",
+  "viewerURL": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/",
+  "license": {
+    "name": "OGC License Agreement",
+    "url": "https://www.ogc.org/license"
+  },
+  "validationReport": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/tests/report.html",
+  "validationReportJson": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/tests/report.json",
+  "imports": [
+    "https://opengeospatial.github.io/bblocks/register.json",
+    "https://ogcincubator.github.io/bblocks-ogcapi-common/build/register.json"
+  ],
+  "buildPlugins": [
+    {
+      "classes": [
+        "standard_gen.plugin.SpecgenBuildPlugin"
+      ],
+      "pip": [
+        "bblocks-specgen @ git+https://github.com/JFarduino/bblocks-specgen@feature/update"
+      ],
+      "urls": [
+        "https://github.com/JFarduino/bblocks-specgen"
+      ]
+    }
+  ],
+  "remoteCacheDir": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/annotated/_cache",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/register.json",
+      "type": "application/json",
+      "title": "This Building Blocks Register in JSON format"
+    },
+    {
+      "rel": "self",
+      "href": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/bblocks.ttl",
+      "type": "text/turtle",
+      "title": "This Building Blocks Register in RDF Turtle format"
+    },
+    {
+      "rel": "self",
+      "href": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/bblocks.jsonld",
+      "type": "application/ld+json",
+      "title": "This Building Blocks Register in JSON-LD format"
+    }
+  ],
+  "standards": [
+    {
+      "id": "part1",
+      "title": "OGC API - Common - Part 1: Core",
+      "version": "1.0.0",
+      "status": "Approved",
+      "doc-number": "OGC 19-072",
+      "path": "build/standards/part1",
+      "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/standards/part1/"
+    }
+  ],
+  "@type": [
+    "skos:ConceptScheme",
+    "dcat:Catalog",
+    "bblocks:BBlocksRegister"
+  ],
+  "skos:prefLabel": "Building Blocks - OGC API - Common - Part 1 (Standard as Building Blocks)",
+  "hasConcepts": [
+    {
+      "itemIdentifier": "ogc.api.common.part1.annexes.ats",
+      "name": "Abstract Test Suite",
+      "abstract": "Annex A of OGC API - Common - Part 1: Core: conformance classes and abstract tests. The tests are defined in the requirements classes (abstract-tests); this block lays out the annex.",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "clause",
+      "normative": true,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Abstract Test Suite",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#_abstract_test_suite_normative"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "annex"
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/annexes/ats/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/annexes/ats/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/annexes/ats/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.annexes.ats"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.annexes.ats",
+      "@type": [
+        "bblocks:Clause",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Abstract Test Suite",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.annexes.bibliography",
+      "name": "Bibliography",
+      "abstract": "Bibliography of OGC API - Common - Part 1: Core (informative references).",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "references",
+      "normative": false,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Bibliography",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#_d0c78460-9a13-4eaa-9c13-9bbfd3fedbc7"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "bibliography"
+      ],
+      "resources": [
+        {
+          "ref": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/annexes/bibliography/references.yaml",
+          "role": "references",
+          "format": "application/yaml"
+        }
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/annexes/bibliography/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/annexes/bibliography/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/annexes/bibliography/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.annexes.bibliography"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.annexes.bibliography",
+      "@type": [
+        "bblocks:References",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Bibliography",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.annexes.bnf",
+      "name": "Backus-Naur Forms",
+      "abstract": "Annex D of OGC API - Common - Part 1: Core: ABNF for URIs (from IETF RFC 3986).",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "clause",
+      "normative": false,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Backus-Naur Forms",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#bnf-annex"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "annex"
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/annexes/bnf/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/annexes/bnf/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/annexes/bnf/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.annexes.bnf"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.annexes.bnf",
+      "@type": [
+        "bblocks:Clause",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Backus-Naur Forms",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.annexes.examples",
+      "name": "Examples (Informative)",
+      "abstract": "Annex B of OGC API - Common - Part 1: Core: example landing pages, conformance declarations, API definitions and service metadata.",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "clause",
+      "normative": false,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Examples (Informative)",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#_examples_informative"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "annex"
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/annexes/examples/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/annexes/examples/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/annexes/examples/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.annexes.examples"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.annexes.examples",
+      "@type": [
+        "bblocks:Clause",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Examples (Informative)",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.annexes.glossary",
+      "name": "Glossary",
+      "abstract": "Annex C of OGC API - Common - Part 1: Core: glossary of ModSpec terms.",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "clause",
+      "normative": false,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Glossary",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#Glossary"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "annex"
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/annexes/glossary/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/annexes/glossary/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/annexes/glossary/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.annexes.glossary"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.annexes.glossary",
+      "@type": [
+        "bblocks:Clause",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Glossary",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.annexes.revision-history",
+      "name": "Revision History",
+      "abstract": "Annex F of OGC API - Common - Part 1: Core: revision history.",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "clause",
+      "normative": false,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Revision History",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#_revision_history"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "annex"
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/annexes/revision-history/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/annexes/revision-history/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/annexes/revision-history/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.annexes.revision-history"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.annexes.revision-history",
+      "@type": [
+        "bblocks:Clause",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Revision History",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.annexes.web-api-guidelines",
+      "name": "OGC Web API Guidelines",
+      "abstract": "Annex E of OGC API - Common - Part 1: Core: how the Standard addresses the OGC Web API Guidelines.",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "clause",
+      "normative": false,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 OGC Web API Guidelines",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#_ogc_web_api_guidelines"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "annex"
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/annexes/web-api-guidelines/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/annexes/web-api-guidelines/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/annexes/web-api-guidelines/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.annexes.web-api-guidelines"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.annexes.web-api-guidelines",
+      "@type": [
+        "bblocks:Clause",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "OGC Web API Guidelines",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.clauses.abbreviated-terms",
+      "name": "Abbreviated terms",
+      "abstract": "Clause 5 of OGC API - Common - Part 1: Core: abbreviated terms.",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "clause",
+      "normative": true,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Abbreviated terms",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#_abbreviated_terms"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "clause"
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/clauses/abbreviated-terms/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/clauses/abbreviated-terms/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/clauses/abbreviated-terms/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.clauses.abbreviated-terms"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.clauses.abbreviated-terms",
+      "@type": [
+        "bblocks:Clause",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Abbreviated terms",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.clauses.conformance",
+      "name": "Conformance",
+      "abstract": "Clause 2 of OGC API - Common - Part 1: Core: conformance classes defined by the Standard and how conformance is tested.",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "clause",
+      "normative": true,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Conformance",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#_conformance"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "clause"
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/clauses/conformance/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/clauses/conformance/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/clauses/conformance/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.clauses.conformance"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.clauses.conformance",
+      "@type": [
+        "bblocks:Clause",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Conformance",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.clauses.conventions",
+      "name": "Conventions",
+      "abstract": "Clause 6 of OGC API - Common - Part 1: Core: Web API fundamentals, identifiers, links, link relations, use of HTTPS and API definitions.",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "clause",
+      "normative": true,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Conventions",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#_conventions"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "clause"
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/clauses/conventions/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/clauses/conventions/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/clauses/conventions/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.clauses.conventions"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.clauses.conventions",
+      "@type": [
+        "bblocks:Clause",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Conventions",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.clauses.encodings",
+      "name": "Encoding Requirements Classes",
+      "abstract": "Clause 10 of OGC API - Common - Part 1: Core: overview of the HTML and JSON encoding requirements classes, which are its subclauses 10.2 and 10.3.",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "clause",
+      "normative": true,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Encoding Requirements Classes",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#rc_encoding-section"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "clause"
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/clauses/encodings/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/clauses/encodings/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/clauses/encodings/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.clauses.encodings"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.clauses.encodings",
+      "@type": [
+        "bblocks:Clause",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Encoding Requirements Classes",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.clauses.media-types",
+      "name": "Media Types",
+      "abstract": "Clause 12 of OGC API - Common - Part 1: Core: media types for responses, OpenAPI definitions and Problem Details reports.",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "clause",
+      "normative": true,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Media Types",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#mediatypes-section"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "clause"
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/clauses/media-types/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/clauses/media-types/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/clauses/media-types/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.clauses.media-types"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.clauses.media-types",
+      "@type": [
+        "bblocks:Clause",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Media Types",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.clauses.overview",
+      "name": "Overview",
+      "abstract": "Clause 7 of OGC API - Common - Part 1: Core: evolution from OGC Web Services, modular APIs and the ways clients use OGC APIs.",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "clause",
+      "normative": true,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Overview",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#overview"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "clause"
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/clauses/overview/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/clauses/overview/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/clauses/overview/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.clauses.overview"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.clauses.overview",
+      "@type": [
+        "bblocks:Clause",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Overview",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.clauses.references",
+      "name": "Normative references",
+      "abstract": "Clause 3 of OGC API - Common - Part 1: Core: normative references (the informative ones are in the Bibliography).",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "references",
+      "normative": true,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Normative references",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#_755e56fb-0099-46f0-9932-c8ee0d7b2278"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "clause"
+      ],
+      "resources": [
+        {
+          "ref": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/clauses/references/references.yaml",
+          "role": "references",
+          "format": "application/yaml"
+        }
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/clauses/references/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/clauses/references/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/clauses/references/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.clauses.references"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.clauses.references",
+      "@type": [
+        "bblocks:References",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Normative references",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.clauses.scope",
+      "name": "Scope",
+      "abstract": "Clause 1 of OGC API - Common - Part 1: Core: the scope of the Standard.",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "clause",
+      "normative": true,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Scope",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#_scope"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "clause"
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/clauses/scope/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/clauses/scope/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/clauses/scope/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.clauses.scope"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.clauses.scope",
+      "@type": [
+        "bblocks:Clause",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Scope",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.clauses.terms",
+      "name": "Terms and definitions",
+      "abstract": "Clause 4 of OGC API - Common - Part 1: Core: terms and definitions.",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "terms",
+      "normative": true,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Terms and definitions",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#_terms_and_definitions"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "clause"
+      ],
+      "resources": [
+        {
+          "ref": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/clauses/terms/terms.yaml",
+          "role": "terms",
+          "format": "application/yaml"
+        }
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/clauses/terms/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/clauses/terms/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/clauses/terms/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.clauses.terms"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.clauses.terms",
+      "@type": [
+        "bblocks:Terms",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Terms and definitions",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.preface.preface",
+      "name": "Preface",
+      "abstract": "Preface of OGC API - Common - Part 1: Core (preface section).",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "clause",
+      "normative": false,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Preface",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#preface-section"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "preface"
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/preface/preface/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/preface/preface/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/preface/preface/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.preface.preface"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.preface.preface",
+      "@type": [
+        "bblocks:Clause",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Preface",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.preface.security-considerations",
+      "name": "Security considerations",
+      "abstract": "Security considerations of OGC API - Common - Part 1: Core (preface section).",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "clause",
+      "normative": false,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Security considerations",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#security-considerations-section"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "preface"
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/preface/security-considerations/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/preface/security-considerations/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/preface/security-considerations/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.preface.security-considerations"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.preface.security-considerations",
+      "@type": [
+        "bblocks:Clause",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Security considerations",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.preface.submitters",
+      "name": "Submitters",
+      "abstract": "Submitters of OGC API - Common - Part 1: Core (preface section).",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "clause",
+      "normative": false,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Submitters",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#submitters-section"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "preface"
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/preface/submitters/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/preface/submitters/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/preface/submitters/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.preface.submitters"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.preface.submitters",
+      "@type": [
+        "bblocks:Clause",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Submitters",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.preface.submitting-organizations",
+      "name": "Submitting Organizations",
+      "abstract": "Submitting Organizations of OGC API - Common - Part 1: Core (preface section).",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "clause",
+      "normative": false,
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Submitting Organizations",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#_f5459b02-6a6f-4114-9239-15bc3e0dfd87"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "preface"
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/preface/submitting-organizations/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/preface/submitting-organizations/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/preface/submitting-organizations/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.preface.submitting-organizations"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.preface.submitting-organizations",
+      "@type": [
+        "bblocks:Clause",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Submitting Organizations",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.requirements.core",
+      "name": "Core Requirements Class",
+      "abstract": "Requirements class \"Core\": protocol-level conventions applicable to all OGC Web APIs - use of HTTP 1.1, HTTP status codes, query parameter names and values, web caching, cross-origin requests, string internationalization, resource encodings and parameter encoding.",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "requirements-class",
+      "normative": true,
+      "standardization-target": "Web API",
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Core Requirements Class",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#rc_core-section"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "requirements-class"
+      ],
+      "conformanceClasses": [
+        "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.api.common.part1.schemas.queryParamValueBoolean",
+        "bblocks://ogc.api.common.part1.schemas.queryParamValueDecimal",
+        "bblocks://ogc.api.common.part1.schemas.queryParamValueDouble",
+        "bblocks://ogc.api.common.part1.schemas.queryParamValueInteger",
+        "bblocks://ogc.api.common.part1.schemas.queryParamValueList"
+      ],
+      "resources": [
+        {
+          "ref": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/core/requirements.yaml",
+          "role": "requirements",
+          "format": "application/yaml"
+        }
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/core/",
+      "testResources": [
+        {
+          "id": "conf/core/http",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        },
+        {
+          "id": "conf/core/query-param-name-unknown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        },
+        {
+          "id": "conf/core/query-param-value-invalid",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        },
+        {
+          "id": "conf/core/query-param-capitalization",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        },
+        {
+          "id": "conf/core/query-param-list-delimiter",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        },
+        {
+          "id": "conf/core/query-param-list-escape",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        },
+        {
+          "id": "conf/core/query-param-list-empty",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        },
+        {
+          "id": "conf/core/query-param-value-boolean",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        },
+        {
+          "id": "conf/core/query-param-value-integer",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        },
+        {
+          "id": "conf/core/query-param-value-decimal",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        },
+        {
+          "id": "conf/core/query-param-value-double",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        }
+      ],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks/blob/master/build/tests/api/common/part1/requirements/core/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/requirements/core/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/requirements/core/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.requirements.core"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.requirements.core",
+      "@type": [
+        "bblocks:Requirements-class",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Core Requirements Class",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.requirements.landing-page",
+      "name": "Landing Page Requirements Class",
+      "abstract": "Requirements class \"Landing Page\": the landing page, the API definition and the conformance declaration resources of an OGC Web API.",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "requirements-class",
+      "normative": true,
+      "standardization-target": "Web API",
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Landing Page Requirements Class",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#rc_landing-page-section"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "requirements-class"
+      ],
+      "conformanceClasses": [
+        "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/landing-page"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.api.common.part1.paths.Conformance",
+        "bblocks://ogc.api.common.part1.paths.LandingPage",
+        "bblocks://ogc.api.common.part1.requirements.core",
+        "bblocks://ogc.api.common.part1.schemas.confClasses",
+        "bblocks://ogc.api.common.part1.schemas.landingPage"
+      ],
+      "resources": [
+        {
+          "ref": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/landing-page/requirements.yaml",
+          "role": "requirements",
+          "format": "application/yaml"
+        }
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/landing-page/",
+      "testResources": [
+        {
+          "id": "conf/landing-page/root-op",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/landing-page.json"
+        },
+        {
+          "id": "conf/landing-page/root-success",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/landing-page.json"
+        },
+        {
+          "id": "conf/landing-page/api-definition-op",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        },
+        {
+          "id": "conf/landing-page/api-definition-success",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        },
+        {
+          "id": "conf/landing-page/conformance-op",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/conformance.json"
+        },
+        {
+          "id": "conf/landing-page/conformance-success",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/conformance.json"
+        }
+      ],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks/blob/master/build/tests/api/common/part1/requirements/landing-page/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/requirements/landing-page/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/requirements/landing-page/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.requirements.landing-page"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.requirements.landing-page",
+      "@type": [
+        "bblocks:Requirements-class",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Landing Page Requirements Class",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.requirements.html",
+      "name": "Requirements Class \u201cHTML\u201d",
+      "abstract": "Encoding requirements class \"HTML\": HTML 5 representations of the Landing Page and Conformance resources.",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "requirements-class",
+      "normative": true,
+      "standardization-target": "Web API",
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Requirements Class \u201cHTML\u201d",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#rc_html-section"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "requirements-class"
+      ],
+      "conformanceClasses": [
+        "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/html"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.api.common.part1.requirements.core",
+        "bblocks://ogc.api.common.part1.requirements.landing-page"
+      ],
+      "resources": [
+        {
+          "ref": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/html/requirements.yaml",
+          "role": "requirements",
+          "format": "application/yaml"
+        }
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/html/",
+      "testResources": [
+        {
+          "id": "conf/html/definition",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/landing-page.html"
+        },
+        {
+          "id": "conf/html/content",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/landing-page.html"
+        }
+      ],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/requirements/html/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/requirements/html/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.requirements.html"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.requirements.html",
+      "@type": [
+        "bblocks:Requirements-class",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Requirements Class \u201cHTML\u201d",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.requirements.json",
+      "name": "Requirements Class \u201cJSON\u201d",
+      "abstract": "Encoding requirements class \"JSON\": JSON representations of the Landing Page and Conformance resources. The schema of this building block is the JSON payload of these resources, so that the test resources of the class are validated against it.",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "requirements-class",
+      "normative": true,
+      "standardization-target": "Web API",
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Requirements Class \u201cJSON\u201d",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#rc_json-section"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "requirements-class"
+      ],
+      "conformanceClasses": [
+        "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/json"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.api.common.part1.requirements.core",
+        "bblocks://ogc.api.common.part1.requirements.landing-page",
+        "bblocks://ogc.api.common.part1.schemas.confClasses",
+        "bblocks://ogc.api.common.part1.schemas.landingPage"
+      ],
+      "resources": [
+        {
+          "ref": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/json/requirements.yaml",
+          "role": "requirements",
+          "format": "application/yaml"
+        }
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "schema": [
+        {
+          "prof:hasArtifact": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/annotated/api/common/part1/requirements/json/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/annotated/api/common/part1/requirements/json/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/json/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/annotated/api/common/part1/requirements/json/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/annotated/api/common/part1/requirements/json/resolvedProperties.json",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/json/",
+      "testResources": [
+        {
+          "id": "conf/json/definition",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/landing-page.json"
+        },
+        {
+          "id": "conf/json/definition-conformance",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/conformance.json"
+        },
+        {
+          "id": "conf/json/content",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/landing-page.json"
+        },
+        {
+          "id": "conf/json/content-conformance",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/conformance.json"
+        },
+        {
+          "id": "conf/json/content-landing-page-no-links",
+          "require-fail": true,
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/landing-page-no-links-fail.json"
+        },
+        {
+          "id": "conf/json/content-conformance-not-a-list",
+          "require-fail": true,
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/conformance-not-a-list-fail.json"
+        }
+      ],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks/blob/master/build/tests/api/common/part1/requirements/json/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/requirements/json/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/requirements/json/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.requirements.json"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.requirements.json",
+      "@type": [
+        "bblocks:Requirements-class",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Requirements Class \u201cJSON\u201d",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.api.common.part1.requirements.oas30",
+      "name": "OpenAPI 3.0 Requirements Class",
+      "abstract": "Requirements class \"OpenAPI 3.0\": requirements for APIs that are self-documented using an OpenAPI 3.0 definition.",
+      "status": "stable",
+      "dateTimeAddition": "2026-11-10T00:00:00Z",
+      "version": "1.0.0",
+      "itemClass": "requirements-class",
+      "normative": true,
+      "standardization-target": "Web API",
+      "sources": [
+        {
+          "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 OpenAPI 3.0 Requirements Class",
+          "link": "https://docs.ogc.org/is/19-072/19-072.html#rc_oas30-section"
+        }
+      ],
+      "tags": [
+        "ogcapi-common",
+        "standard",
+        "requirements-class"
+      ],
+      "conformanceClasses": [
+        "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/oas30"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.api.common.part1.requirements.core",
+        "bblocks://ogc.api.common.part1.requirements.landing-page",
+        "bblocks://ogc.api.common.part1.responses.Exception"
+      ],
+      "resources": [
+        {
+          "ref": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/oas30/requirements.yaml",
+          "role": "requirements",
+          "format": "application/yaml"
+        }
+      ],
+      "shaclShapes": null,
+      "license": {
+        "name": "OGC License Agreement",
+        "url": "https://www.ogc.org/license"
+      },
+      "dateOfLastChange": "2026-11-10",
+      "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/requirements/oas30/",
+      "testResources": [
+        {
+          "id": "conf/oas30/oas-definition-1",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        },
+        {
+          "id": "conf/oas30/oas-definition-2",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        },
+        {
+          "id": "conf/oas30/oas-impl",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        },
+        {
+          "id": "conf/oas30/completeness",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        },
+        {
+          "id": "conf/oas30/exceptions-codes",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        },
+        {
+          "id": "conf/oas30/security",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/test-resources/api-definition.yaml"
+        }
+      ],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks/blob/master/build/tests/api/common/part1/requirements/oas30/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/markdown/api/common/part1/requirements/oas30/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/build/generateddocs/json-full/api/common/part1/requirements/oas30/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/bblock/ogc.api.common.part1.requirements.oas30"
+        }
+      },
+      "@id": "bblocks://ogc.api.common.part1.requirements.oas30",
+      "@type": [
+        "bblocks:Requirements-class",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "OpenAPI 3.0 Requirements Class",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/"
+      }
+    }
+  ],
+  "skos:hasTopConcept": [
+    {
+      "@id": "bblocks://ogc.api.common.part1.annexes.ats"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.annexes.bibliography"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.annexes.bnf"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.annexes.examples"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.annexes.glossary"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.annexes.revision-history"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.annexes.web-api-guidelines"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.clauses.abbreviated-terms"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.clauses.conformance"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.clauses.conventions"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.clauses.encodings"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.clauses.media-types"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.clauses.overview"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.clauses.references"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.clauses.scope"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.clauses.terms"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.preface.preface"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.preface.security-considerations"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.preface.submitters"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.preface.submitting-organizations"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.requirements.core"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.requirements.landing-page"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.requirements.html"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.requirements.json"
+    },
+    {
+      "@id": "bblocks://ogc.api.common.part1.requirements.oas30"
+    }
+  ]
+}

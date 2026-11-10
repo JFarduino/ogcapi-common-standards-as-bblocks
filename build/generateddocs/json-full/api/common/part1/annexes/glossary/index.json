@@ -1,0 +1,35 @@
+
+
+{
+  "itemIdentifier": "ogc.api.common.part1.annexes.glossary",
+  "name": "Glossary",
+  "abstract": "Annex C of OGC API - Common - Part 1: Core: glossary of ModSpec terms.",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "clause",
+  "normative": false,
+  "sources": [
+    {
+      "title": "OGC 19-072 \u2014 OGC API - Common - Part 1: Core \u2014 Glossary",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#Glossary"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "annex"
+  ],
+  "shaclShapes": {},
+  "license": {
+    "name": "OGC License Agreement",
+    "url": "https://www.ogc.org/license"
+  },
+  "dateOfLastChange": "2026-11-10",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-common-standards-as-bblocks/_sources/part1/annexes/glossary/",
+  "validationPassed": true,
+  "description": "**Conformance Test Module**\\\nset of related tests, all within a single conformance test class (OGC 08-131)\n\n> **NOTE 1** When no ambiguity is possible, the word test may be omitted. i.e., conformance test module\n> is the same as conformance module. Conformance modules may be nested in a hierarchical way. This term\n> and those associated to it are included here for consistency with ISO 19105.\n\n**Conformance Test Class; Conformance Test Level**\\\nset of conformance test modules that must be applied to receive a single certificate of conformance.\n(OGC 08-131)\n\n> **NOTE 2** When no ambiguity is possible, the word test may be left out, so conformance test class may\n> be called a conformance class.\n\n**Executable Test Suite (ETS)**\\\nA set of code (e.g. Java and CTL) that provides runtime tests for the assertions defined by the ATS.\nTest data required to do the tests are part of the ETS\n([OGC 08-134](https://portal.opengeospatial.org/files/?artifact_id=55234))\n\n**Recommendation**\\\nexpression in the content of a document conveying that among several possibilities one is recommended\nas particularly suitable, without mentioning or excluding others, or that a certain course of action is\npreferred but not necessarily required, or that (in the negative form) a certain possibility or course\nof action is deprecated but not prohibited (OGC 08-131)\n\n> **NOTE 3** \u201cAlthough using normative language, a recommendation is not a requirement. The usual form\n> replaces the shall (imperative or command) of a requirement with a should (suggestive or\n> conditional).\u201d (ISO Directives Part 2)\n\n**Requirement**\\\nexpression in the content of a document conveying criteria to be fulfilled if compliance with the\ndocument is to be claimed and from which no deviation is permitted (OGC 08-131)\n\n**Requirements Class**\\\naggregate of all requirement modules that must all be satisfied to satisfy a conformance test class\n(OGC 08-131)\n\n**Requirements Module**\\\naggregate of requirements and recommendations of a specification against a single standardization\ntarget type (OGC 08-131)\n\n**Standardization Target**\\\nentity to which some requirements of a standard apply (OGC 08-131)\n\n> **NOTE 4** The standardization target is the entity that may receive a certificate of conformance for\n> a requirements class.\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/JFarduino/ogcapi-common-standards-as-bblocks",
+  "gitPath": "_sources/part1/annexes/glossary"
+}

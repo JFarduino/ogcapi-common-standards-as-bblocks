@@ -1,5 +1,5 @@
 {
-  "name": "Backus-Naur Forms (Informative)",
+  "name": "Backus-Naur Forms",
   "abstract": "Annex D of OGC API - Common - Part 1: Core: ABNF for URIs (from IETF RFC 3986).",
   "status": "stable",
   "dateTimeAddition": "2026-11-10T00:00:00Z",
@@ -8,7 +8,7 @@
   "normative": false,
   "sources": [
     {
-      "title": "OGC 19-072 — OGC API - Common - Part 1: Core — Backus-Naur Forms (Informative)",
+      "title": "OGC 19-072 — OGC API - Common - Part 1: Core — Backus-Naur Forms",
       "link": "https://docs.ogc.org/is/19-072/19-072.html#bnf-annex"
     }
   ],

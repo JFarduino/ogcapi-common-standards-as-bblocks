@@ -1,43 +1,65 @@
-# Requirements class: HTML  (OGC 19-072, clause 10.2 - Requirements class 3)
-# Class URI:       http://www.opengis.net/spec/ogcapi-common-1/1.0/req/html
-# Conformance URI: http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/html
+# Requirements class HTML of OGC 19-072 (OGC API - Common - Part 1: Core)
+#   requirements class: http://www.opengis.net/spec/ogcapi-common-1/1.0/req/html
+#   conformance class:  http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/html
 #
-# Requirements 18-19 of OGC 19-072. Recommendation 17 is in description.md.
+# Statements (requirements and recommendations) are placed in description.md, or in another clause,
+# with <!-- requirement|recommendation: <id> --> markers, and numbered in document order. OGC 19-072
+# labels some statements "Recommendation" but identifies them as /per/...: those carry an explicit
+# 'uri'. Abstract tests are laid out in Annex A by the ogc.api.common.part1.annexes.ats block; their
+# 'tested-by' entries are test resources of tests.yaml.
 
 class-id: html
+title: HTML
 standardization-target: Web API
-
 depends-on:
-  # Prerequisites of requirements class 3 and conformance class A.4 (HTML)
-  - bblock: ogc.api.common.part1.requirements.core
-  - bblock: ogc.api.common.part1.requirements.landing-page
-  - uri: http://www.w3.org/TR/html5/
-    title: HTML5
-  - uri: http://schema.org/docs/schemas.html
-    title: Schema.org
-
+- bblock: ogc.api.common.part1.requirements.landing-page
+- uri: http://www.w3.org/TR/html5/
+  title: HTML5
+- uri: http://schema.org/docs/schemas.html
+  title: Schema.org
+conformance-class:
+  title: HTML
+  subject: http://www.opengis.net/spec/ogcapi-common/1.0/req/html
+  prerequisites:
+  - '[Core Conformance Class](#conf-core)'
+  - '[Landing Page Conformance Class](#conf-landing-page)'
 requirements:
+- id: html/definition
+  statement: |
+    200-responses of the server SHALL support the `text/html` media type for the Landing Page
+    and Conformance resources.
+- id: html/content
+  statement: |
+    Every 200-response of the API with the media type “text/html” SHALL be a
+    [HTML 5 document](https://www.w3.org/TR/html5/) that includes the following information in the
+    HTML body:
 
-  # Requirement 18
-  - id: html/definition
-    level: SHALL
-    statement: |
-      **A.** 200-responses of the server SHALL support the `text/html` media type for the Landing Page
-      and Conformance resources.
-    tested-by:
-      - conf/html/definition
-
-  # Requirement 19
-  - id: html/content
-    level: SHALL
-    statement: |
-      **A.** Every 200-response of the API with the media type “text/html” SHALL be a
-      [HTML 5 document](https://www.w3.org/TR/html5/) that includes the following information in the
-      HTML body:
-
-      - All information identified in the schemas of the
-        [Response Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#responseObject)
-        in the HTML `<body/>`, and
-      - All links in HTML `<a/>` elements in the HTML `<body/>`.
-    tested-by:
-      - conf/html/content
+    - All information identified in the schemas of the
+      [Response Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#responseObject)
+      in the HTML `<body/>`, and
+    - All links in HTML `<a/>` elements in the HTML `<body/>`.
+- id: html/schema-org
+  type: recommendation
+  statement: A 200-response with the media type `text/html`, SHOULD include Schema.org annotations.
+abstract-tests:
+- id: html/definition
+  requirement: html/definition
+  purpose: Verify support for HTML
+  method: |
+    ```text
+    DO FOR EACH resource and operation defined in the Landing Page Conformance Class:
+      1. Execute the operation specifying text/html as the media type
+      2. Validate that a document was returned with a status code 200
+      3. Validate the contents of the returned document using test /conf/html/content.
+    DONE
+    ```
+  tested-by:
+  - conf/html/definition
+- id: html/content
+  requirement: html/content
+  purpose: Verify the content of an HTML document given an input document and schema.
+  method: |
+    1. Validate that the document is an HTML 5 document
+    2. Manually inspect the document against the schema.
+  tested-by:
+  - conf/html/content

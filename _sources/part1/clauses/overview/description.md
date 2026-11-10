@@ -1,7 +1,7 @@
 The OGC API — Common — Part 1: Core Standard defines common requirements and recommendations which are
 applicable to all OGC Web API Standards.
 
-## 7.1 Evolution from OGC Web Services
+## Evolution from OGC Web Services
 
 OGC Web Service (OWS) Standards implement a Remote-Procedure-Call-over-HTTP architectural style using
 XML for payloads. This was the state-of-the-art when OGC Web Services (OWS) were originally designed in
@@ -16,7 +16,7 @@ for sharing Spatial Data on the Web as well as the W3C best practices for sharin
 A detailed discussion of OGC Web Services and Web APIs can be found in the
 [OGC API — Common — Users Guide](http://www.opengis.net/doc/UG/ogcapi-common/1.0#ug-evolution-from-web-services).
 
-## 7.2 Modular APIs
+## Modular APIs
 
 A goal of OGC API Standards is to provide rapid and easy access to spatial resources. To meet this goal,
 the needs of both the resource provider and the resource consumer must be considered. The approach
@@ -27,10 +27,10 @@ set of modules, the likelihood that they will integrate at run-time is greatly e
 The modular Web API approach adopted by OGC API Standards has several facets.
 
 - A common core that is recommended for all implementations of OGC API Standards. This OGC API — Common
-  — Part 1: Core Standard defines this core in the [Core Requirements Class](#clause-8).
+  — Part 1: Core Standard defines this core in the [Core Requirements Class](#sec-8).
 - Common descriptive resources which allow clients to learn the purpose and capabilities of an API as
   well as how they should be used. These resources are defined in the
-  [Landing Page Requirements Class](#clause-9).
+  [Landing Page Requirements Class](#sec-9).
 - Clear separation between common requirements and more resource specific capabilities. The OGC API —
   Common Standard specifies the common requirements that may be relevant to almost anyone who wants to
   build an API for spatial resources. Resource-specific requirements are addressed in resource-specific
@@ -46,7 +46,7 @@ blocks that together implement the capabilities that are specified in OGC API �
 this is that it should be possible to implement an API that simultaneously conforms to conformance
 classes from multiple current or future OGC API Standards.
 
-## 7.3 Using APIs
+## Using APIs
 
 OGC API Standards are expected to support two different approaches that clients may use when accessing
 an OGC conformant Web API.

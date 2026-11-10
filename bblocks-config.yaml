@@ -33,13 +33,19 @@ imports:
   - '@ogc/ogcapi-common'
 
 # Build plugins: generate the standards document(s) described in standards.yaml
-# (https://github.com/ogcincubator/bblocks-specgen). The document is written to
-# <build-dir>/<standard id>/index.html, i.e. build/standards/part1/index.html.
+# (bblocks-specgen). The document is written to <build-dir>/<standard id>/index.html,
+# i.e. build/standards/part1/index.html.
+#
+# specgen is installed from the feature/update branch of JFarduino/bblocks-specgen ('layout: ogc',
+# file includes), locally (build.sh) and in the GitHub workflow alike. To try changes of the local
+# copy in bblocks-specgen-jules/ before pushing them, use instead (build.sh mounts the repository
+# on /workspace; GitHub workflows cannot see that folder):
+#   bblocks-specgen @ file:///workspace/bblocks-specgen-jules
 plugins:
   build:
     - classes: [standard_gen.plugin.SpecgenBuildPlugin]
-      pip: [bblocks-specgen @ git+https://github.com/ogcincubator/bblocks-specgen]
-      url: https://github.com/ogcincubator/bblocks-specgen
+      pip: [bblocks-specgen @ git+https://github.com/JFarduino/bblocks-specgen@feature/update]
+      url: https://github.com/JFarduino/bblocks-specgen
       config:
         standards-file: standards.yaml
         build-dir: build/standards

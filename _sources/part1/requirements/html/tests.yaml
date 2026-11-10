@@ -1,37 +1,9 @@
-# Abstract tests of conformance class HTML (OGC 19-072, Annex A.5).
-#
-# The test resource is an HTML 5 representation of the example landing page of OGC 19-072, Annex B.1.
-# HTML resources are not machine-validated by the building blocks postprocessor (the abstract test
-# requires a manual inspection against the schema).
+# Test resources of the abstract tests of this class (see abstract-tests in requirements.yaml).
+# Each entry is validated by bblocks-postprocess against the schema of this building block.
 
 - id: conf/html/definition
   ref: ../../test-resources/landing-page.html
   output-filename: conf-html-definition.html
-  method: |
-    **Abstract test A.20** — `/conf/html/definition` (subject: `/req/html/definition`,
-    `/req/html/content`)
-
-    **Test purpose:** Verify support for HTML
-
-    **Test method:**
-
-    ```text
-    DO FOR EACH resource and operation defined in the Landing Page Conformance Class:
-      1. Execute the operation specifying text/html as the media type
-      2. Validate that a document was returned with a status code 200
-      3. Validate the contents of the returned document using test /conf/html/content.
-    DONE
-    ```
-
 - id: conf/html/content
   ref: ../../test-resources/landing-page.html
   output-filename: conf-html-content.html
-  method: |
-    **Abstract test A.21** — `/conf/html/content`
-
-    **Test purpose:** Verify the content of an HTML document given an input document and schema.
-
-    **Test method:**
-
-    1. Validate that the document is an HTML 5 document
-    2. Manually inspect the document against the schema.

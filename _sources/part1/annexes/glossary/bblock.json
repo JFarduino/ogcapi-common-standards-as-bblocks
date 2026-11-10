@@ -1,5 +1,5 @@
 {
-  "name": "Glossary (Informative)",
+  "name": "Glossary",
   "abstract": "Annex C of OGC API - Common - Part 1: Core: glossary of ModSpec terms.",
   "status": "stable",
   "dateTimeAddition": "2026-11-10T00:00:00Z",
@@ -8,7 +8,7 @@
   "normative": false,
   "sources": [
     {
-      "title": "OGC 19-072 — OGC API - Common - Part 1: Core — Glossary (Informative)",
+      "title": "OGC 19-072 — OGC API - Common - Part 1: Core — Glossary",
       "link": "https://docs.ogc.org/is/19-072/19-072.html#Glossary"
     }
   ],

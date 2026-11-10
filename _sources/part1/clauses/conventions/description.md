@@ -1,4 +1,4 @@
-## 6.1 Web API Fundamentals
+## Web API Fundamentals
 
 The following concepts are critical to understanding OGC Web API Standards.
 
@@ -12,7 +12,7 @@ The following concepts are critical to understanding OGC Web API Standards.
 - Representations are exchanged between components using the HTTP protocol and the operations (GET,
   PUT, etc.) that HTTP supports.
 
-## 6.2 Identifiers
+## Identifiers
 
 The Architecture of the World Wide Web establishes the URI as the single global identification system
 for the Web. Therefore, URIs or URI Templates are used in OGC Web API Standards to identify key entities
@@ -99,7 +99,7 @@ subcomponent, these have to be percent-encoded. See Clause 2 of RFC 3986 for det
 Additional information on this topic is provided in the
 [OGC API — Common — Users Guide](http://www.opengis.net/doc/UG/ogcapi-common/1.0#identifiers-section).
 
-## 6.3 Links
+## Links
 
 OGC Web API Standards use RFC 8288 (Web Linking) to express relationships between resources. Resource
 representations defined in these Standards commonly include a “links” element. A “links” element is an
@@ -107,37 +107,9 @@ array of individual hyperlink elements. These “links” elements provide a con
 related resources.
 
 The individual hyperlink elements that make up a “links” element are defined using the following
-[Hyperlink Schema](http://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/link.yaml)
-(published as the [Link schema](bblocks://ogc.api.common.part1.schemas.link) building block).
+[Hyperlink Schema](http://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/link.yaml).
 
-```yaml
-type: object
-required:
-  - href
-  - rel
-properties:
-  href:
-    type: string
-    description: Supplies the URI to a remote resource (or resource fragment).
-    example: http://data.example.com/buildings/123
-  rel:
-    type: string
-    description: The type or semantics of the relation.
-    example: alternate
-  type:
-    type: string
-    description: A hint indicating what the media type of the result of dereferencing the link should be.
-    example: application/geo+json
-  hreflang:
-    type: string
-    description: A hint indicating what the language of the result of dereferencing the link should be.
-    example: en
-  title:
-    type: string
-    description: Used to label the destination of a link such that it can be used as a human-readable identifier.
-    example: Trierer Strasse 70, 53115 Bonn
-  length:
-    type: integer
+```yaml include=bblocks://ogc.api.common.part1.schemas.link
 ```
 
 *Figure 3 — Link Relation Schema*
@@ -147,15 +119,12 @@ properties:
 In addition, links should be passed in the response using HTTP link headers. These links are accessible
 to the client without a need to process the resource.
 
-| **Recommendation 1** | `/rec/core/link-header` |
-|---|---|
-| **A** | Links included in the payload of a response SHOULD also be included as Link headers in the HTTP response according to RFC 8288, Clause 3. |
-| **B** | This recommendation does not apply when there are a large number of links included in a response or a link is not known when the HTTP headers of the response are created. |
+<!-- recommendation: core/link-header -->
 
 Additional information on this topic is provided in the
 [OGC API — Common — Users Guide](http://www.opengis.net/doc/UG/ogcapi-common/1.0#link-relations-section).
 
-## 6.4 Link relations
+## Link relations
 
 Link relation types identify the semantics of a link. For example, a link with the relation type
 “service-meta” indicates that the current link context has service metadata at the link target.
@@ -188,7 +157,7 @@ Additional relation types may be used if the implementation warrants it.
 Additional information on the use of link relationships is provided in the
 [OGC API — Common — Users Guide](http://www.opengis.net/doc/UG/ogcapi-common/1.0#link-relations-section).
 
-## 6.5 Use of HTTPS
+## Use of HTTPS
 
 For simplicity, this OGC Standard only refers to the HTTP protocol. This is not meant to exclude the use
 of HTTPS. This is simply a shorthand notation for “HTTP or HTTPS”. In fact, most servers are expected to
@@ -197,9 +166,9 @@ use HTTPS and not HTTP.
 OGC Web API Standards do not prohibit the use of any valid HTTP option. However, implementers should be
 aware that optional capabilities that are not in common use could be an impediment to interoperability.
 
-## 6.6 API definition
+## API definition
 
-### 6.6.1 General remarks
+### General remarks
 
 This OGC Standard specifies requirements and recommendations for the development of APIs that share
 spatial resources while using a Standard way of doing so. In general, APIs will go beyond the
@@ -211,7 +180,7 @@ the best case, documentation would be available both in HTML for human consumpti
 machine-readable format that can be processed by software for run-time binding. The use of OpenAPI is
 one way to provide that machine-readable documentation.
 
-### 6.6.2 Role of OpenAPI
+### Role of OpenAPI
 
 This OGC API Standard uses OpenAPI 3.0 fragments in examples and to formally state requirements. Using
 OpenAPI 3.0 is not required for implementing an OGC API. Other API definition languages may be used
@@ -222,7 +191,7 @@ This Standard includes a conformance class for OGC API definitions that follow t
 3.0. Alternative API definition languages are also allowed. Conformance classes for additional API
 definition languages will be added as the OGC API landscape continues to evolve.
 
-### 6.6.3 References to OpenAPI components in normative statements
+### References to OpenAPI components in normative statements
 
 Some normative statements (requirements, recommendations and permissions) use a phrase that a component
 in the API definition of the server must be “based upon” a schema or parameter component in the OGC
@@ -241,7 +210,7 @@ In this case, the following changes to the pre-defined OpenAPI component are per
 For OGC API definitions that do not conform to the OpenAPI Specification 3.0, the normative statement
 should be interpreted in the context of the API definition language used.
 
-### 6.6.4 Reusable OpenAPI components
+### Reusable OpenAPI components
 
 Reusable components for OpenAPI definitions for an OGC API are referenced from this document. They are
 available from the OGC Schemas Registry at

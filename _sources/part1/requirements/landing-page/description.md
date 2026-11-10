@@ -1,9 +1,10 @@
+<!-- requirements-class -->
+
 The Landing Page Requirements Class of the OGC API — Common — Part 1: Core Standard describes how the
 Landing Page and its associated resources are accessed through an OGC conformant Web API.
 
 The Landing Page resources are introduced in Table 3. The requirements and recommendations applicable
-to these resources are provided in the sections below; the requirements of this class are listed in the
-[Requirements](#req-clause-9-requirements) section at the end of this clause.
+to these resources are provided in the sections below.
 
 *Table 3 — Landing Page Resources*
 
@@ -13,7 +14,7 @@ to these resources are provided in the sections below; the requirements of this 
 | API Definition | GET | the API Definition document for this API |
 | Conformance Declaration | GET | the conformance information for this API |
 
-## 9.1 API landing page
+## API landing page
 
 An OGC Web API has a single landing page on the `{root}` node.
 
@@ -28,40 +29,19 @@ resource-specific as they follow links and paths from the landing page.
 While the three metadata elements are defined as text strings, the attribution element is special.
 Specifically, the attribution element can contain markup text. Markup allows a text string to import
 images and format text. The capabilities are only limited by the markup language used. See the
-[example landing page](#annex-b) for an example of the use of markup in the attribution element.
+[example landing page](#sec-B.1) for an example of the use of markup in the attribution element.
 
-### 9.1.1 Operation
+### Operation
 
-See requirement [`/req/landing-page/root-op`](#req-landing-page-root-op).
+<!-- requirement: landing-page/root-op -->
 
-### 9.1.2 Response
+### Response
 
-See requirement [`/req/landing-page/root-success`](#req-landing-page-root-success).
+<!-- requirement: landing-page/root-success -->
 
-The Landing Page returned by this operation is based on the following OpenAPI schema (published as the
-[Landing Page schema](bblocks://ogc.api.common.part1.schemas.landingPage) building block).
+The Landing Page returned by this operation is based on the following OpenAPI schema.
 
-```yaml
-type: object
-required:
-  - links
-properties:
-  title:
-    type: string
-    title: The title of the API.
-    description: While a title is not required, implementers are strongly advised to include one.
-    example: Buildings in Bonn
-  description:
-    type: string
-    example: Access to data about buildings in the city of Bonn via a Web API that conforms to the OGC API Common specification.
-  attribution:
-    type: string
-    title: attribution for the API
-    description: The `attribution` should be short and intended for presentation to a user, for example, in a corner of a map. Parts of the text can be links to other resources if additional information is needed. The string can include HTML markup.
-  links:
-    type: array
-    items:
-      $ref: link.yaml
+```yaml include=https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/landingPage.yaml bblock=ogc.api.common.part1.schemas.landingPage
 ```
 
 *Figure 4 — Landing Page Schema*
@@ -69,44 +49,41 @@ properties:
 In addition to the required resources, links to additional resources may be included in the Landing
 Page.
 
-Examples of OGC API landing pages are provided in [Annex B.1](#annex-b).
+Examples of OGC API landing pages are provided in [Annex B.1](#sec-B.1).
 
 A JSON schema for the Landing Page resource can be found on the
 [OGC Schema Repository](http://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/landingPage.yaml).
 
-### 9.1.3 Error Situations
+### Error Situations
 
-See [Clause 8.2](#8-2-http-status-codes) for general guidance.
+See [Clause 8.2](#sec-8.2) for general guidance.
 
-## 9.2 API Definition
+## API Definition
 
 Every API implementation should provide an API Definition resource that describes the capabilities
 provided by that API. This resource can be used by client developers to understand the supported
 services, by software clients to connect to the server, and by development tools to support the
 implementation of servers and clients.
 
-### 9.2.1 Operation
+### Operation
 
-See requirement [`/req/landing-page/api-definition-op`](#req-landing-page-api-definition-op).
+<!-- requirement: landing-page/api-definition-op -->
 
-| **Recommendation 15** | `/rec/landing-page/api-definition-op` |
-|---|---|
-| **A** | The server SHOULD support the HTTP GET operation on the URI `{root}/api`. |
-| **B** | The response to the HTTP GET request issued in A SHOULD satisfy requirement `/req/landing-page/api-definition-success`. |
+<!-- recommendation: landing-page/api-definition-op -->
 
-### 9.2.2 Response
+### Response
 
-See requirement [`/req/landing-page/api-definition-success`](#req-landing-page-api-definition-success).
+<!-- requirement: landing-page/api-definition-success -->
 
-| **Recommendation 16** | `/rec/landing-page/api-definition-oas` |
-|---|---|
-| **A** | If the API definition document uses the OpenAPI Specification 3.0, THEN the document SHOULD conform to the [OpenAPI Specification 3.0 requirements class](#clause-12). |
+> **NOTE** The -f parameter MAY be used to satisfy this requirement.
 
-### 9.2.3 Error Situations
+<!-- recommendation: landing-page/api-definition-oas -->
 
-See [Clause 8.2](#8-2-http-status-codes) for general guidance.
+### Error Situations
 
-## 9.3 Declaration of Conformance Classes
+See [Clause 8.2](#sec-8.2) for general guidance.
+
+## Declaration of Conformance Classes
 
 The OGC Web API Standards define a collection of modules that can be assembled into a Web API. The first
 question a client will ask when accessing one of these APIs is “what are you?” In other words, what
@@ -122,28 +99,17 @@ Ease of access is also supported by the structure of the Conformance Declaration
 list of URIs. This is a structure that requires almost no parsing and little interpretation and is
 designed to be accessible to even the simplest client.
 
-### 9.3.1 Operation
+### Operation
 
-See requirement [`/req/landing-page/conformance-op`](#req-landing-page-conformance-op).
+<!-- requirement: landing-page/conformance-op -->
 
-### 9.3.2 Response
+### Response
 
-See requirement [`/req/landing-page/conformance-success`](#req-landing-page-conformance-success).
+<!-- requirement: landing-page/conformance-success -->
 
-The Conformance Declaration returned by this operation is based on the following OpenAPI schema
-(published as the [Conformance Classes schema](bblocks://ogc.api.common.part1.schemas.confClasses)
-building block).
+The Conformance Declaration returned by this operation is based on the following OpenAPI schema.
 
-```yaml
-type: object
-required:
-  - conformsTo
-properties:
-  conformsTo:
-    type: array
-    items:
-      type: string
-      example: "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core"
+```yaml include=bblocks://ogc.api.common.part1.schemas.confClasses
 ```
 
 *Figure 5 — Conformance Declaration Schema*
@@ -151,10 +117,8 @@ properties:
 A JSON schema for the Landing Page resource can be found on the
 [OGC Schema Repository](http://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/confClasses.yaml).
 
-Examples of OGC Conformance Declarations are provided in [Annex B.2](#annex-b).
+Examples of OGC Conformance Declarations are provided in [Annex B.2](#sec-B.2).
 
-### 9.3.3 Error situations
+### Error situations
 
-See [Clause 8.2](#8-2-http-status-codes) for general guidance.
-
-<!-- requirements -->
+See [Clause 8.2](#sec-8.2) for general guidance.

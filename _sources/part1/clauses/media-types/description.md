@@ -1,18 +1,18 @@
-## 13.1 Normal Response Media Types
+## Normal Response Media Types
 
 The typical media type for all “web pages” in an OGC Web API would be `text/html`.
 
 The media type that would typically be used in an OGC Web API for machine-to-machine exchanges would be
 `application/json`.
 
-## 13.2 OpenAPI Media Types
+## OpenAPI Media Types
 
 The media types for an OpenAPI definition are `application/vnd.oai.openapi+json;version=3.0` (JSON) and
 `application/vnd.oai.openapi;version=3.0` (YAML).
 
 > **NOTE** The OpenAPI media type has not been registered yet with IANA and may change.
 
-## 13.3 Problem Details Media Types
+## Problem Details Media Types
 
 OGC API — Common recommends that implementers use IETF RFC 7807 when constructing the response body for
 an error condition. The media types for an RFC 7807 Problem Details response body are:

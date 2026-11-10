@@ -1,0 +1,20 @@
+{
+  "name": "Encoding Requirements Classes",
+  "abstract": "Clause 10 of OGC API - Common - Part 1: Core: overview of the HTML and JSON encoding requirements classes, which are its subclauses 10.2 and 10.3.",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "clause",
+  "normative": true,
+  "sources": [
+    {
+      "title": "OGC 19-072 — OGC API - Common - Part 1: Core — Encoding Requirements Classes",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#rc_encoding-section"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "clause"
+  ]
+}

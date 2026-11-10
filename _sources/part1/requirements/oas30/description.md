@@ -1,29 +1,33 @@
-## 12.1 Basic requirements
+## Basic requirements
 
 APIs conforming to this requirements class are self-documenting using an
-[OpenAPI Document](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#oasDocument):
-see requirements [`/req/oas30/oas-definition-1`](#req-oas30-oas-definition-1),
-[`/req/oas30/oas-definition-2`](#req-oas30-oas-definition-2) and
-[`/req/oas30/oas-impl`](#req-oas30-oas-impl), listed in the
-[Requirements](#req-clause-12-requirements) section at the end of this clause.
+[OpenAPI Document](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#oasDocument).
 
-Two example OpenAPI documents are included in [Annex B](#annex-b).
+<!-- requirements-class -->
 
-## 12.2 Complete definition
+<!-- requirement: oas30/oas-definition-1 -->
 
-See requirement [`/req/oas30/completeness`](#req-oas30-completeness).
+<!-- requirement: oas30/oas-definition-2 -->
 
-Note APIs that, for example, are access-controlled (see [Security](#12-4-security)), support web cache
+Two example OpenAPI documents are included in [Annex B](#sec-B.3).
+
+<!-- requirement: oas30/oas-impl -->
+
+## Complete definition
+
+<!-- requirement: oas30/completeness -->
+
+Note APIs that, for example, are access-controlled (see [Security](#sec-11.4)), support web cache
 validation, support CORS, or that use HTTP redirection will make use of additional HTTP status codes
 beyond regular codes such as 200 for successful GET requests and 400, 404 or 500 for error situations.
-See [Clause 8.2](#8-2-http-status-codes).
+See [Clause 8.2](#sec-8.2).
 
 Clients should be prepared to receive responses not documented in the OpenAPI definition. For example,
 additional errors may occur in the transport layer outside of the server.
 
-## 12.3 Exceptions
+## Exceptions
 
-See requirement [`/req/oas30/exceptions-codes`](#req-oas30-exceptions-codes).
+<!-- requirement: oas30/exceptions-codes -->
 
 *Example — An exception response object definition* (see also the
 [Exception response](bblocks://ogc.api.common.part1.responses.Exception) building block)
@@ -39,7 +43,7 @@ content:
       type: string
 ```
 
-## 12.4 Security
+## Security
 
 OpenAPI uses two constructs to describe the security features of an API; Security Requirements and
 Security Schemes. Security Requirements are packaged in an array. Only one of the Security Requirements
@@ -62,9 +66,9 @@ The OpenAPI specification currently supports the following
 - OAuth2’s common flows (implicit, password, application and access code) as defined in RFC6749; and
 - OpenID Connect Discovery.
 
-See requirement [`/req/oas30/security`](#req-oas30-security).
+<!-- requirement: oas30/security -->
 
-## 12.5 Query Parameter Definition
+## Query Parameter Definition
 
 The OpenAPI specification defines query parameters using the Parameter object with the `in` property set
 to “query.” The parameter name is a literal value provided by the `name` property. Since the parameter
@@ -104,9 +108,7 @@ object properties. For example, assume that the value of `freeFormParameters` is
 
 In the request URI this would be expressed as `&my_first_parameter=some%20value&my_other_parameter=42`.
 
-## 12.6 Further Information
+## Further Information
 
 Additional guidance on using OpenAPI in OGC Web API implementations can be found in the
 [OGC API — Common — Users Guide](http://www.opengis.net/doc/UG/ogcapi-common/1.0#oas30-usage-section).
-
-<!-- requirements -->

@@ -1,4 +1,4 @@
-## D.1 BNF for URI
+## BNF for URI
 
 The following Augmented Backus-Naur Form (ABNF) is from Appendix A of IETF RFC 3986.
 

@@ -1,5 +1,5 @@
 {
-  "name": "Revision History (Informative)",
+  "name": "Revision History",
   "abstract": "Annex F of OGC API - Common - Part 1: Core: revision history.",
   "status": "stable",
   "dateTimeAddition": "2026-11-10T00:00:00Z",
@@ -8,7 +8,7 @@
   "normative": false,
   "sources": [
     {
-      "title": "OGC 19-072 — OGC API - Common - Part 1: Core — Revision History (Informative)",
+      "title": "OGC 19-072 — OGC API - Common - Part 1: Core — Revision History",
       "link": "https://docs.ogc.org/is/19-072/19-072.html#_revision_history"
     }
   ],

@@ -1,49 +1,72 @@
-# Requirements class: JSON  (OGC 19-072, clause 10.3 - Requirements class 4)
-# Class URI:       http://www.opengis.net/spec/ogcapi-common-1/1.0/req/json
-# Conformance URI: http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/json
+# Requirements class JSON of OGC 19-072 (OGC API - Common - Part 1: Core)
+#   requirements class: http://www.opengis.net/spec/ogcapi-common-1/1.0/req/json
+#   conformance class:  http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/json
 #
-# Requirements 20-21 of OGC 19-072. Recommendation 18 is in description.md.
+# Statements (requirements and recommendations) are placed in description.md, or in another clause,
+# with <!-- requirement|recommendation: <id> --> markers, and numbered in document order. OGC 19-072
+# labels some statements "Recommendation" but identifies them as /per/...: those carry an explicit
+# 'uri'. Abstract tests are laid out in Annex A by the ogc.api.common.part1.annexes.ats block; their
+# 'tested-by' entries are test resources of tests.yaml.
 
 class-id: json
+title: JSON
 standardization-target: Web API
-
 depends-on:
-  # Prerequisites of requirements class 4 and conformance class A.3 (JSON)
-  - bblock: ogc.api.common.part1.requirements.core
-  - bblock: ogc.api.common.part1.requirements.landing-page
-  - uri: https://www.rfc-editor.org/info/rfc8259
-    title: "IETF RFC 8259: The JavaScript Object Notation (JSON) Data Interchange Format"
-  - uri: https://json-schema.org/specification.html
-    title: JSON Schema
-
+- bblock: ogc.api.common.part1.requirements.landing-page
+- uri: https://www.rfc-editor.org/info/rfc8259
+  title: 'IETF RFC 8259: The JavaScript Object Notation (JSON) Data Interchange Format'
+- uri: https://json-schema.org/specification.html
+  title: JSON Schema
+conformance-class:
+  title: JSON
+  subject: http://www.opengis.net/spec/ogcapi-common-1/1.0/req/json
+  prerequisites:
+  - '[Core Conformance Class](#conf-core)'
+  - '[Landing Page Conformance Class](#conf-landing-page)'
 requirements:
+- id: json/definition
+  statement: |
+    200-responses of the server SHALL support the `application/json` media type for the
+    Landing Page and Conformance resources.
+- id: json/content
+  parts:
+  - |
+    Every request to a Landing Page or Conformance resource which:
 
-  # Requirement 20
-  - id: json/definition
-    level: SHALL
-    statement: |
-      **A.** 200-responses of the server SHALL support the `application/json` media type for the
-      Landing Page and Conformance resources.
-    tested-by:
-      - conf/json/definition
-      - conf/json/definition-conformance
+    - Receives a 200-response
+    - with the Content-Type header set to `application/json`
 
-  # Requirement 21
-  - id: json/content
-    level: SHALL
-    statement: |
-      **A.** Every request to a Landing Page or Conformance resource which:
-
-      - Receives a 200-response
-      - with the Content-Type header set to `application/json`
-
-      SHALL include, or link to, a payload encoded according to the
-      [JSON Interchange Format](https://tools.ietf.org/html/rfc8259)
-
-      **B.** The payload for these responses SHALL conform with the JSON Schema specified for the
-      resource in the [Landing Page Requirements Class](#clause-9).
-    tested-by:
-      - conf/json/content
-      - conf/json/content-conformance
-      - conf/json/content-landing-page-no-links
-      - conf/json/content-conformance-not-a-list
+    SHALL include, or link to, a payload encoded according to the
+    [JSON Interchange Format](https://tools.ietf.org/html/rfc8259)
+  - |
+    The payload for these responses SHALL conform with the JSON Schema specified for the
+    resource in the [Landing Page Requirements Class](#sec-9).
+- id: json/problem-details
+  type: recommendation
+  statement: Any OGC Web API implementation instance returning an RFC 7807 “Problem Details” report in JSON should set the Content-Type header to “application/problem+json” and structure the report using the JSON Schema [here](https://github.com/opengeospatial/ogcapi-common/blob/master/core/openapi/schemas/exception.json).
+abstract-tests:
+- id: json/definition
+  requirement: json/definition
+  purpose: Verify support for JSON
+  method: |
+    ```text
+    DO FOR EACH resource and operation defined in the Landing Page Conformance Class:
+      1. Execute the operation specifying application/json as the media type
+      2. Validate that a document was returned with a status code 200
+      3. Validate the contents of the returned document using test /conf/json/content.
+    DONE
+    ```
+  tested-by:
+  - conf/json/definition
+  - conf/json/definition-conformance
+- id: json/content
+  requirement: json/content
+  purpose: Verify the content of a JSON document given an input document and schema.
+  method: |
+    1. Validate that the document is a JSON (IETF RFC 8259) document.
+    2. Validate the document against the schema using a JSON Schema validator.
+  tested-by:
+  - conf/json/content
+  - conf/json/content-conformance
+  - conf/json/content-landing-page-no-links
+  - conf/json/content-conformance-not-a-list

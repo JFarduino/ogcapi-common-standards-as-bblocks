@@ -1,0 +1,27 @@
+{
+  "name": "Bibliography",
+  "abstract": "Bibliography of OGC API - Common - Part 1: Core (informative references).",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "references",
+  "normative": false,
+  "sources": [
+    {
+      "title": "OGC 19-072 — OGC API - Common - Part 1: Core — Bibliography",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#_d0c78460-9a13-4eaa-9c13-9bbfd3fedbc7"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "bibliography"
+  ],
+  "resources": [
+    {
+      "ref": "references.yaml",
+      "role": "references",
+      "format": "application/yaml"
+    }
+  ]
+}

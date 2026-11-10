@@ -1,119 +1,21 @@
-# Abstract tests of conformance class Landing Page (OGC 19-072, Annex A.3).
-#
-# Test resources are the example documents of OGC 19-072, Annex B (landing page, API definition,
-# conformance declaration). This building block has no schema of its own, so they are only checked to be
-# well-formed here; their validation against the landing page / conformance schemas is done by the JSON
-# requirements class (requirements/json), as required by /req/json/content.
+# Test resources of the abstract tests of this class (see abstract-tests in requirements.yaml).
+# Each entry is validated by bblocks-postprocess against the schema of this building block.
 
 - id: conf/landing-page/root-op
   ref: ../../test-resources/landing-page.json
   output-filename: conf-landing-page-root-op.json
-  method: |
-    **Abstract test A.12** — `/conf/landing-page/root-op` (subject: `/req/landing-page/root-op`,
-    `/req/landing-page/root-success`)
-
-    **Test purpose:** Validate that a landing page can be retrieved from the expected location.
-
-    **Test method:**
-
-    1. Issue an HTTP GET request to the URL `{root}/`
-    2. Validate that a document was returned with a status code 200
-    3. Validate the contents of the returned document using test `/conf/landing-page/root-success`.
-
 - id: conf/landing-page/root-success
   ref: ../../test-resources/landing-page.json
   output-filename: conf-landing-page-root-success.json
-  method: |
-    **Abstract test A.13** — `/conf/landing-page/root-success`
-
-    **Test purpose:** Validate that the landing page complies with the required structure and contents.
-
-    **Test method:** Validate the landing page for all supported media types using the resources and
-    tests identified in Table A.1
-
-    For formats that require manual inspection, perform the following:
-
-    1. Validate that the landing page includes a “service-desc” and/or “service-doc” link to an API
-       Definition
-    2. Validate that the landing page includes a “http://www.opengis.net/def/rel/ogc/1.0/conformance”
-       link to the conformance class declaration
-
-    The landing page may be retrieved in a number of different formats. The following table identifies
-    the applicable schema document for each format and the test to be used to validate the landing page
-    against that schema. All supported formats should be exercised.
-
-    *Table A.1 — Schema and Tests for Landing Pages*
-
-    | Format | Schema Document | Test ID |
-    |---|---|---|
-    | HTML | landingPage.yaml | `/conf/html/content` |
-    | JSON | landingPage.yaml | `/conf/json/content` |
-
 - id: conf/landing-page/api-definition-op
   ref: ../../test-resources/api-definition.yaml
   output-filename: conf-landing-page-api-definition-op.yaml
-  method: |
-    **Abstract test A.14** — `/conf/landing-page/api-definition-op` (subject:
-    `/req/landing-page/api-definition-op`, `/req/landing-page/api-definition-success`)
-
-    **Test purpose:** Validate that the API Definition document can be retrieved from the expected
-    location.
-
-    **Test method:**
-
-    ```text
-    DO FOR EACH service-desc and service-doc link on the landing page:
-      1. Issue an HTTP GET request for the link
-      2. Validate that a document was returned with a status code 200
-      3. Validate the contents of the returned document using test /conf/landing-page/api-definition-success.
-    DONE
-    ```
-
 - id: conf/landing-page/api-definition-success
   ref: ../../test-resources/api-definition.yaml
   output-filename: conf-landing-page-api-definition-success.yaml
-  method: |
-    **Abstract test A.15** — `/conf/landing-page/api-definition-success`
-
-    **Test purpose:** Validate that the API Definition complies with the required structure and
-    contents.
-
-    **Test method:** Validate the API Definition document against an appropriate schema document.
-
 - id: conf/landing-page/conformance-op
   ref: ../../test-resources/conformance.json
   output-filename: conf-landing-page-conformance-op.json
-  method: |
-    **Abstract test A.16** — `/conf/landing-page/conformance-op` (subject:
-    `/req/landing-page/conformance-op`, `/req/landing-page/conformance-success`)
-
-    **Test purpose:** Validate that a Conformance Declaration can be retrieved from the expected
-    locations.
-
-    **Test method:**
-
-    ```text
-    DO FOR EACH http://www.opengis.net/def/rel/ogc/1.0/conformance link on the landing page:
-      1. Issue an HTTP GET request for the link
-      2. Validate that a document was returned with a status code 200
-      3. Validate the contents of the returned document using test /conf/landing-page/conformance-success.
-    DONE
-    ```
-
-    4. Issue an HTTP GET request for the `{root}/conformance` path
-    5. Validate that a document was returned with a status code 200
-    6. Validate the contents of the returned document using test `/conf/landing-page/conformance-success`.
-
 - id: conf/landing-page/conformance-success
   ref: ../../test-resources/conformance.json
   output-filename: conf-landing-page-conformance-success.json
-  method: |
-    **Abstract test A.17** — `/conf/landing-page/conformance-success`
-
-    **Test purpose:** Validate that the Conformance Declaration response complies with the required
-    structure and contents.
-
-    **Test method:**
-
-    1. Validate the response document against the schema `confClasses.yaml`
-    2. Validate that the document lists all OGC API conformance classes that the API implements.

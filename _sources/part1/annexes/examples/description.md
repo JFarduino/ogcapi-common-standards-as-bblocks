@@ -1,4 +1,4 @@
-## B.1 Example Landing Pages
+## Example Landing Pages
 
 *Example — JSON Landing Page*
 
@@ -150,7 +150,7 @@ links:
   href: http://www.example.com/oapi-c?f=text/html
 ```
 
-## B.2 Conformance Examples
+## Conformance Examples
 
 *Example — Conformance Response*
 
@@ -180,7 +180,7 @@ conformsTo:
 - http://www.opengis.net/spec/ogcapi-common-1/1.0/req/json
 ```
 
-## B.3 API Definition Examples
+## API Definition Examples
 
 *Example — JSON API Definition*
 
@@ -305,7 +305,7 @@ components:
       $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/core/openapi/3.0/API-Common-Part-1_1_0.yaml#/components/responses/500'
 ```
 
-## B.4 Service Metadata Examples
+## Service Metadata Examples
 
 *Example — Service Metadata*
 

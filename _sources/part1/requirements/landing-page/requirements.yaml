@@ -1,107 +1,171 @@
-# Requirements class: Landing Page  (OGC 19-072, clause 9 - Requirements class 2)
-# Class URI:       http://www.opengis.net/spec/ogcapi-common-1/1.0/req/landing-page
-# Conformance URI: http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/landing-page
+# Requirements class Landing Page of OGC 19-072 (OGC API - Common - Part 1: Core)
+#   requirements class: http://www.opengis.net/spec/ogcapi-common-1/1.0/req/landing-page
+#   conformance class:  http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/landing-page
 #
-# Requirements 12-17 of OGC 19-072. Recommendations 15 and 16 are in description.md.
+# Statements (requirements and recommendations) are placed in description.md, or in another clause,
+# with <!-- requirement|recommendation: <id> --> markers, and numbered in document order. OGC 19-072
+# labels some statements "Recommendation" but identifies them as /per/...: those carry an explicit
+# 'uri'. Abstract tests are laid out in Annex A by the ogc.api.common.part1.annexes.ats block; their
+# 'tested-by' entries are test resources of tests.yaml.
 
 class-id: landing-page
+title: Landing Page
 standardization-target: Web API
-
-depends-on:
-  # Prerequisite of conformance class A.2 (Landing Page)
-  - bblock: ogc.api.common.part1.requirements.core
-
+conformance-class:
+  title: Landing Page
+  subject: http://www.opengis.net/spec/ogcapi-common/1.0/req/landing-page
+  prerequisites:
+  - '[Core Conformance Class](#conf-core)'
 requirements:
+- id: landing-page/root-op
+  parts:
+  - The server SHALL support the HTTP GET operation on the URI `{root}/`.
+  - |
+    The response to the HTTP GET request issued in A SHALL satisfy requirement
+    [`/req/landing-page/root-success`](#req-landing-page-root-success).
+  applies-to:
+    bblock: ogc.api.common.part1.paths.LandingPage
+- id: landing-page/root-success
+  parts:
+  - |
+    A successful execution of the operation SHALL be reported as a response with an HTTP status
+    code 200.
+  - |
+    The content of that response SHALL be based upon the schema
+    [landingPage.yaml](http://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/landingPage.yaml)
+    and include links to the following resources:
 
-  # Requirement 12 - 9.1.1 Operation
-  - id: landing-page/root-op
-    level: SHALL
-    statement: |
-      **A.** The server SHALL support the HTTP GET operation on the URI `{root}/`.
+    - API Definition (relation type ‘service-desc’ or ‘service-doc’)
+    - Conformance Declaration (relation type ‘http://www.opengis.net/def/rel/ogc/1.0/conformance’)
+  applies-to:
+    bblock: ogc.api.common.part1.schemas.landingPage
+- id: landing-page/api-definition-op
+  parts:
+  - |
+    The server SHALL support the HTTP GET operation on all links from the landing page that
+    have the relation type `service-desc`.
+  - |
+    The server SHALL support the HTTP GET operation on all links from the landing page that
+    have the relation type `service-doc`.
+  - |
+    The responses to all HTTP GET requests issued in A and B SHALL satisfy requirement
+    [`/req/landing-page/api-definition-success`](#req-landing-page-api-definition-success).
+- id: landing-page/api-definition-success
+  parts:
+  - |
+    A successful execution of the operation SHALL be reported as a response with a HTTP status
+    code 200.
+  - The content of that response SHALL be an API Definition document.
+  - |
+    The API Definition document SHALL be consistent with the media type identified through HTTP
+    content negotiation.
+- id: landing-page/conformance-op
+  parts:
+  - The server SHALL support the HTTP GET operation on the URI `{root}/conformance`.
+  - |
+    The server SHALL support the HTTP GET operation on all links from the landing page that
+    have the relation type `http://www.opengis.net/def/rel/ogc/1.0/conformance`.
+  - |
+    The responses to all HTTP GET requests issued in A and B SHALL satisfy requirement
+    [`/req/landing-page/conformance-success`](#req-landing-page-conformance-success).
+  applies-to:
+    bblock: ogc.api.common.part1.paths.Conformance
+- id: landing-page/conformance-success
+  parts:
+  - |
+    A successful execution of the operation SHALL be reported as a response with a HTTP status
+    code 200.
+  - |
+    The content of that response SHALL be based upon the schema
+    [confClasses.yaml](http://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/confClasses.yaml)
+    and list all OGC API conformance classes that the API conforms to.
+  applies-to:
+    bblock: ogc.api.common.part1.schemas.confClasses
+- id: landing-page/api-definition-op
+  type: recommendation
+  parts:
+  - The server SHOULD support the HTTP GET operation on the URI `{root}/api`.
+  - The response to the HTTP GET request issued in A SHOULD satisfy requirement `/req/landing-page/api-definition-success`.
+- id: landing-page/api-definition-oas
+  type: recommendation
+  statement: If the API definition document uses the OpenAPI Specification 3.0, THEN the document SHOULD conform to the [OpenAPI Specification 3.0 requirements class](#sec-11).
+abstract-tests:
+- id: landing-page/root-op
+  requirement: landing-page/root-op
+  purpose: Validate that a landing page can be retrieved from the expected location.
+  method: |
+    1. Issue an HTTP GET request to the URL `{root}/`
+    2. Validate that a document was returned with a status code 200
+    3. Validate the contents of the returned document using test `/conf/landing-page/root-success`.
+  tested-by:
+  - conf/landing-page/root-op
+- id: landing-page/root-success
+  requirement: landing-page/root-success
+  purpose: Validate that the landing page complies with the required structure and contents.
+  method: |
+    Validate the landing page for all supported media types using the resources and
+    tests identified in Table A.1
 
-      **B.** The response to the HTTP GET request issued in A SHALL satisfy requirement
-      [`/req/landing-page/root-success`](#req-landing-page-root-success).
-    applies-to:
-      bblock: ogc.api.common.part1.paths.LandingPage
-    tested-by:
-      - conf/landing-page/root-op
+    For formats that require manual inspection, perform the following:
 
-  # Requirement 13 - 9.1.2 Response
-  - id: landing-page/root-success
-    level: SHALL
-    statement: |
-      **A.** A successful execution of the operation SHALL be reported as a response with an HTTP status
-      code 200.
+    1. Validate that the landing page includes a “service-desc” and/or “service-doc” link to an API
+       Definition
+    2. Validate that the landing page includes a “http://www.opengis.net/def/rel/ogc/1.0/conformance”
+       link to the conformance class declaration
 
-      **B.** The content of that response SHALL be based upon the schema
-      [landingPage.yaml](http://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/landingPage.yaml)
-      and include links to the following resources:
+    The landing page may be retrieved in a number of different formats. The following table identifies
+    the applicable schema document for each format and the test to be used to validate the landing page
+    against that schema. All supported formats should be exercised.
 
-      - API Definition (relation type ‘service-desc’ or ‘service-doc’)
-      - Conformance Declaration (relation type ‘http://www.opengis.net/def/rel/ogc/1.0/conformance’)
-    applies-to:
-      bblock: ogc.api.common.part1.schemas.landingPage
-    tested-by:
-      - conf/landing-page/root-success
+    *Table A.1 — Schema and Tests for Landing Pages*
 
-  # Requirement 14 - 9.2.1 Operation
-  - id: landing-page/api-definition-op
-    level: SHALL
-    statement: |
-      **A.** The server SHALL support the HTTP GET operation on all links from the landing page that
-      have the relation type `service-desc`.
+    | Format | Schema Document | Test ID |
+    |---|---|---|
+    | HTML | landingPage.yaml | `/conf/html/content` |
+    | JSON | landingPage.yaml | `/conf/json/content` |
+  tested-by:
+  - conf/landing-page/root-success
+- id: landing-page/api-definition-op
+  requirement: landing-page/api-definition-op
+  purpose: Validate that the API Definition document can be retrieved from the expected location.
+  method: |
+    ```text
+    DO FOR EACH service-desc and service-doc link on the landing page:
+      1. Issue an HTTP GET request for the link
+      2. Validate that a document was returned with a status code 200
+      3. Validate the contents of the returned document using test /conf/landing-page/api-definition-success.
+    DONE
+    ```
+  tested-by:
+  - conf/landing-page/api-definition-op
+- id: landing-page/api-definition-success
+  requirement: landing-page/api-definition-success
+  purpose: Validate that the API Definition complies with the required structure and contents.
+  method: Validate the API Definition document against an appropriate schema document.
+  tested-by:
+  - conf/landing-page/api-definition-success
+- id: landing-page/conformance-op
+  requirement: landing-page/conformance-op
+  purpose: Validate that a Conformance Declaration can be retrieved from the expected locations.
+  method: |
+    ```text
+    DO FOR EACH http://www.opengis.net/def/rel/ogc/1.0/conformance link on the landing page:
+      1. Issue an HTTP GET request for the link
+      2. Validate that a document was returned with a status code 200
+      3. Validate the contents of the returned document using test /conf/landing-page/conformance-success.
+    DONE
+    ```
 
-      **B.** The server SHALL support the HTTP GET operation on all links from the landing page that
-      have the relation type `service-doc`.
-
-      **C.** The responses to all HTTP GET requests issued in A and B SHALL satisfy requirement
-      [`/req/landing-page/api-definition-success`](#req-landing-page-api-definition-success).
-    tested-by:
-      - conf/landing-page/api-definition-op
-
-  # Requirement 15 - 9.2.2 Response
-  - id: landing-page/api-definition-success
-    level: SHALL
-    statement: |
-      **A.** A successful execution of the operation SHALL be reported as a response with a HTTP status
-      code 200.
-
-      **B.** The content of that response SHALL be an API Definition document.
-
-      **C.** The API Definition document SHALL be consistent with the media type identified through HTTP
-      content negotiation.
-
-      *NOTE: The -f parameter MAY be used to satisfy this requirement.*
-    tested-by:
-      - conf/landing-page/api-definition-success
-
-  # Requirement 16 - 9.3.1 Operation
-  - id: landing-page/conformance-op
-    level: SHALL
-    statement: |
-      **A.** The server SHALL support the HTTP GET operation on the URI `{root}/conformance`.
-
-      **B.** The server SHALL support the HTTP GET operation on all links from the landing page that
-      have the relation type `http://www.opengis.net/def/rel/ogc/1.0/conformance`.
-
-      **C.** The responses to all HTTP GET requests issued in A and B SHALL satisfy requirement
-      [`/req/landing-page/conformance-success`](#req-landing-page-conformance-success).
-    applies-to:
-      bblock: ogc.api.common.part1.paths.Conformance
-    tested-by:
-      - conf/landing-page/conformance-op
-
-  # Requirement 17 - 9.3.2 Response
-  - id: landing-page/conformance-success
-    level: SHALL
-    statement: |
-      **A.** A successful execution of the operation SHALL be reported as a response with a HTTP status
-      code 200.
-
-      **B.** The content of that response SHALL be based upon the schema
-      [confClasses.yaml](http://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/confClasses.yaml)
-      and list all OGC API conformance classes that the API conforms to.
-    applies-to:
-      bblock: ogc.api.common.part1.schemas.confClasses
-    tested-by:
-      - conf/landing-page/conformance-success
+    4. Issue an HTTP GET request for the `{root}/conformance` path
+    5. Validate that a document was returned with a status code 200
+    6. Validate the contents of the returned document using test `/conf/landing-page/conformance-success`.
+  tested-by:
+  - conf/landing-page/conformance-op
+- id: landing-page/conformance-success
+  requirement: landing-page/conformance-success
+  purpose: Validate that the Conformance Declaration response complies with the required structure and contents.
+  method: |
+    1. Validate the response document against the schema `confClasses.yaml`
+    2. Validate that the document lists all OGC API conformance classes that the API implements.
+  tested-by:
+  - conf/landing-page/conformance-success

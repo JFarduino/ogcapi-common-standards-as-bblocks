@@ -1,5 +1,5 @@
 {
-  "name": "OGC Web API Guidelines (Informative)",
+  "name": "OGC Web API Guidelines",
   "abstract": "Annex E of OGC API - Common - Part 1: Core: how the Standard addresses the OGC Web API Guidelines.",
   "status": "stable",
   "dateTimeAddition": "2026-11-10T00:00:00Z",
@@ -8,7 +8,7 @@
   "normative": false,
   "sources": [
     {
-      "title": "OGC 19-072 — OGC API - Common - Part 1: Core — OGC Web API Guidelines (Informative)",
+      "title": "OGC 19-072 — OGC API - Common - Part 1: Core — OGC Web API Guidelines",
       "link": "https://docs.ogc.org/is/19-072/19-072.html#_ogc_web_api_guidelines"
     }
   ],

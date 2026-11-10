@@ -1,18 +1,27 @@
 # A short, descriptive name of this building block collection
-name: My OGC Building Blocks repository
+name: OGC API - Common - Part 1 (Standard as Building Blocks)
 
 # Short abstract for this collection (optional)
 abstract: |
-  This is an example text for the abstract. It should be short and to the point.
-  A "Tell me more" link will appear if there is an additional description with a longer explanation.
+  OGC API — Common — Part 1: Core (OGC 19-072) authored as Building Blocks: every clause,
+  requirements class, term, reference and annex of the Standard is a Building Block, and the
+  standards document is generated from them.
 
 # Description for this collection (optional)
 description: |
-  The description can be longer. Both **the abstract** *and the description* support Markdown,
-  including [links](https://google.es).
+  This repository contains the Building Blocks for
+  [OGC API — Common — Part 1: Core](https://docs.ogc.org/is/19-072/19-072.html) (OGC 19-072, version 1.0.0),
+  following the "OGC Standards as Building Blocks" approach: normative requirements, abstract tests,
+  test resources and prose are co-located in Building Blocks, and the HTML standards document is
+  generated from them by [bblocks-specgen](https://github.com/ogcincubator/bblocks-specgen)
+  (see `standards.yaml`).
+
+  The requirements reference the reusable OGC API — Common components (schemas, paths, responses)
+  published in the [OGC API — Common Building Blocks register](https://ogcincubator.github.io/bblocks-ogcapi-common/).
 
 # Customize the following prefix (will be prepended to the path of the building blocks):
-identifier-prefix: ogc.bbr.template.
+# Path _sources/part1/requirements/core/ -> identifier ogc.api.common.part1.requirements.core
+identifier-prefix: ogc.api.common.
 
 # List of imports ("default" is an alias for the main OGC Building Blocks Register).
 # An entry can also be an "@org/register" alias (e.g. "@ogc/main", equivalent to "default"),
@@ -20,6 +29,26 @@ identifier-prefix: ogc.bbr.template.
 # a full register.json URL.
 imports:
   - default
+  # OGC API - Common Part 1 components (ogc.api.common.part1.schemas.*, .paths.*, .responses.*)
+  - '@ogc/ogcapi-common'
+
+# Build plugins: generate the standards document(s) described in standards.yaml
+# (bblocks-specgen). The document is written to <build-dir>/<standard id>/index.html,
+# i.e. build/standards/part1/index.html.
+#
+# specgen is installed from the feature/update branch of JFarduino/bblocks-specgen ('layout: ogc',
+# file includes), locally (build.sh) and in the GitHub workflow alike. To try changes of the local
+# copy in bblocks-specgen-jules/ before pushing them, use instead (build.sh mounts the repository
+# on /workspace; GitHub workflows cannot see that folder):
+#   bblocks-specgen @ file:///workspace/bblocks-specgen-jules
+plugins:
+  build:
+    - classes: [standard_gen.plugin.SpecgenBuildPlugin]
+      pip: [bblocks-specgen @ git+https://github.com/JFarduino/bblocks-specgen@feature/update]
+      url: https://github.com/JFarduino/bblocks-specgen
+      config:
+        standards-file: standards.yaml
+        build-dir: build/standards
 
 # Meta-registry used to resolve "@org/register" import aliases above (optional).
 # Defaults to the postprocessor's built-in meta-registry if omitted; set to null to disable
@@ -37,9 +66,9 @@ schema-oas30-downcompile: False
 # If "url" is left unspecified and a LICENSE, LICENSE.md or LICENSE.txt file exists at the repository
 # root, its published URL is used automatically.
 #
-# license:
-#   name: Apache-2.0
-#   url: https://www.apache.org/licenses/LICENSE-2.0
+license:
+  name: OGC License Agreement
+  url: https://www.ogc.org/license
 
 # Viewer configuration (optional)
 #
@@ -95,6 +124,8 @@ schema-oas30-downcompile: False
 #   Each entry installs its pip dependencies into a sandbox and imports the given modules,
 #   which are scanned for plugin classes. Unless the postprocessor is run with
 #   --skip-permissions=true, you will be prompted before plugin code is installed/run.
+#   NOTE: this repository already declares "plugins" (bblocks-specgen) near the top of this file;
+#   add any further plugin entries there rather than uncommenting this reference block.
 #
 # plugins:
 #   transforms:

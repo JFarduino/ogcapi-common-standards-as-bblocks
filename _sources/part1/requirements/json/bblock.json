@@ -1,0 +1,35 @@
+{
+  "name": "Requirements Class “JSON”",
+  "abstract": "Encoding requirements class \"JSON\": JSON representations of the Landing Page and Conformance resources. The schema of this building block is the JSON payload of these resources, so that the test resources of the class are validated against it.",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "requirements-class",
+  "normative": true,
+  "standardization-target": "Web API",
+  "sources": [
+    {
+      "title": "OGC 19-072 — OGC API - Common - Part 1: Core — Requirements Class “JSON”",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#rc_json-section"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "requirements-class"
+  ],
+  "conformanceClasses": [
+    "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/json"
+  ],
+  "dependsOn": [
+    "ogc.api.common.part1.requirements.core",
+    "ogc.api.common.part1.requirements.landing-page"
+  ],
+  "resources": [
+    {
+      "ref": "requirements.yaml",
+      "role": "requirements",
+      "format": "application/yaml"
+    }
+  ]
+}

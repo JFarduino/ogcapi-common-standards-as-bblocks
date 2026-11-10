@@ -1,0 +1,21 @@
+# Test resources of the abstract tests of this class (see abstract-tests in requirements.yaml).
+# Each entry is validated by bblocks-postprocess against the schema of this building block.
+
+- id: conf/oas30/oas-definition-1
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-oas30-oas-definition-1.yaml
+- id: conf/oas30/oas-definition-2
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-oas30-oas-definition-2.yaml
+- id: conf/oas30/oas-impl
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-oas30-oas-impl.yaml
+- id: conf/oas30/completeness
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-oas30-completeness.yaml
+- id: conf/oas30/exceptions-codes
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-oas30-exceptions-codes.yaml
+- id: conf/oas30/security
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-oas30-security.yaml

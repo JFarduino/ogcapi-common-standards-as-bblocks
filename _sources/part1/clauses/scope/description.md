@@ -1,0 +1,13 @@
+The OGC API — Common — Part 1: Core Standard provides the fundamental rules for implementing a Web API
+that conforms to OGC API Standards. It seeks to establish a solid foundation which can be extended by
+other resource-specific Web API Standards.
+
+First, this OGC Standard establishes rules for the use of HTTP protocols and Uniform Resource
+Identifiers (URIs). These requirements seek to provide both API servers and clients a predictable
+environment for the exchange of HTTP requests and responses. These rules are applicable regardless of
+the resources being accessed.
+
+This OGC Standard then enables discovery operations directed against a Web API implementation. It
+identifies the hosted resources, defines conformance classes, and provides both human and
+machine-readable documentation of the API design. The requirements specified in this standard SHOULD
+be applicable to any Web API implementation.

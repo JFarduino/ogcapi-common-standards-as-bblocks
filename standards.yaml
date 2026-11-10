@@ -1,0 +1,140 @@
+# Standards documents generated from the building blocks of this repository.
+#
+# Read by bblocks-specgen (declared as a build plugin in bblocks-config.yaml), not by
+# bblocks-postprocess. See https://github.com/ogcincubator/bblocks-specgen/blob/master/docs/authoring.md
+#
+# Source document: OGC 19-072, OGC API - Common - Part 1: Core, version 1.0.0
+#   https://docs.ogc.org/is/19-072/19-072.html
+
+standards:
+
+  - id: part1
+    prefix: ogc.api.common.part1
+    # Requirements classes live under ogc.api.common.part1.requirements.<id>; their class id is <id>
+    class-id-prefix: ogc.api.common.part1.requirements.
+
+    title: "OGC API - Common - Part 1: Core"
+    doc-number: OGC 19-072
+    type: Standard
+    # Not "Draft": requirement and conformance URIs are generated without the "draft/" segment
+    status: Approved
+    version: "1.0.0"
+    doc-subtype: Implementation
+    submission-date: "2021-08-23"
+    approval-date: "2022-02-02"
+    pub-date: "2023-03-28"
+    external-id: http://www.opengis.net/doc/is/ogcapi-common-1/1.0
+
+    # Render like the published OGC document (bblocks-specgen-jules, "layout: ogc"): ModSpec
+    # tables, statements numbered across the document, numbered subclauses, OGC-style cover.
+    # The default "classic" layout draws the blue requirement boxes.
+    layout: ogc
+    modspec:
+      singular-labels: true     # "Prerequisite" when there is only one, as in OGC 19-072
+      obligation-row: false     # 19-072's requirements class tables have no "Obligation" row
+
+    base-uri: http://www.opengis.net/spec/ogcapi-common-1/1.0
+    req-uri-template:  "{base-uri}/{status}req/{id}"
+    conf-uri-template: "{base-uri}/{status}conf/{id}"
+
+    editors:
+      - name: Charles Heazel
+        affiliation: Heazeltech LLC
+
+    wg: OGC API - Common SWG
+    keywords:
+      - ogcdoc
+      - OGC document
+      - geographic information
+      - spatial data
+      - API
+      - json
+      - html
+      - OpenAPI
+      - REST
+      - Common
+
+    abstract: |
+      The OGC has extended its suite of Standards to include Resource Oriented Architectures and
+      Web APIs. In the course of developing these Standards, some practices proved to be common
+      across multiple OGC Web API Standards. These common practices are documented in the OGC API —
+      Common Standard. The OGC API - Common Standard is a multi-part standard that specifies reusable
+      building-blocks that can be used in the construction of OGC API Standards. This document
+      presents Part 1, the Core, of the OGC API – Common Standard. Standards developers will use
+      these building-blocks in the construction of other OGC Standards that relate to Web APIs. The
+      result is a modular suite of coherent API standards which can be adapted by a system designer
+      for the unique requirements of their system.
+      The purpose of the OGC API — Common — Part 1: Core Standard (API-Core) is to define those
+      fundamental building blocks and requirements which are applicable to all OGC Web API Standards.
+
+    boilerplate:
+      copyright-year: 2023
+      # The notices of the published OGC 19-072 (approved standard), in place of the generated
+      # copyright / patent policy / license text. 'license' is still shown in the page footer.
+      license: OGC License Agreement
+      notices:
+        - title: Notice
+          text: |
+            This document is an OGC Member approved international standard. This document is available on a royalty free, non-discriminatory basis. Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.
+
+            | | |
+            |---|---|
+            | Document number: | 19-072 |
+            | Document type: | OGC Standard |
+            | Document subtype: | Implementation |
+            | Document stage: | Approved |
+            | Document language: | English |
+        - title: Copyright notice
+          text: |
+            Copyright © 2023 Open Geospatial Consortium<br>
+            To obtain additional rights of use, visit <https://www.ogc.org/legal>
+        - title: Note
+          text: |
+            Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
+
+            Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
+        - title: License Agreement
+          text: |
+            Use of this document is subject to the license agreement at <https://www.ogc.org/license>
+
+            Suggested additions, changes and comments on this document are welcome and encouraged. Such suggestions may be submitted using the online change request form on OGC web site: <http://ogc.standardstracker.org/>
+
+    # Preface (I-VI), before clause 1. The abstract and keywords are generated from above.
+    preface:
+      - auto: abstract                                            # I
+      - auto: keywords                                            # II
+      - bblock: ogc.api.common.part1.preface.preface              # III
+      - bblock: ogc.api.common.part1.preface.security-considerations   # IV
+      - bblock: ogc.api.common.part1.preface.submitting-organizations  # V
+      - bblock: ogc.api.common.part1.preface.submitters           # VI
+
+    # Document order; clause and annex numbers are assigned in this order and match OGC 19-072.
+    # Statements are placed in the clause text with <!-- requirement|recommendation: id --> markers.
+    # Entries after {auto: annex-a} are annexes (B, C, ...).
+    clauses:
+      - bblock: ogc.api.common.part1.clauses.scope                # 1
+      - bblock: ogc.api.common.part1.clauses.conformance          # 2
+      - bblock: ogc.api.common.part1.clauses.references           # 3
+      - bblock: ogc.api.common.part1.clauses.terms                # 4
+      - bblock: ogc.api.common.part1.clauses.abbreviated-terms    # 5
+      - bblock: ogc.api.common.part1.clauses.conventions          # 6
+      - bblock: ogc.api.common.part1.clauses.overview             # 7
+      - bblock: ogc.api.common.part1.requirements.core            # 8
+      - bblock: ogc.api.common.part1.requirements.landing-page    # 9
+      - bblock: ogc.api.common.part1.clauses.encodings            # 10 (10.1 Overview)
+        subclauses:
+          - bblock: ogc.api.common.part1.requirements.html        # 10.2
+            title: Requirement Class “HTML”
+          - bblock: ogc.api.common.part1.requirements.json        # 10.3
+            title: Requirement Class “JSON”
+      - bblock: ogc.api.common.part1.requirements.oas30           # 11
+      - bblock: ogc.api.common.part1.clauses.media-types          # 12
+      - auto: annex-a                                             # A - Abstract Test Suite
+        bblock: ogc.api.common.part1.annexes.ats
+      - bblock: ogc.api.common.part1.annexes.examples             # B
+      - bblock: ogc.api.common.part1.annexes.glossary             # C
+      - bblock: ogc.api.common.part1.annexes.bnf                  # D
+      - bblock: ogc.api.common.part1.annexes.web-api-guidelines   # E
+      - bblock: ogc.api.common.part1.annexes.revision-history     # F
+      - bblock: ogc.api.common.part1.annexes.bibliography
+        numbered: false

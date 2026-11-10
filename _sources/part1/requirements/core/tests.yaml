@@ -1,0 +1,36 @@
+# Test resources of the abstract tests of this class (see abstract-tests in requirements.yaml).
+# Each entry is validated by bblocks-postprocess against the schema of this building block.
+
+- id: conf/core/http
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-core-http.yaml
+- id: conf/core/query-param-name-unknown
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-core-query-param-name-unknown.yaml
+- id: conf/core/query-param-value-invalid
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-core-query-param-value-invalid.yaml
+- id: conf/core/query-param-capitalization
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-core-query-param-capitalization.yaml
+- id: conf/core/query-param-list-delimiter
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-core-query-param-list-delimiter.yaml
+- id: conf/core/query-param-list-escape
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-core-query-param-list-escape.yaml
+- id: conf/core/query-param-list-empty
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-core-query-param-list-empty.yaml
+- id: conf/core/query-param-value-boolean
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-core-query-param-value-boolean.yaml
+- id: conf/core/query-param-value-integer
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-core-query-param-value-integer.yaml
+- id: conf/core/query-param-value-decimal
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-core-query-param-value-decimal.yaml
+- id: conf/core/query-param-value-double
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-core-query-param-value-double.yaml

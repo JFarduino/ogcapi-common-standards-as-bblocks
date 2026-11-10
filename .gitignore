@@ -3,3 +3,6 @@ build-local/
 bblocks-config-local.yml
 bblocks-config-local.yaml
 .volumes
+.bblocks-sandbox/
+# local copy of bblocks-specgen (its own git repository)
+bblocks-specgen-jules/

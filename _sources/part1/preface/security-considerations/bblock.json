@@ -1,0 +1,20 @@
+{
+  "name": "Security considerations",
+  "abstract": "Security considerations of OGC API - Common - Part 1: Core (preface section).",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "clause",
+  "normative": false,
+  "sources": [
+    {
+      "title": "OGC 19-072 — OGC API - Common - Part 1: Core — Security considerations",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#security-considerations-section"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "preface"
+  ]
+}

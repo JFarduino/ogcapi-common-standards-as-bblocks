@@ -1,0 +1,372 @@
+# Requirements class Core of OGC 19-072 (OGC API - Common - Part 1: Core)
+#   requirements class: http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
+#   conformance class:  http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core
+#
+# Statements (requirements and recommendations) are placed in description.md, or in another clause,
+# with <!-- requirement|recommendation: <id> --> markers, and numbered in document order. OGC 19-072
+# labels some statements "Recommendation" but identifies them as /per/...: those carry an explicit
+# 'uri'. Abstract tests are laid out in Annex A by the ogc.api.common.part1.annexes.ats block; their
+# 'tested-by' entries are test resources of tests.yaml.
+
+class-id: core
+title: Core
+standardization-target: Web API
+depends-on:
+- uri: https://www.rfc-editor.org/info/rfc7231
+  title: RFC 7231 (HTTP/1.1)
+- uri: https://www.rfc-editor.org/info/rfc2818
+  title: RFC 2818 (HTTP over TLS)
+- uri: https://www.rfc-editor.org/info/rfc8288
+  title: RFC 8288 (Web Linking)
+conformance-class:
+  title: Core
+  subject: http://www.opengis.net/spec/ogcapi-common/1.0/req/core
+requirements:
+- id: core/http
+  parts:
+  - OGC Web APIs SHALL conform to HTTP 1.1.
+  - If the API supports HTTPS, then the API SHALL also conform to HTTP over TLS.
+- id: core/query-param-name-unknown
+  statement: |
+    The server SHALL return a response with the status code 400 IF
+
+    - the request URI includes a query parameter that is not specified in the API definition
+    - `/per/core/query-param-name-specified` does not apply, and
+    - `/per/core/query-param-name-tolerance` does not apply.
+- id: core/query-param-value-invalid
+  statement: |
+    The server SHALL respond with a response with the status code 400 IF
+
+    - the request URI includes a query parameter that has an invalid value and
+    - `/per/core/query-param-value-specified` does not apply and
+    - `/per/core/query-param-value-tolerance` does not apply.
+- id: core/query-param-capitalization
+  parts:
+  - Parameter names and values SHALL be case sensitive.
+  - |
+    IF a parameter name or value includes a percent encoded (escaped) character, THEN the
+    upper case hexadecimal digits (“A” through “F”) of that percent encoded character SHALL be
+    equivalent to the lower case digits “a” through “f” respectively.
+- id: core/query-param-list-delimiter
+  parts:
+  - |
+    Parameters values containing lists SHOULD specify the delimiter to be used in the API
+    definition.
+  - The default list item delimiter SHALL be the comma (“,”).
+  applies-to:
+    bblock: ogc.api.common.part1.schemas.queryParamValueList
+- id: core/query-param-list-escape
+  statement: |
+    Any list item values that include a space or comma SHALL escape the space or comma
+    character using the URI encoding rules from IETF RFC 3986.
+  applies-to:
+    bblock: ogc.api.common.part1.schemas.queryParamValueList
+- id: core/query-param-list-empty
+  statement: All empty entries SHALL be represented by the empty string.
+  applies-to:
+    bblock: ogc.api.common.part1.schemas.queryParamValueList
+- id: core/query-param-value-boolean
+  statement: |
+    Boolean values shall be represented by the lowercase strings “true” and “false”,
+    representing Boolean true and false respectively.
+  applies-to:
+    bblock: ogc.api.common.part1.schemas.queryParamValueBoolean
+- id: core/query-param-value-integer
+  statement: |
+    Integer values SHALL be represented by a finite-length sequence of decimal digits with an
+    optional leading negative “-” sign. Positive values are assumed if the leading sign is omitted.
+  applies-to:
+    bblock: ogc.api.common.part1.schemas.queryParamValueInteger
+- id: core/query-param-value-decimal
+  statement: |
+    Decimal values SHALL be represented by a finite-length sequence of decimal digits separated
+    by a period as a decimal indicator.
+
+    - An optional leading negative sign (“-”) is allowed.
+    - If the sign is omitted, positive (“+”) is assumed.
+    - Leading and trailing zeroes are optional.
+    - If the fractional part is zero, the period and following zero(es) can be omitted.
+  applies-to:
+    bblock: ogc.api.common.part1.schemas.queryParamValueDecimal
+- id: core/query-param-value-double
+  parts:
+  - |
+    Double values SHALL be represented by a mantissa followed, optionally, by the character
+    “e”, followed by an exponent.
+  - The exponent SHALL be an integer.
+  - The mantissa SHALL be a decimal number.
+  - |
+    The representations for exponent and mantissa SHALL follow the lexical rules for integer and
+    decimal.
+  - If the “e” and the following exponent are omitted, an exponent value of 0 SHALL be assumed.
+  applies-to:
+    bblock: ogc.api.common.part1.schemas.queryParamValueDouble
+- id: core/link-header
+  type: recommendation
+  parts:
+  - Links included in the payload of a response SHOULD also be included as Link headers in the HTTP response according to RFC 8288, Clause 3.
+  - This recommendation does not apply when there are a large number of links included in a response or a link is not known when the HTTP headers of the response are created.
+- id: core/additional-status-codes
+  type: recommendation
+  uri: http://www.opengis.net/spec/ogcapi-common-1/1.0/per/core/additional-status-codes
+  statement: Servers MAY implement additional capabilities provided by the HTTP protocol. Therefore, they MAY return status codes in addition to those listed in Table 2.
+- id: core/problem-details
+  type: recommendation
+  statement: An OGC Web API should include a “Problem Details” report in any error response in accordance with IETF RFC 7807.
+- id: core/query-param-name-specified
+  type: recommendation
+  uri: http://www.opengis.net/spec/ogcapi-common-1/1.0/per/core/query-param-name-specified
+  statement: |
+    Examples of a parameter range include:
+
+    - A regular expression that defines the valid parameter names,
+    - A URI Template segment that defines the valid parameter names,
+    - An indication that all parameter names are accepted (no parameter validation).
+  parts:
+  - The specification of a query parameter in the API definition MAY encompass a range of parameter names. Any query parameter that falls within the specified range can be considered “specified” in the API definition.
+- id: core/query-param-name-tolerance
+  type: recommendation
+  uri: http://www.opengis.net/spec/ogcapi-common-1/1.0/per/core/query-param-name-tolerance
+  parts:
+  - |
+    Servers MAY display tolerance for requests with incorrect query parameter names. These acts of tolerance include:
+
+    - Accept alternate capitalizations, spellings, and/or aliases of parameters,
+    - Ignore unknown/unrecognized parameters,
+    - Return a response with a status code of 30x redirecting the client to a more correct version of the request.
+  - Servers should not be excessively tolerant. The response a client receives from the server should be a reasonable response for the request submitted.
+- id: core/query-param-value-specified
+  type: recommendation
+  uri: http://www.opengis.net/spec/ogcapi-common-1/1.0/per/core/query-param-value-specified
+  parts:
+  - The specification of a query parameter in the API definition should include a definition of the valid values for that parameter. Any value that meets that criteria can be considered “specified” in the API definition.
+  - |
+    The API definition language chosen may not be capable of expressing the desired range of values. In that case the server SHOULD provide:
+
+    - A definition of the parameter values that best expresses the intended use of that parameter,
+    - Additional human readable text documenting the actual range of validity.
+- id: core/query-param-value-tolerance
+  type: recommendation
+  uri: http://www.opengis.net/spec/ogcapi-common-1/1.0/per/core/query-param-value-tolerance
+  parts:
+  - |
+    Servers MAY display tolerance for requests where a parameter has an incorrect value. These acts of tolerance include:
+
+    - substituting default values for invalid ones,
+    - correcting formatting errors (e.g. convert integers to float).
+  - Servers should not be excessively tolerant. The response a client receives from the server should be a reasonable response for the request submitted.
+- id: core/etag
+  type: recommendation
+  statement: The service SHOULD support entity tags and the associated headers as specified by HTTP 1.1.
+- id: core/cross-origin
+  type: recommendation
+  statement: If the server is intended to be accessed from a browser, cross-origin requests SHOULD be supported. Note that support can also be added in a proxy layer on top of the server.
+- id: core/string-i18n
+  type: recommendation
+  statement: For encodings that support string internationalization, the server SHOULD include information about the language for each string value that includes linguistic text.
+- id: core/html
+  type: recommendation
+  statement: To support browsing an API with a web browser and to enable search engines to crawl and index the dataset, implementations SHOULD consider supporting an HTML encoding.
+- id: core/json
+  type: recommendation
+  statement: To support processing of an API with a web applet, implementations SHOULD consider supporting a JSON encoding.
+- id: core/query-param-capitalization
+  type: recommendation
+  parts:
+  - Query parameter names SHOULD be in kebab case.
+  - Query parameter values are usually reflective of the internal structure of the target resource. Unless otherwise specified, these values SHOULD be in kebab case.
+- id: core/query-param-value-special
+  type: recommendation
+  statement: The special values positive and negative infinity and not-a-number SHOULD be represented using the strings `inf`, `-inf` and `nan`, respectively.
+abstract-tests:
+- id: core/http
+  requirement: core/http
+  purpose: Validate that the resources advertised through the API can be accessed using the HTTP 1.1 protocol and, where appropriate, TLS.
+  method: |
+    1. All compliance tests shall be configured to use the HTTP 1.1 protocol exclusively.
+    2. For APIs that support HTTPS, all compliance tests shall be configured to use HTTP over TLS
+       (RFC 2818) with their HTTP 1.1 protocol.
+  tested-by:
+  - conf/core/http
+- id: core/query-param-name-unknown
+  requirement: core/query-param-name-unknown
+  purpose: Validate that an error is returned when a query parameter is used that has not been specified in the API definition.
+  method: |
+    ```text
+    DO FOR ALL operations advertised in the API definition
+      1. Execute that operation using a query parameter that is not specified in the API definition.
+      2. Validate that the operation returns a response with the status code 400.
+    DONE
+    ```
+  tested-by:
+  - conf/core/query-param-name-unknown
+- id: core/query-param-value-invalid
+  requirement: core/query-param-value-invalid
+  purpose: Validate that an error is returned when a query parameter contains a value that is not valid for that parameter.
+  method: |
+    ```text
+    DO FOR ALL query parameters advertised in the API definition
+      DO FOR ALL operations for which that parameter is valid
+        1. Execute that operation using the query parameter with values
+           that do not comply with the advertised constraints on those values.
+           (Example: exceeding minimum or maximum values)
+        2. Validate that the operation returns a response with the status code 400.
+      DONE
+    DONE
+    ```
+  tested-by:
+  - conf/core/query-param-value-invalid
+- id: core/query-param-capitalization
+  requirement: core/query-param-capitalization
+  purpose: Validate that a parameter name is correctly capitalized
+  method: |
+    ```text
+    DO FOR ALL query parameters advertised in the API definition
+      DO FOR ALL operations for which that parameter is valid
+        1. Execute that operation using that query parameter
+           capitalized as specified in the API definition
+        2. Validate that the operation returns a response with the status code 200.
+        3. Execute that operation using that query parameter with capitalization
+           inverse of that specified in the API definition
+           (Example: "Range" vs. "rANGE")
+        4. Validate that the operation returns a response with the status code 400.
+      DONE
+    DONE
+    ```
+  tested-by:
+  - conf/core/query-param-capitalization
+- id: core/query-param-list-delimiter
+  requirement: core/query-param-list-delimiter
+  purpose: For every query parameter where the value may be a list, validate that the server uses the designated delimiter to parse the items from the list.
+  method: |
+    ```text
+    DO FOR ALL query parameters advertised in the API definition where the parameter value can be a list
+      DO FOR ALL operations for which that parameter is valid
+        1. Generate a request using that parameter and a value that is a delimited
+           list of items. Use a delimiter that is:
+             a. As advertised in the API definition OR
+             b. A comma (",") if no delimiter is advertised.
+        2. Validate that the server properly interprets that parameter value
+        3. Generate a request using that parameter and a value where:
+             a. the value is a delimited list AND
+             b. the delimiter used to construct the list is not valid for this server
+        4. Validate that the server returns a status code 400
+      DONE
+    DONE
+    ```
+  tested-by:
+  - conf/core/query-param-list-delimiter
+- id: core/query-param-list-escape
+  requirement: core/query-param-list-escape
+  purpose: For every query parameter where the value may be a list, validate that all escaped space and comma characters that appear in the values are properly processed.
+  method: |
+    ```text
+    DO FOR ALL query parameters advertised in the API definition where the parameter value can be a list
+      DO FOR ALL operations for which that parameter is valid
+        1. Generate a request using that parameter and a value that
+           includes an escaped space or comma
+        2. Validate that the server properly interprets that parameter value
+        3. Generate a request using that parameter and a value that
+           includes a non-escaped space or comma
+        4. Validate that the server returns a status code 400
+      DONE
+    DONE
+    ```
+  tested-by:
+  - conf/core/query-param-list-escape
+- id: core/query-param-list-empty
+  requirement: core/query-param-list-empty
+  purpose: For every query parameter where the value may be a list, validate that the server interprets an empty string as an empty list.
+  method: |
+    ```text
+    DO FOR ALL query parameters advertised in the API definition where the parameter value can be a list
+      DO FOR ALL operations for which that parameter is valid
+        1. Generate a request using that parameter and an empty string for the parameter value.
+        2. Validate that the server properly interprets that parameter value as an empty list
+      DONE
+    DONE
+    ```
+  tested-by:
+  - conf/core/query-param-list-empty
+- id: core/query-param-value-boolean
+  requirement: core/query-param-value-boolean
+  purpose: For every query parameter where the value is a boolean, validate that the server correctly interprets boolean values of “true” and “false”.
+  method: |
+    ```text
+    DO FOR ALL query parameters advertised in the API definition where the parameter value is a boolean
+      DO FOR ALL operations for which that parameter is valid
+        1. Generate a request using that parameter and the string "true" for the parameter value
+        2. Validate that the server properly interprets that parameter value as true boolean value
+        3. Generate a request using that parameter and the string "false" for the parameter value
+        4. Validate that the server properly interprets that parameter value as false boolean value
+      DONE
+    DONE
+    ```
+  tested-by:
+  - conf/core/query-param-value-boolean
+- id: core/query-param-value-integer
+  requirement: core/query-param-value-integer
+  purpose: For every query parameter where the value is an integer, validate that the server correctly interprets properly encoded integer values.
+  method: |
+    ```text
+    DO FOR ALL query parameters advertised in the API definition where the parameter value is an integer
+      DO FOR ALL operations for which that parameter is valid
+        1. Generate a request using that parameter and an unsigned numeric string for the parameter value
+        2. Validate that the server properly interprets that parameter value as an unsigned integer
+        3. Generate a request using that parameter and a negative signed numeric string for the parameter value
+        4. Validate that the server properly interprets that parameter value as a signed negative integer value
+      DONE
+    DONE
+    ```
+  tested-by:
+  - conf/core/query-param-value-integer
+- id: core/query-param-value-decimal
+  requirement: core/query-param-value-decimal
+  purpose: For every query parameter where the value is a decimal, validate that the server correctly interprets properly encoded decimal values.
+  method: |
+    ```text
+    DO FOR ALL query parameters advertised in the API definition where the parameter value is a decimal number
+      DO FOR ALL operations for which that parameter is valid
+        1. Generate a request using that parameter and a parameter value that is:
+             a) an unsigned numeric string preceded by one or more zeros
+             b) contains at least two factional digits followed by one or more zeros
+        2. Validate that the server properly interprets that parameter value as an unsigned decimal value
+        3. Generate a request using that parameter and a parameter value that is:
+             a) a signed negative numeric string
+             b) contains at least two factional digits followed by one or more zeros
+        4. Validate that the server properly interprets that parameter value as a signed negative decimal value
+        5. Generate a request using that parameter and a parameter value that:
+             a) is an unsigned numeric string preceded by one or more zeros
+             b) does not contain non-numeric characters (".")
+        6. Validate that the server properly interprets that parameter value as an unsigned decimal value
+           with a fractional value of zero
+      DONE
+    DONE
+    ```
+  tested-by:
+  - conf/core/query-param-value-decimal
+- id: core/query-param-value-double
+  requirement: core/query-param-value-double
+  purpose: For every query parameter where the value is a double, validate that the server correctly interprets properly encoded double values.
+  method: |
+    ```text
+    DO FOR ALL query parameters advertised in the API definition where the parameter value is a double value
+      DO FOR ALL operations for which that parameter is valid
+        1. Generate a request using that parameter and a parameter value that is:
+             a) greater than 4,294,967,296 ("e" and exponent required) and
+             b) contains at least two factional digits followed by one or more zeros
+        2. Validate that the server properly interprets that parameter value
+        3. Generate a request using that parameter and a parameter value that is:
+             a) less than -4,294,967,296 (without "e" and exponent) and
+             b) contains at least two factional digits followed by one or more zeros
+        4. Validate that the server properly interprets that parameter value
+        5. Generate a request using that parameter and a parameter value that is:
+             a) Less than 4,294,967,296
+             b) Greater than -4,294,967,295
+             c) Represented as a single decimal number
+        6. Validate that the server properly interprets that parameter value
+      DONE
+    DONE
+    ```
+  tested-by:
+  - conf/core/query-param-value-double

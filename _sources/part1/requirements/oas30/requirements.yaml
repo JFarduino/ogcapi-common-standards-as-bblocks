@@ -1,0 +1,105 @@
+# Requirements class OpenAPI 3.0 of OGC 19-072 (OGC API - Common - Part 1: Core)
+#   requirements class: http://www.opengis.net/spec/ogcapi-common-1/1.0/req/oas30
+#   conformance class:  http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/oas30
+#
+# Statements (requirements and recommendations) are placed in description.md, or in another clause,
+# with <!-- requirement|recommendation: <id> --> markers, and numbered in document order. OGC 19-072
+# labels some statements "Recommendation" but identifies them as /per/...: those carry an explicit
+# 'uri'. Abstract tests are laid out in Annex A by the ogc.api.common.part1.annexes.ats block; their
+# 'tested-by' entries are test resources of tests.yaml.
+
+class-id: oas30
+title: OpenAPI 3.0
+standardization-target: Web API
+depends-on:
+- uri: http://spec.openapis.org/oas/v3.0.3
+  title: OpenAPI Specification 3.0
+conformance-class:
+  title: OpenAPI 3.0
+  subject: http://www.opengis.net/spec/ogcapi-common/1.0/req/oas30
+  prerequisites:
+  - '[Core Conformance Class](#conf-core)'
+  - '[Landing Page Conformance Class](#conf-landing-page)'
+requirements:
+- id: oas30/oas-definition-1
+  statement: |
+    An OpenAPI definition in JSON using the media type
+    `application/vnd.oai.openapi+json;version=3.0` and a HTML version of the API definition using
+    the media type `text/html` SHALL be available.
+- id: oas30/oas-definition-2
+  statement: The JSON representation SHALL conform to the OpenAPI Specification, version 3.0.
+- id: oas30/oas-impl
+  statement: The API SHALL implement all capabilities specified in the OpenAPI definition.
+- id: oas30/completeness
+  parts:
+  - |
+    The OpenAPI definition SHALL specify for each operation all
+    [HTTP Status Codes](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#httpCodes)
+    and [Response Objects](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#responseObject)
+    that the API uses in responses.
+  - |
+    This includes the successful execution of an operation as well as all error situations
+    that originate from the server.
+- id: oas30/exceptions-codes
+  statement: |
+    For error situations that originate from an API server, the API definition SHALL cover all
+    applicable HTTP Status Codes.
+  applies-to:
+    bblock: ogc.api.common.part1.responses.Exception
+- id: oas30/security
+  statement: |
+    If the operations of the API are access-controlled, the security scheme(s) and requirements
+    SHALL be documented in the OpenAPI definition.
+abstract-tests:
+- id: oas30/oas-definition-1
+  requirement: oas30/oas-definition-1
+  purpose: Verify that JSON and HTML versions of the OpenAPI document are available.
+  method: |
+    1. Verify that an OpenAPI definition in JSON is available using the media type
+       `application/vnd.oai.openapi+json;version=3.0` and link relation `service-desc`
+    2. Verify that an HTML version of the API definition is available using the media type `text/html`
+       and link relation `service-doc`.
+  tested-by:
+  - conf/oas30/oas-definition-1
+- id: oas30/oas-definition-2
+  requirement: oas30/oas-definition-2
+  purpose: Verify that the OpenAPI document is valid JSON.
+  method: |
+    Verify that the JSON representation conforms to the OpenAPI Specification,
+    version 3.0.
+  tested-by:
+  - conf/oas30/oas-definition-2
+- id: oas30/oas-impl
+  requirement: oas30/oas-impl
+  purpose: Verify that all capabilities specified in the OpenAPI definition are implemented by the API.
+  method: |
+    1. Construct an operation for each OpenAPI Path object including all server URL options, HTTP
+       operations and enumerated path parameters.
+    2. Validate that each operation performs in accordance with the API definition.
+  tested-by:
+  - conf/oas30/oas-impl
+- id: oas30/completeness
+  requirement: oas30/completeness
+  purpose: Verify the completeness of an OpenAPI document.
+  method: |
+    Verify that for each operation, the OpenAPI document describes all HTTP Status
+    Codes and Response Objects that the API uses in responses.
+  tested-by:
+  - conf/oas30/completeness
+- id: oas30/exceptions-codes
+  requirement: oas30/exceptions-codes
+  purpose: Verify that the OpenAPI document fully describes potential exception codes.
+  method: |
+    Verify that for each operation, the OpenAPI document describes all HTTP Status
+    Codes that may be generated.
+  tested-by:
+  - conf/oas30/exceptions-codes
+- id: oas30/security
+  requirement: oas30/security
+  purpose: Verify that any authentication protocols implemented by the API are documented in the OpenAPI document.
+  method: |
+    1. Identify all authentication protocols supported by the API.
+    2. Validate that each authentication protocol is described in the OpenAPI document by a Security
+       Schema Object and its use specified by a Security Requirement Object.
+  tested-by:
+  - conf/oas30/security

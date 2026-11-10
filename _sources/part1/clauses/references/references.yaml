@@ -1,0 +1,47 @@
+# Clause 3 - Normative references (sorted by doc-id when rendered)
+normative:
+  - title: "E. Rescorla: HTTP Over TLS. RFC Publisher"
+    doc-id: IETF RFC 2818
+    uri: https://www.rfc-editor.org/info/rfc2818
+    date: "2000"
+
+  - title: "T. Berners-Lee, R. Fielding, L. Masinter: Uniform Resource Identifier (URI): Generic Syntax. RFC Publisher"
+    doc-id: IETF RFC 3986
+    uri: https://www.rfc-editor.org/info/rfc3986
+    date: "2005"
+
+  - title: "J. Gregorio, R. Fielding, M. Hadley, M. Nottingham, D. Orchard: URI Template. RFC Publisher"
+    doc-id: IETF RFC 6570
+    uri: https://www.rfc-editor.org/info/rfc6570
+    date: "2012"
+
+  - title: "R. Fielding, J. Reschke (eds.): Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content. RFC Publisher"
+    doc-id: IETF RFC 7231
+    uri: https://www.rfc-editor.org/info/rfc7231
+    date: "2014"
+
+  - title: "R. Fielding, J. Reschke (eds.): Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests. RFC Publisher"
+    doc-id: IETF RFC 7232
+    uri: https://www.rfc-editor.org/info/rfc7232
+    date: "2014"
+
+  - title: "M. Nottingham, E. Wilde: Problem Details for HTTP APIs. RFC Publisher"
+    doc-id: IETF RFC 7807
+    uri: https://www.rfc-editor.org/info/rfc7807
+    date: "2016"
+
+  - title: "M. Nottingham: Web Linking. RFC Publisher"
+    doc-id: IETF RFC 8288
+    uri: https://www.rfc-editor.org/info/rfc8288
+    date: "2017"
+
+  - title: "T. Bray (ed.): The JavaScript Object Notation (JSON) Data Interchange Format. RFC Publisher"
+    doc-id: IETF RFC 8259
+    uri: https://www.rfc-editor.org/info/rfc8259
+    date: "2017"
+
+  - title: >-
+      Open API Initiative: OpenAPI Specification, Version 3.0. The latest patch version at the time of
+      publication of this standard was 3.0.3
+    doc-id: OpenAPI 3.0
+    uri: http://spec.openapis.org/oas/v3.0.3

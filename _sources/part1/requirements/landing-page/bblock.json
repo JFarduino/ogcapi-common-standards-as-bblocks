@@ -1,0 +1,38 @@
+{
+  "name": "Landing Page Requirements Class",
+  "abstract": "Requirements class \"Landing Page\": the landing page, the API definition and the conformance declaration resources of an OGC Web API.",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "requirements-class",
+  "normative": true,
+  "standardization-target": "Web API",
+  "sources": [
+    {
+      "title": "OGC 19-072 — OGC API - Common - Part 1: Core — Landing Page Requirements Class",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#rc_landing-page-section"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "requirements-class"
+  ],
+  "conformanceClasses": [
+    "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/landing-page"
+  ],
+  "dependsOn": [
+    "ogc.api.common.part1.requirements.core",
+    "ogc.api.common.part1.paths.LandingPage",
+    "ogc.api.common.part1.paths.Conformance",
+    "ogc.api.common.part1.schemas.landingPage",
+    "ogc.api.common.part1.schemas.confClasses"
+  ],
+  "resources": [
+    {
+      "ref": "requirements.yaml",
+      "role": "requirements",
+      "format": "application/yaml"
+    }
+  ]
+}

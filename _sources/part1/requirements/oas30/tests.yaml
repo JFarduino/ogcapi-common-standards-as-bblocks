@@ -1,0 +1,83 @@
+# Abstract tests of conformance class OpenAPI 3.0 (OGC 19-072, Annex A.6).
+#
+# The test resource of every test is the example OpenAPI 3.0 API definition of OGC 19-072, Annex B.3.
+# The tests are listed here in the order of the requirements they verify; OGC 19-072 numbers them
+# A.22 to A.27.
+
+- id: conf/oas30/oas-definition-1
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-oas30-oas-definition-1.yaml
+  method: |
+    **Abstract test A.24** — `/conf/oas30/oas-definition-1`
+
+    **Test purpose:** Verify that JSON and HTML versions of the OpenAPI document are available.
+
+    **Test method:**
+
+    1. Verify that an OpenAPI definition in JSON is available using the media type
+       `application/vnd.oai.openapi+json;version=3.0` and link relation `service-desc`
+    2. Verify that an HTML version of the API definition is available using the media type `text/html`
+       and link relation `service-doc`.
+
+- id: conf/oas30/oas-definition-2
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-oas30-oas-definition-2.yaml
+  method: |
+    **Abstract test A.25** — `/conf/oas30/oas-definition-2`
+
+    **Test purpose:** Verify that the OpenAPI document is valid JSON.
+
+    **Test method:** Verify that the JSON representation conforms to the OpenAPI Specification,
+    version 3.0.
+
+- id: conf/oas30/oas-impl
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-oas30-oas-impl.yaml
+  method: |
+    **Abstract test A.26** — `/conf/oas30/oas-impl`
+
+    **Test purpose:** Verify that all capabilities specified in the OpenAPI definition are implemented
+    by the API.
+
+    **Test method:**
+
+    1. Construct an operation for each OpenAPI Path object including all server URL options, HTTP
+       operations and enumerated path parameters.
+    2. Validate that each operation performs in accordance with the API definition.
+
+- id: conf/oas30/completeness
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-oas30-completeness.yaml
+  method: |
+    **Abstract test A.22** — `/conf/oas30/completeness`
+
+    **Test purpose:** Verify the completeness of an OpenAPI document.
+
+    **Test method:** Verify that for each operation, the OpenAPI document describes all HTTP Status
+    Codes and Response Objects that the API uses in responses.
+
+- id: conf/oas30/exceptions-codes
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-oas30-exceptions-codes.yaml
+  method: |
+    **Abstract test A.23** — `/conf/oas30/exceptions-codes`
+
+    **Test purpose:** Verify that the OpenAPI document fully describes potential exception codes.
+
+    **Test method:** Verify that for each operation, the OpenAPI document describes all HTTP Status
+    Codes that may be generated.
+
+- id: conf/oas30/security
+  ref: ../../test-resources/api-definition.yaml
+  output-filename: conf-oas30-security.yaml
+  method: |
+    **Abstract test A.27** — `/conf/oas30/security`
+
+    **Test purpose:** Verify that any authentication protocols implemented by the API are documented in
+    the OpenAPI document.
+
+    **Test method:**
+
+    1. Identify all authentication protocols supported by the API.
+    2. Validate that each authentication protocol is described in the OpenAPI document by a Security
+       Schema Object and its use specified by a Security Requirement Object.

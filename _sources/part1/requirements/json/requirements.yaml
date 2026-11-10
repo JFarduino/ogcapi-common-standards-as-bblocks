@@ -1,0 +1,49 @@
+# Requirements class: JSON  (OGC 19-072, clause 10.3 - Requirements class 4)
+# Class URI:       http://www.opengis.net/spec/ogcapi-common-1/1.0/req/json
+# Conformance URI: http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/json
+#
+# Requirements 20-21 of OGC 19-072. Recommendation 18 is in description.md.
+
+class-id: json
+standardization-target: Web API
+
+depends-on:
+  # Prerequisites of requirements class 4 and conformance class A.3 (JSON)
+  - bblock: ogc.api.common.part1.requirements.core
+  - bblock: ogc.api.common.part1.requirements.landing-page
+  - uri: https://www.rfc-editor.org/info/rfc8259
+    title: "IETF RFC 8259: The JavaScript Object Notation (JSON) Data Interchange Format"
+  - uri: https://json-schema.org/specification.html
+    title: JSON Schema
+
+requirements:
+
+  # Requirement 20
+  - id: json/definition
+    level: SHALL
+    statement: |
+      **A.** 200-responses of the server SHALL support the `application/json` media type for the
+      Landing Page and Conformance resources.
+    tested-by:
+      - conf/json/definition
+      - conf/json/definition-conformance
+
+  # Requirement 21
+  - id: json/content
+    level: SHALL
+    statement: |
+      **A.** Every request to a Landing Page or Conformance resource which:
+
+      - Receives a 200-response
+      - with the Content-Type header set to `application/json`
+
+      SHALL include, or link to, a payload encoded according to the
+      [JSON Interchange Format](https://tools.ietf.org/html/rfc8259)
+
+      **B.** The payload for these responses SHALL conform with the JSON Schema specified for the
+      resource in the [Landing Page Requirements Class](#clause-9).
+    tested-by:
+      - conf/json/content
+      - conf/json/content-conformance
+      - conf/json/content-landing-page-no-links
+      - conf/json/content-conformance-not-a-list

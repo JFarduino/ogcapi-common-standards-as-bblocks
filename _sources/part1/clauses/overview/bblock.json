@@ -1,0 +1,20 @@
+{
+  "name": "Overview",
+  "abstract": "Clause 7 of OGC API - Common - Part 1: Core: evolution from OGC Web Services, modular APIs and the ways clients use OGC APIs.",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "clause",
+  "normative": true,
+  "sources": [
+    {
+      "title": "OGC 19-072 — OGC API - Common - Part 1: Core — Overview",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#overview"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "clause"
+  ]
+}

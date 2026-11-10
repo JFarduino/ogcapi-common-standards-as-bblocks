@@ -1,0 +1,20 @@
+{
+  "name": "Scope",
+  "abstract": "Clause 1 of OGC API - Common - Part 1: Core: the scope of the Standard.",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "clause",
+  "normative": true,
+  "sources": [
+    {
+      "title": "OGC 19-072 — OGC API - Common - Part 1: Core — Scope",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#_scope"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "clause"
+  ]
+}

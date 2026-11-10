@@ -1,0 +1,9 @@
+*Table F.1 — Revision History*
+
+| Date | Release | Editor | Primary clauses modified | Description |
+|---|---|---|---|---|
+| 2019-10-31 | October 2019 snapshot | C. Heazel | all | Baseline update |
+| 2020-04-21 | Public Comments | C. Heazel | all | Separation of Collections from Core plus additional comment adjudications. |
+| 2021-04-12 | Public Comments | C. Heazel | all | Second public comment period. |
+| 2021-08-01 | Final Review | C. Heazel | all | Ready for SWG review and TC vote |
+| 2022-11-04 | 1.0.0 | G. Hobona | all | Final OGC Staff review |

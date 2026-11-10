@@ -1,0 +1,20 @@
+{
+  "name": "Media Types",
+  "abstract": "Clause 12 of OGC API - Common - Part 1: Core: media types for responses, OpenAPI definitions and Problem Details reports.",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "clause",
+  "normative": true,
+  "sources": [
+    {
+      "title": "OGC 19-072 — OGC API - Common - Part 1: Core — Media Types",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#mediatypes-section"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "clause"
+  ]
+}

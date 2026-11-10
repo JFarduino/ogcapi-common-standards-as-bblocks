@@ -1,0 +1,38 @@
+{
+  "name": "Core Requirements Class",
+  "abstract": "Requirements class \"Core\": protocol-level conventions applicable to all OGC Web APIs - use of HTTP 1.1, HTTP status codes, query parameter names and values, web caching, cross-origin requests, string internationalization, resource encodings and parameter encoding.",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "requirements-class",
+  "normative": true,
+  "standardization-target": "Web API",
+  "sources": [
+    {
+      "title": "OGC 19-072 — OGC API - Common - Part 1: Core — Core Requirements Class",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#rc_core-section"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "requirements-class"
+  ],
+  "conformanceClasses": [
+    "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core"
+  ],
+  "dependsOn": [
+    "ogc.api.common.part1.schemas.queryParamValueList",
+    "ogc.api.common.part1.schemas.queryParamValueBoolean",
+    "ogc.api.common.part1.schemas.queryParamValueInteger",
+    "ogc.api.common.part1.schemas.queryParamValueDecimal",
+    "ogc.api.common.part1.schemas.queryParamValueDouble"
+  ],
+  "resources": [
+    {
+      "ref": "requirements.yaml",
+      "role": "requirements",
+      "format": "application/yaml"
+    }
+  ]
+}

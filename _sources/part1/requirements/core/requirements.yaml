@@ -1,0 +1,158 @@
+# Requirements class: Core  (OGC 19-072, clause 8 - Requirements class 1)
+# Class URI:       http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
+# Conformance URI: http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core
+#
+# Requirements 1-11 of OGC 19-072. The recommendations and permissions of the class are in
+# description.md, next to the text they belong to. Each requirement is tested by the abstract test of
+# Annex A that has it as subject (tests.yaml).
+
+class-id: core
+standardization-target: Web API
+
+depends-on:
+  - uri: https://www.rfc-editor.org/info/rfc7231
+    title: "RFC 7231 (HTTP/1.1)"
+  - uri: https://www.rfc-editor.org/info/rfc2818
+    title: "RFC 2818 (HTTP over TLS)"
+  - uri: https://www.rfc-editor.org/info/rfc8288
+    title: "RFC 8288 (Web Linking)"
+
+requirements:
+
+  # Requirement 1 - 8.1 HTTP 1.1
+  - id: core/http
+    level: SHALL
+    statement: |
+      **A.** OGC Web APIs SHALL conform to HTTP 1.1.
+
+      **B.** If the API supports HTTPS, then the API SHALL also conform to HTTP over TLS.
+    tested-by:
+      - conf/core/http
+
+  # Requirement 2 - 8.3.1 Parameter Names
+  - id: core/query-param-name-unknown
+    level: SHALL
+    statement: |
+      **A.** The server SHALL return a response with the status code 400 IF
+
+      - the request URI includes a query parameter that is not specified in the API definition
+      - `/per/core/query-param-name-specified` does not apply, and
+      - `/per/core/query-param-name-tolerance` does not apply.
+    tested-by:
+      - conf/core/query-param-name-unknown
+
+  # Requirement 3 - 8.3.2 Parameter Values
+  - id: core/query-param-value-invalid
+    level: SHALL
+    statement: |
+      **A.** The server SHALL respond with a response with the status code 400 IF
+
+      - the request URI includes a query parameter that has an invalid value and
+      - `/per/core/query-param-value-specified` does not apply and
+      - `/per/core/query-param-value-tolerance` does not apply.
+    tested-by:
+      - conf/core/query-param-value-invalid
+
+  # Requirement 4 - 8.8.1 Capitalization
+  - id: core/query-param-capitalization
+    level: SHALL
+    statement: |
+      **A.** Parameter names and values SHALL be case sensitive.
+
+      **B.** IF a parameter name or value includes a percent encoded (escaped) character, THEN the
+      upper case hexadecimal digits (“A” through “F”) of that percent encoded character SHALL be
+      equivalent to the lower case digits “a” through “f” respectively.
+    tested-by:
+      - conf/core/query-param-capitalization
+
+  # Requirement 5 - 8.8.2 Parameter Value Lists
+  - id: core/query-param-list-delimiter
+    level: SHALL
+    statement: |
+      **A.** Parameters values containing lists SHOULD specify the delimiter to be used in the API
+      definition.
+
+      **B.** The default list item delimiter SHALL be the comma (“,”).
+    applies-to:
+      bblock: ogc.api.common.part1.schemas.queryParamValueList
+    tested-by:
+      - conf/core/query-param-list-delimiter
+
+  # Requirement 6
+  - id: core/query-param-list-escape
+    level: SHALL
+    statement: |
+      **A.** Any list item values that include a space or comma SHALL escape the space or comma
+      character using the URI encoding rules from IETF RFC 3986.
+    applies-to:
+      bblock: ogc.api.common.part1.schemas.queryParamValueList
+    tested-by:
+      - conf/core/query-param-list-escape
+
+  # Requirement 7
+  - id: core/query-param-list-empty
+    level: SHALL
+    statement: |
+      **A.** All empty entries SHALL be represented by the empty string.
+    applies-to:
+      bblock: ogc.api.common.part1.schemas.queryParamValueList
+    tested-by:
+      - conf/core/query-param-list-empty
+
+  # Requirement 8 - 8.8.3 Numeric and Boolean Values
+  - id: core/query-param-value-boolean
+    level: SHALL
+    statement: |
+      **A.** Boolean values shall be represented by the lowercase strings “true” and “false”,
+      representing Boolean true and false respectively.
+    applies-to:
+      bblock: ogc.api.common.part1.schemas.queryParamValueBoolean
+    tested-by:
+      - conf/core/query-param-value-boolean
+
+  # Requirement 9
+  - id: core/query-param-value-integer
+    level: SHALL
+    statement: |
+      **A.** Integer values SHALL be represented by a finite-length sequence of decimal digits with an
+      optional leading negative “-” sign. Positive values are assumed if the leading sign is omitted.
+    applies-to:
+      bblock: ogc.api.common.part1.schemas.queryParamValueInteger
+    tested-by:
+      - conf/core/query-param-value-integer
+
+  # Requirement 10
+  - id: core/query-param-value-decimal
+    level: SHALL
+    statement: |
+      **A.** Decimal values SHALL be represented by a finite-length sequence of decimal digits separated
+      by a period as a decimal indicator.
+
+      - An optional leading negative sign (“-”) is allowed.
+      - If the sign is omitted, positive (“+”) is assumed.
+      - Leading and trailing zeroes are optional.
+      - If the fractional part is zero, the period and following zero(es) can be omitted.
+    applies-to:
+      bblock: ogc.api.common.part1.schemas.queryParamValueDecimal
+    tested-by:
+      - conf/core/query-param-value-decimal
+
+  # Requirement 11
+  - id: core/query-param-value-double
+    level: SHALL
+    statement: |
+      **A.** Double values SHALL be represented by a mantissa followed, optionally, by the character
+      “e”, followed by an exponent.
+
+      **B.** The exponent SHALL be an integer.
+
+      **C.** The mantissa SHALL be a decimal number.
+
+      **D.** The representations for exponent and mantissa SHALL follow the lexical rules for integer and
+      decimal.
+
+      **E.** If the “e” and the following exponent are omitted, an exponent value of 0 SHALL be assumed.
+    applies-to:
+      bblock: ogc.api.common.part1.schemas.queryParamValueDouble
+    tested-by:
+      - conf/core/query-param-value-double

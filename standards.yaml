@@ -1,0 +1,89 @@
+# Standards documents generated from the building blocks of this repository.
+#
+# Read by bblocks-specgen (declared as a build plugin in bblocks-config.yaml), not by
+# bblocks-postprocess. See https://github.com/ogcincubator/bblocks-specgen/blob/master/docs/authoring.md
+#
+# Source document: OGC 19-072, OGC API - Common - Part 1: Core, version 1.0.0
+#   https://docs.ogc.org/is/19-072/19-072.html
+
+standards:
+
+  - id: part1
+    prefix: ogc.api.common.part1
+    # Requirements classes live under ogc.api.common.part1.requirements.<id>; their class id is <id>
+    class-id-prefix: ogc.api.common.part1.requirements.
+
+    title: "OGC API - Common - Part 1: Core"
+    doc-number: OGC 19-072
+    type: Standard
+    # Not "Draft": requirement and conformance URIs are generated without the "draft/" segment
+    status: Approved
+    version: "1.0.0"
+    pub-date: "2023-03-28"
+
+    base-uri: http://www.opengis.net/spec/ogcapi-common-1/1.0
+    req-uri-template:  "{base-uri}/{status}req/{id}"
+    conf-uri-template: "{base-uri}/{status}conf/{id}"
+
+    editors:
+      - name: Charles Heazel
+        affiliation: Heazeltech LLC
+
+    wg: OGC API - Common SWG
+    keywords:
+      - ogcdoc
+      - OGC document
+      - geographic information
+      - spatial data
+      - API
+      - json
+      - html
+      - OpenAPI
+      - REST
+      - Common
+
+    abstract: |
+      The OGC has extended its suite of Standards to include Resource Oriented Architectures and
+      Web APIs. In the course of developing these Standards, some practices proved to be common
+      across multiple OGC Web API Standards. These common practices are documented in the OGC API —
+      Common Standard. The OGC API - Common Standard is a multi-part standard that specifies reusable
+      building-blocks that can be used in the construction of OGC API Standards. This document
+      presents Part 1, the Core, of the OGC API – Common Standard. Standards developers will use
+      these building-blocks in the construction of other OGC Standards that relate to Web APIs. The
+      result is a modular suite of coherent API standards which can be adapted by a system designer
+      for the unique requirements of their system.
+      The purpose of the OGC API — Common — Part 1: Core Standard (API-Core) is to define those
+      fundamental building blocks and requirements which are applicable to all OGC Web API Standards.
+
+    boilerplate:
+      copyright-year: 2023
+      # Approved standard: no "patent-policy" (that adds the draft "This document is not an OGC
+      # Standard" warning)
+      license: OGC License Agreement
+
+    # Document order. Clause numbers are assigned in this order, so they match OGC 19-072
+    # for clauses 1-9. OGC 19-072 groups the HTML and JSON requirements classes under a single
+    # clause 10; the generator renders each requirements class as its own clause, so from clause
+    # 10 on the numbers are shifted by one (HTML = 10, JSON = 11, OpenAPI 3.0 = 12, Media Types = 13).
+    # Entries after {auto: annex-a} are annexes (B, C, ...).
+    clauses:
+      - ogc.api.common.part1.clauses.scope                  # 1
+      - ogc.api.common.part1.clauses.conformance            # 2
+      - ogc.api.common.part1.clauses.references             # 3
+      - ogc.api.common.part1.clauses.terms                  # 4
+      - ogc.api.common.part1.clauses.abbreviated-terms      # 5
+      - ogc.api.common.part1.clauses.conventions            # 6
+      - ogc.api.common.part1.clauses.overview               # 7
+      - ogc.api.common.part1.requirements.core              # 8
+      - ogc.api.common.part1.requirements.landing-page      # 9
+      - ogc.api.common.part1.requirements.html              # 10
+      - ogc.api.common.part1.requirements.json              # 11
+      - ogc.api.common.part1.requirements.oas30             # 12
+      - ogc.api.common.part1.clauses.media-types            # 13
+      - auto: annex-a                                       # A - Abstract Test Suite (generated)
+      - ogc.api.common.part1.annexes.examples               # B
+      - ogc.api.common.part1.annexes.glossary               # C
+      - ogc.api.common.part1.annexes.bnf                    # D
+      - ogc.api.common.part1.annexes.web-api-guidelines     # E
+      - ogc.api.common.part1.annexes.revision-history       # F
+      - ogc.api.common.part1.annexes.front-matter           # G

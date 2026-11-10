@@ -1,0 +1,64 @@
+The OGC API — Common — Part 1: Core Standard defines common requirements and recommendations which are
+applicable to all OGC Web API Standards.
+
+## 7.1 Evolution from OGC Web Services
+
+OGC Web Service (OWS) Standards implement a Remote-Procedure-Call-over-HTTP architectural style using
+XML for payloads. This was the state-of-the-art when OGC Web Services (OWS) were originally designed in
+the late 1990s and early 2000s. However, technology has evolved. New Resource-Oriented APIs provide an
+alternative to the Service-Oriented Approach. New OGC Web API Standards are under development to provide
+API alternatives to the OWS Standards.
+
+The OGC API — Common Standard specifies common modules for defining OGC Web API Standards that follow the
+current Web architecture. In particular, the recommendations as defined in the W3C/OGC best practices
+for sharing Spatial Data on the Web as well as the W3C best practices for sharing Data on the Web.
+
+A detailed discussion of OGC Web Services and Web APIs can be found in the
+[OGC API — Common — Users Guide](http://www.opengis.net/doc/UG/ogcapi-common/1.0#ug-evolution-from-web-services).
+
+## 7.2 Modular APIs
+
+A goal of OGC API Standards is to provide rapid and easy access to spatial resources. To meet this goal,
+the needs of both the resource provider and the resource consumer must be considered. The approach
+specified in this Standard is to provide a modular framework of API components. This framework provides
+a consistent “look and feel” across all OGC APIs. When API servers and clients are built from the same
+set of modules, the likelihood that they will integrate at run-time is greatly enhanced.
+
+The modular Web API approach adopted by OGC API Standards has several facets.
+
+- A common core that is recommended for all implementations of OGC API Standards. This OGC API — Common
+  — Part 1: Core Standard defines this core in the [Core Requirements Class](#clause-8).
+- Common descriptive resources which allow clients to learn the purpose and capabilities of an API as
+  well as how they should be used. These resources are defined in the
+  [Landing Page Requirements Class](#clause-9).
+- Clear separation between common requirements and more resource specific capabilities. The OGC API —
+  Common Standard specifies the common requirements that may be relevant to almost anyone who wants to
+  build an API for spatial resources. Resource-specific requirements are addressed in resource-specific
+  OGC Standards.
+- Technologies that change more frequently are decoupled and specified in separate modules (“conformance
+  classes” in OGC terminology). This enables, for example, the use/re-use of new encodings for spatial
+  data or API descriptions.
+
+Modularization is not just about a single “service”. OGC APIs provide building blocks that can be reused
+in APIs in general. In other words, a server that implements the OGC API – Features Standard should not
+be seen as a standalone service. Rather, this server should be viewed as a collection of API building
+blocks that together implement the capabilities that are specified in OGC API — Features. A corollary of
+this is that it should be possible to implement an API that simultaneously conforms to conformance
+classes from multiple current or future OGC API Standards.
+
+## 7.3 Using APIs
+
+OGC API Standards are expected to support two different approaches that clients may use when accessing
+an OGC conformant Web API.
+
+In the first approach, clients are implemented with knowledge about the Standard used to build the API
+and the associated resource types. The clients navigate the resources based on this knowledge and based
+on the responses provided by the API. The API definition may be used to determine details, e.g., on
+filter parameters, but this may not be necessary depending on the needs of the client. These are clients
+that are in general able to use multiple APIs as long as they implement OGC API Standards.
+
+The other approach targets developers that are not familiar with OGC API Standards but want to interact
+with spatial data provided by an API that happens to implement OGC API Standards. In this case the
+developer will study and use the API definition — typically an OpenAPI document — to understand the API
+and implement the code to interact with that API. This assumes familiarity with the API definition
+language and the related tooling, but it should not be necessary to study the OGC API Standards.

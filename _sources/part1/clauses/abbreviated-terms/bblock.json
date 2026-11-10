@@ -1,0 +1,20 @@
+{
+  "name": "Abbreviated terms",
+  "abstract": "Clause 5 of OGC API - Common - Part 1: Core: abbreviated terms.",
+  "status": "stable",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0.0",
+  "itemClass": "clause",
+  "normative": true,
+  "sources": [
+    {
+      "title": "OGC 19-072 — OGC API - Common - Part 1: Core — Abbreviated terms",
+      "link": "https://docs.ogc.org/is/19-072/19-072.html#_abbreviated_terms"
+    }
+  ],
+  "tags": [
+    "ogcapi-common",
+    "standard",
+    "clause"
+  ]
+}

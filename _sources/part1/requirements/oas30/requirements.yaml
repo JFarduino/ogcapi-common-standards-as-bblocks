@@ -1,0 +1,77 @@
+# Requirements class: OpenAPI 3.0  (OGC 19-072, clause 11 - Requirements class 5)
+# Class URI:       http://www.opengis.net/spec/ogcapi-common-1/1.0/req/oas30
+# Conformance URI: http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/oas30
+#
+# Requirements 22-27 of OGC 19-072.
+
+class-id: oas30
+standardization-target: Web API
+
+depends-on:
+  # Prerequisites of requirements class 5 and conformance class A.5 (OpenAPI 3.0)
+  - bblock: ogc.api.common.part1.requirements.core
+  - bblock: ogc.api.common.part1.requirements.landing-page
+  - uri: http://spec.openapis.org/oas/v3.0.3
+    title: OpenAPI Specification 3.0
+
+requirements:
+
+  # Requirement 22 - 12.1 (OGC 19-072 11.1) Basic requirements
+  - id: oas30/oas-definition-1
+    level: SHALL
+    statement: |
+      **A.** An OpenAPI definition in JSON using the media type
+      `application/vnd.oai.openapi+json;version=3.0` and a HTML version of the API definition using
+      the media type `text/html` SHALL be available.
+    tested-by:
+      - conf/oas30/oas-definition-1
+
+  # Requirement 23
+  - id: oas30/oas-definition-2
+    level: SHALL
+    statement: |
+      **A.** The JSON representation SHALL conform to the OpenAPI Specification, version 3.0.
+    tested-by:
+      - conf/oas30/oas-definition-2
+
+  # Requirement 24
+  - id: oas30/oas-impl
+    level: SHALL
+    statement: |
+      **A.** The API SHALL implement all capabilities specified in the OpenAPI definition.
+    tested-by:
+      - conf/oas30/oas-impl
+
+  # Requirement 25 - 12.2 (OGC 19-072 11.2) Complete definition
+  - id: oas30/completeness
+    level: SHALL
+    statement: |
+      **A.** The OpenAPI definition SHALL specify for each operation all
+      [HTTP Status Codes](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#httpCodes)
+      and [Response Objects](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#responseObject)
+      that the API uses in responses.
+
+      **B.** This includes the successful execution of an operation as well as all error situations
+      that originate from the server.
+    tested-by:
+      - conf/oas30/completeness
+
+  # Requirement 26 - 12.3 (OGC 19-072 11.3) Exceptions
+  - id: oas30/exceptions-codes
+    level: SHALL
+    statement: |
+      **A.** For error situations that originate from an API server, the API definition SHALL cover all
+      applicable HTTP Status Codes.
+    applies-to:
+      bblock: ogc.api.common.part1.responses.Exception
+    tested-by:
+      - conf/oas30/exceptions-codes
+
+  # Requirement 27 - 12.4 (OGC 19-072 11.4) Security
+  - id: oas30/security
+    level: SHALL
+    statement: |
+      **A.** If the operations of the API are access-controlled, the security scheme(s) and requirements
+      SHALL be documented in the OpenAPI definition.
+    tested-by:
+      - conf/oas30/security

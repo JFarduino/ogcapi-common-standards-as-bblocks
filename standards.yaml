@@ -25,7 +25,7 @@ standards:
     pub-date: "2023-03-28"
     external-id: http://www.opengis.net/doc/is/ogcapi-common-1/1.0
 
-    # Render like the published OGC document (bblocks-specgen-jules, "layout: ogc"): ModSpec
+    # Render like the published OGC document (bblocks-specgen, "layout: ogc"): ModSpec
     # tables, statements numbered across the document, numbered subclauses, OGC-style cover.
     # The default "classic" layout draws the blue requirement boxes.
     layout: ogc

@@ -8,9 +8,8 @@ HTML standards document is generated from them.
 The Building Blocks are processed by [bblocks-postprocess](https://github.com/opengeospatial/bblocks-postprocess)
 (validation, documentation, register), which runs bblocks-specgen as a build plugin to assemble the
 standards document described in [`standards.yaml`](standards.yaml). The plugin is installed from the
-`feature/update` branch of [JFarduino/bblocks-specgen](https://github.com/JFarduino/bblocks-specgen), a fork of
-[ogcincubator/bblocks-specgen](https://github.com/ogcincubator/bblocks-specgen) that adds the `layout: ogc`
-rendering (ModSpec tables, numbered subclauses, OGC cover) and file includes.
+`master` branch of [ogcincubator/bblocks-specgen](https://github.com/ogcincubator/bblocks-specgen), which
+provides the `layout: ogc` rendering (ModSpec tables, numbered subclauses, OGC cover) and file includes.
 
 ## Repository layout
 
@@ -92,8 +91,8 @@ From a terminal, the first build (and the first one after the `pip:` line of the
 for permission to install the `bblocks-specgen` plugin. In scripts/CI, pass `--skip-permissions true` to
 `./build.sh` instead.
 
-The plugin is installed from GitHub (`feature/update`), so changes to bblocks-specgen are picked up once
-pushed to that branch. To try a local clone first, put it in `bblocks-specgen-jules/` (ignored by git)
+The plugin is installed from GitHub (`master` of ogcincubator/bblocks-specgen), so changes to
+bblocks-specgen are picked up once merged upstream. To try a local clone first, put it in `bblocks-specgen-jules/` (ignored by git)
 and use `bblocks-specgen @ file:///workspace/bblocks-specgen-jules` as the `pip:` entry in
 `bblocks-config.yaml` (`build.sh` mounts the repository on `/workspace`); GitHub workflows cannot see
 that folder.
